@@ -1,0 +1,8 @@
+<RCC>
+  <qresource>
+    <file>Imagenes/descarga.jpg</file>
+  </qresource>
+  <qresource prefix="logo">
+    <file>514ba084-0d56-41a1-9273-abc5a52fc600.png</file>
+  </qresource>
+</RCC>
