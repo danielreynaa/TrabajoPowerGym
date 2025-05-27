@@ -1,31 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>VistaEntrenamiento</class>
+ <widget class="QMainWindow" name="VistaEntrenamiento">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>900</width>
     <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Registro de Entrenamiento</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainVerticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      
+      <!-- Sentadilla -->
+      <item>
+       <layout class="QVBoxLayout" name="layoutSentadilla">
+        <item>
+         <widget class="QLabel" name="imagenSentadilla">
+          <property name="pixmap">
+           <pixmap resource="../recursos.qrc">:/imagenes/sentadilla.jpg</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSentadilla">
+          <property name="text">
+           <string>Sentadilla</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pesoSentadilla">
+          <property name="placeholderText">
+           <string>Kg levantados</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+      <!-- Press Banca -->
+      <item>
+       <layout class="QVBoxLayout" name="layoutPressBanca">
+        <item>
+         <widget class="QLabel" name="imagenPressBanca">
+          <property name="pixmap">
+           <pixmap resource="../recursos.qrc">:/imagenes/pressbanca.jpg</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelPressBanca">
+          <property name="text">
+           <string>Press Banca</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pesoPressBanca">
+          <property name="placeholderText">
+           <string>Kg levantados</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+      <!-- Peso Muerto -->
+      <item>
+       <layout class="QVBoxLayout" name="layoutPesoMuerto">
+        <item>
+         <widget class="QLabel" name="imagenPesoMuerto">
+          <property name="pixmap">
+           <pixmap resource="../recursos.qrc">:/imagenes/pesomuelto.jpg</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelPesoMuerto">
+          <property name="text">
+           <string>Peso Muerto</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pesoPesoMuerto">
+          <property name="placeholderText">
+           <string>Kg levantados</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+     </layout>
+    </item>
+
+        <!-- Campo Fecha -->
+    <item>
+     <widget class="QDateEdit" name="fechaEntrenamiento">
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy-MM-dd</string>
+      </property>
+     </widget>
+    </item>
+
+
+    <!-- Botón Guardar -->
+    <item>
+     <widget class="QPushButton" name="botonGuardar">
+      <property name="minimumHeight">
+       <number>40</number>
+      </property>
+      <property name="text">
+       <string>Guardar</string>
+      </property>
+     </widget>
+    </item>
+
+   </layout>
   </widget>
+  <widget class="QMenuBar" name="menubar"/>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>
