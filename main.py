@@ -16,18 +16,6 @@ if __name__ == "__main__":
     ventana_inicial.show()
 
     sys.exit(app.exec_()) 
-
-
-
-
-
-
-
-
-
-
-
-
     app = QApplication([])
     ventana = Login()
     ventana.show()
