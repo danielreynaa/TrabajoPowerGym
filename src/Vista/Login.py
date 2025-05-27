@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import uic
 
 # Cargar la interfaz generada desde el archivo .ui
-Form, Window = uic.loadUiType("./src/Vista/Ui/VistaLogin.ui")
+Form, Window = uic.loadUiType("./src/Vista/Ui/VistaInicial.ui")
 
 class Login(QMainWindow, Form):
     def __init__(self):
