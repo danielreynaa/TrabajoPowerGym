@@ -2,13 +2,11 @@ from PyQt5.QtWidgets import QMainWindow, QMessageBox # Importamos QMessageBox
 from PyQt5 import uic
 from datetime import date # Importamos date para trabajar con fechas
 
-<<<<<<< HEAD
+
 # Importa la vista de Login para poder navegar de vuelta a ella
 from src.Vista.Login import Login
 
-# Cargar la interfaz generada desde el archivo .ui para VistaRegistro
-=======
->>>>>>> 6fcd4438ab06140706542521c69467b858d3c0dd
+
 Form_Registro, Window_Registro = uic.loadUiType("./src/Vista/Ui/VistaRegistro.ui")
 
 class VistaRegistro(QMainWindow, Form_Registro):
