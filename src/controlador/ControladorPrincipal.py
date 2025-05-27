@@ -7,7 +7,7 @@ class ControladorPrincipal():
 
     def login(self, nombre): 
         if len(nombre) > 3: 
-            loginVO = LoginVO(nombre)
+            loginVO = loginVO(nombre)
             respuestaLogin = self._modelo.comprobarLogin(loginVO)
             print(respuestaLogin)
             self._vista.show()
