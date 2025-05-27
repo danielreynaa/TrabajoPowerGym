@@ -1,26 +1,65 @@
-from src.Modelo.Conexion import Conexion
+# src/Modelo/DAO/UserDao.py
+from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.SuperVo import SuperVo
 from typing import List
 
-
 class UserDao(Conexion):
-    SQL_SELECT = "SELECT  DNI, NombreCompleto, Telefono, FechaNacimiento"
-    super().__init__()
+    SQL_SELECT = """
+        SELECT id_usuario,
+               nombre, apellidos, email, contrasena, rol,
+               fecha_registro, fecha_nacimiento, telefono, peso_corporal
+        FROM Usuarios
+    """
+    SQL_INSERT = """
+        INSERT INTO Usuarios (
+            nombre, apellidos, email, contrasena, rol,
+            fecha_nacimiento, telefono, peso_corporal
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    """
+    SQL_CONSULTA_LOGIN = """
+        SELECT COUNT(*) FROM Usuarios WHERE email = ? AND contrasena = ?
+    """
 
+    def __init__(self):
+        super().__init__()
 
     def select(self) -> List[SuperVo]:
         cursor = self.getCursor()
-        clientes = []
-
+        usuarios: List[SuperVo] = []
         try:
-            cursor.execute(SQL_SELECT)
-            rows = cursor.fetchall()
-            for row in rows:
-                DNI, NombreCompleto, Telefono, FechaNacimiento = row 
-                cliente =SuperVo(DNI, NombreCompleto, Telefono, FechaNacimiento)
-                clientes.append(cliente)
+            cursor.execute(self.SQL_SELECT)
+            for row in cursor.fetchall():
+                # row = (id_usuario, nombre, apellidos, email, contrasena, rol,
+                #        fecha_registro, fecha_nacimiento, telefono, peso_corporal)
+                usuarios.append(SuperVo(*row))
+        except Exception as e:
+            print("❌ Error en SELECT:", e)
+        finally:
+            cursor.close()
+        return usuarios
 
-        except Exception as e: 
-            print("e")
+    def insert_user(self, nombre, apellidos, email, contrasena, rol,
+                    fecha_nacimiento=None, telefono=None, peso_corporal=None):
+        cursor = self.getCursor()
+        try:
+            cursor.execute(self.SQL_INSERT, (
+                nombre, apellidos, email, contrasena, rol,
+                fecha_nacimiento, telefono, peso_corporal
+            ))
+            print("✅ Usuario insertado correctamente.")
+        except Exception as e:
+            print("❌ Error al INSERT:", e)
+        finally:
+            cursor.close()
 
-        return clientes
+    def consulta_login(self, email: str, contrasena: str) -> bool:
+        cursor = self.getCursor()
+        try:
+            cursor.execute(self.SQL_CONSULTA_LOGIN, (email, contrasena))
+            count = cursor.fetchone()[0]
+            return count == 1
+        except Exception as e:
+            print("❌ Error en login:", e)
+            return False
+        finally:
+            cursor.close()
