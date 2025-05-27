@@ -1,5 +1,5 @@
 # src/Modelo/DAO/UserDao.py
-from src.Modelo.Conexion.Conexion import Conexion
+from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.SuperVo import SuperVo
 from typing import List
 
@@ -46,7 +46,6 @@ class UserDao(Conexion):
                 nombre, apellidos, email, contrasena, rol,
                 fecha_nacimiento, telefono, peso_corporal
             ))
-            self.conexion.commit()
             print("✅ Usuario insertado correctamente.")
         except Exception as e:
             print("❌ Error al INSERT:", e)
