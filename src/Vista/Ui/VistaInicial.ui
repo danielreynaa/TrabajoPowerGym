@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Registrar">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -44,7 +44,7 @@
      <string>Registrarme </string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="YaRegistrado">
     <property name="geometry">
      <rect>
       <x>60</x>
