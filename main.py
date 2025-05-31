@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication
 from src.Vista.VistaInicial import VistaInicial 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5 import uic
-from src.Vista.Login import Login
+from src.Vista.VistaLogin import Login
 from src.Modelo.BO.UserBO import UserBO
 from src.Modelo.VO.LoginVo import LoginVo
 

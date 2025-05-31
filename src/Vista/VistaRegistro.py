@@ -3,7 +3,7 @@ from PyQt5 import uic
 from datetime import date
 import hashlib
 
-from src.Vista.Login import Login
+from src.Vista.VistaLogin import Login
 from src.Modelo.BO.UserBO import UserBO
 
 Form_Registro, Window_Registro = uic.loadUiType("./src/Vista/Ui/vistaRegistro.ui")
@@ -52,14 +52,14 @@ class VistaRegistro(QMainWindow, Form_Registro):
             return
 
         rol_por_defecto = "Atleta"
-
+        contrasena_hash = hashlib.sha256(contrasena.encode()).hexdigest()
         user_bo = UserBO()
         try:
             user_bo.registrar_usuario(
                 nombre=nombre,
                 apellidos=apellidos,
                 email=email,
-                contrasena=contrasena,
+                contrasena=contrasena_hash,
                 rol=rol_por_defecto,
                 fecha_nacimiento=fecha_nacimiento,
                 telefono=telefono,
