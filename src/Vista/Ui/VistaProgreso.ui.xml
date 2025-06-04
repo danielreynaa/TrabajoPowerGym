@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VistaPerfil</class>
- <widget class="QMainWindow" name="VistaPerfil">
+ <class>VistaProgreso</class>
+ <widget class="QMainWindow" name="VistaProgreso">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>300</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Perfil del Usuario</string>
+   <string>Progreso de Entrenamiento</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -19,7 +19,7 @@
     <item>
      <widget class="QLabel" name="labelTitulo">
       <property name="text">
-       <string>Mi Perfil</string>
+       <string>Progreso de tus ejercicios</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -34,33 +34,35 @@
     </item>
 
     <item>
-     <widget class="QLabel" name="labelNombre">
-      <property name="text">
-       <string>Nombre: [nombre_usuario]</string>
+     <widget class="QComboBox" name="comboEjercicio">
+      <property name="currentText">
+       <string>Sentadilla</string>
       </property>
+      <item>
+       <property name="text">
+        <string>Sentadilla</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Press Banca</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Peso Muerto</string>
+       </property>
+      </item>
      </widget>
     </item>
 
     <item>
-     <widget class="QLabel" name="labelCorreo">
-      <property name="text">
-       <string>Correo: [correo@ejemplo.com]</string>
-      </property>
-     </widget>
-    </item>
-
-    <item>
-     <widget class="QLabel" name="labelFechaRegistro">
-      <property name="text">
-       <string>Fecha de registro: [yyyy-mm-dd]</string>
-      </property>
-     </widget>
-    </item>
-
-    <item>
-     <widget class="QPushButton" name="botonEditar">
-      <property name="text">
-       <string>Editar perfil</string>
+     <widget class="QWidget" name="graficaWidget">
+      <property name="minimumSize">
+       <size>
+        <width>600</width>
+        <height>400</height>
+       </size>
       </property>
      </widget>
     </item>
