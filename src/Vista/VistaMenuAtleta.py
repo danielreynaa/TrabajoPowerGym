@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QApplication
 import sys
-from Vista.VistaLogin import Login
-from src.Vista.Principal import VistaPrincipal
+from .VistaLogin import Login
+from src.Vista.VistaLogin import Login
 
 class ControladorAplicacion:
     def __init__(self):
