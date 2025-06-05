@@ -2,7 +2,7 @@
 from PyQt5.QtWidgets import QMainWindow 
 from PyQt5 import uic
 import sys 
-from src.Vista.Login import Login
+from src.Vista.VistaLogin import Login
 from src.Vista.VistaRegistro import VistaRegistro
 
 Form_Inicial, Window_Inicial = uic.loadUiType("./src/Vista/Ui/VistaInicial.ui")
