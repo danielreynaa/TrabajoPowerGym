@@ -6,7 +6,7 @@ import hashlib
 from src.Vista.VistaLogin import Login
 from src.Modelo.BO.UserBO import UserBO
 
-Form_Registro, Window_Registro = uic.loadUiType("./src/Vista/Ui/vistaRegistro.ui")
+Form_Registro, Window_Registro = uic.loadUiType("./src/Vista/Ui/VistaRegistro.ui")
 
 class VistaRegistro(QMainWindow, Form_Registro):
     def __init__(self):
