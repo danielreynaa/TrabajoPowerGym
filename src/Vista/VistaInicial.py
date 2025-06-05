@@ -31,3 +31,14 @@ class VistaInicial(QMainWindow, Form_Inicial):
         self.login_window = Login() 
         self.login_window.show()    
         self.close()               
+    
+
+    def abrir_vista_menu_desde_login_exitoso(self):
+        print("Login exitoso detectado. Abriendo VistaMenu...")
+        # La ventana de login ya debería haberse cerrado si emitía la señal y luego se cerraba
+        # Pero si no lo hace, aquí la podemos cerrar:
+        # if self.login_window:
+        #     self.login_window.close()
+
+        self.menu_window = VistaMenu()
+        self.menu_window.show()
