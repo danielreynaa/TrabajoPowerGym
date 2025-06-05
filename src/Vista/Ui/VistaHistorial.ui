@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VistaHistorial</class>
+ <widget class="QMainWindow" name="VistaHistorial">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Historial de Entrenamientos</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainVerticalLayout">
+    
+    <!-- Título -->
+    <item>
+     <widget class="QLabel" name="labelTitulo">
+      <property name="text">
+       <string>Historial de Entrenamientos</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Tabla de historial -->
+    <item>
+     <widget class="QTableWidget" name="tablaHistorial">
+      <column>
+       <property name="horizontalHeaderLabels">
+        <stringlist>
+         <string>Fecha</string>
+         <string>Ejercicio</string>
+         <string>Peso (kg)</string>
+        </stringlist>
+       </property>
+      </column>
+     </widget>
+    </item>
+
+    <!-- Título récords -->
+    <item>
+     <widget class="QLabel" name="labelRecord">
+      <property name="text">
+       <string>Récords personales</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Récords -->
+    <item>
+     <layout class="QHBoxLayout" name="layoutRecords">
+      <item>
+       <widget class="QLabel" name="recordSentadilla">
+        <property name="text">
+         <string>Sentadilla: - kg</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="recordPressBanca">
+        <property name="text">
+         <string>Press Banca: - kg</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="recordPesoMuerto">
+        <property name="text">
+         <string>Peso Muerto: - kg</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
