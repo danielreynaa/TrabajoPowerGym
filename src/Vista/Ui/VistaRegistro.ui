@@ -527,6 +527,66 @@
         </spacer>
        </item>
        <item>
+        <widget class="QLabel" name="lbl_rol">
+          <property name="font">
+          <font>
+            <pointsize>10</pointsize>
+          </font>
+          </property>
+          <property name="text">
+          <string>Tipo de usuario:</string>
+          </property>
+        </widget>
+        </item>
+        <item>
+        <widget class="QComboBox" name="combo_rol">
+          <property name="minimumSize">
+          <size>
+            <width>0</width>
+            <height>40</height>
+          </size>
+          </property>
+          <property name="font">
+          <font>
+            <pointsize>11</pointsize>
+          </font>
+          </property>
+          <property name="styleSheet">
+          <string notr="true">
+            QComboBox {
+            background-color: rgba(255, 255, 255, 200);
+            border: 2px solid rgb(55, 5, 255);
+            border-radius: 8px;
+            padding: 8px;
+            color: black;
+            }
+            QComboBox:focus {
+            border: 2px solid rgb(0, 0, 200);
+            }
+          </string>
+          </property>
+          <property name="currentIndex">
+          <number>-1</number>
+          </property>
+          <item>
+          <property name="text">
+            <string>Administrador</string>
+          </property>
+          </item>
+          <item>
+          <property name="text">
+            <string>Entrenador</string>
+          </property>
+          </item>
+          <item>
+          <property name="text">
+            <string>Atleta</string>
+          </property>
+          </item>
+        </widget>
+        </item>
+
+       <item>
         <widget class="QPushButton" name="btn_registrar">
          <property name="minimumSize">
           <size>

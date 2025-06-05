@@ -1,7 +1,6 @@
-# src/Modelo/DAO/UserDao.py
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.SuperVo import SuperVo
-from typing import List
+from typing import List, Optional
 
 class UserDao(Conexion):
     SQL_SELECT = """
@@ -19,6 +18,12 @@ class UserDao(Conexion):
     SQL_CONSULTA_LOGIN = """
         SELECT COUNT(*) FROM Usuarios WHERE email = ? AND contrasena = ?
     """
+    SQL_SELECT_POR_EMAIL = """
+        SELECT id_usuario,
+               nombre, apellidos, email, contrasena, rol,
+               fecha_registro, fecha_nacimiento, telefono, peso_corporal
+        FROM Usuarios WHERE email = ?
+    """
 
     def __init__(self):
         super().__init__()
@@ -29,8 +34,6 @@ class UserDao(Conexion):
         try:
             cursor.execute(self.SQL_SELECT)
             for row in cursor.fetchall():
-                # row = (id_usuario, nombre, apellidos, email, contrasena, rol,
-                #        fecha_registro, fecha_nacimiento, telefono, peso_corporal)
                 usuarios.append(SuperVo(*row))
         except Exception as e:
             print("❌ Error en SELECT:", e)
@@ -61,5 +64,20 @@ class UserDao(Conexion):
         except Exception as e:
             print("❌ Error en login:", e)
             return False
+        finally:
+            cursor.close()
+
+    def obtener_usuario_por_email(self, email: str) -> Optional[dict]:
+        cursor = self.getCursor()
+        try:
+            cursor.execute(self.SQL_SELECT_POR_EMAIL, (email,))
+            fila = cursor.fetchone()
+            if fila:
+                columnas = [desc[0] for desc in cursor.description]
+                return dict(zip(columnas, fila))
+            return None
+        except Exception as e:
+            print("❌ Error al obtener usuario por email:", e)
+            return None
         finally:
             cursor.close()
