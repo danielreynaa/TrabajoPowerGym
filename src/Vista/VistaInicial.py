@@ -38,3 +38,5 @@ class VistaInicial(QMainWindow, Form_Inicial):
             self.menu = VistaMenuEntrenador()
         else:
             self.menu = VistaMenuAtleta()
+
+        self.menu.show()
