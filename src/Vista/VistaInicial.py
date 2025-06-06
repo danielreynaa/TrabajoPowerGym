@@ -27,16 +27,18 @@ class VistaInicial(QMainWindow, Form_Inicial):
         self.close()
 
     def mostrar_login(self):
-        self.login_window = Login(callback_login_exitoso=self.abrir_menu_por_rol)
+        self.login_window = Login(callback_login_exitoso=self.abrir_menu_por_usuario)
         self.login_window.show()
         self.close()
 
-    def abrir_menu_por_rol(self, rol):
+    def abrir_menu_por_usuario(self, usuario):
+        rol = usuario.get("rol", "")
+        
         if rol == "Administrador":
-            self.menu = VistaMenuAdministrador()
+            self.menu = VistaMenuAdministrador(usuario)
         elif rol == "Entrenador":
-            self.menu = VistaMenuEntrenador()
+            self.menu = VistaMenuEntrenador(usuario)
         else:
-            self.menu = VistaMenuAtleta()
+            self.menu = VistaMenuAtleta(usuario)
 
         self.menu.show()

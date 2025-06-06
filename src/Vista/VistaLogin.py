@@ -37,8 +37,6 @@ class Login(QMainWindow, Form):
             QMessageBox.information(self, "Login Exitoso", f"Bienvenido {rol}.")
 
             if self.callback_login_exitoso:
-                self.callback_login_exitoso(rol)
+                self.callback_login_exitoso(usuario)  # CAMBIO: ahora se pasa el dict completo
 
             self.close()
-        else:
-            QMessageBox.critical(self, "Error", "Usuario o contraseña incorrectos.")

@@ -1,20 +1,20 @@
+# src/Vista/VistaEntrenamiento.py
+
 import sqlite3
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5 import uic
 from datetime import datetime
 
 class VistaEntrenamiento(QMainWindow):
-    def __init__(self):
+    def __init__(self, usuario):
         super().__init__()
         uic.loadUi("src/Vista/Ui/VistaEntrenamiento.ui", self)
         self.botonGuardar.clicked.connect(self.guardar_entrenamiento)
 
-        # Conexión a la base de datos (usa SQLite en local)
         self.conn = sqlite3.connect("powergym.db")
         self.cursor = self.conn.cursor()
 
-        # Usuario de ejemplo (esto normalmente se obtiene del login)
-        self.usuario = "usuario_demo"
+        self.usuario = usuario  # usuario es un dict con al menos el campo "email"
 
     def guardar_entrenamiento(self):
         ejercicios = {
@@ -39,7 +39,7 @@ class VistaEntrenamiento(QMainWindow):
             # Insertar el nuevo registro en historial
             self.cursor.execute(
                 "INSERT INTO historial (usuario, ejercicio, peso, fecha) VALUES (?, ?, ?, ?)",
-                (self.usuario, ejercicio, peso_int, datetime.now().strftime("%Y-%m-%d"))
+                (self.usuario["email"], ejercicio, peso_int, datetime.now().strftime("%Y-%m-%d"))
             )
 
         self.conn.commit()
@@ -52,7 +52,7 @@ class VistaEntrenamiento(QMainWindow):
     def obtener_maximo(self, ejercicio):
         self.cursor.execute(
             "SELECT MAX(peso) FROM historial WHERE usuario = ? AND ejercicio = ?",
-            (self.usuario, ejercicio)
+            (self.usuario["email"], ejercicio)
         )
         resultado = self.cursor.fetchone()
         return resultado[0] if resultado[0] else 0

@@ -1,15 +1,16 @@
+# src/Vista/VistaHistorial.py
+
 import sqlite3
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt5 import uic
 
 class VistaHistorial(QMainWindow):
-    def __init__(self):
+    def __init__(self, usuario):
         super().__init__()
         uic.loadUi("src/Vista/Ui/VistaHistorial.ui", self)
 
-        self.usuario = "usuario_demo"  # Reemplazar con el usuario logueado real
+        self.usuario = usuario  # usuario es un dict con al menos el campo "email"
 
-        # Conectar a la base de datos
         self.conn = sqlite3.connect("powergym.db")
         self.cursor = self.conn.cursor()
 
@@ -22,7 +23,7 @@ class VistaHistorial(QMainWindow):
             FROM historial
             WHERE usuario = ?
             ORDER BY fecha DESC
-        """, (self.usuario,))
+        """, (self.usuario["email"],))
         registros = self.cursor.fetchall()
 
         self.tablaHistorial.setRowCount(len(registros))
@@ -45,7 +46,7 @@ class VistaHistorial(QMainWindow):
             self.cursor.execute("""
                 SELECT MAX(peso) FROM historial
                 WHERE usuario = ? AND ejercicio = ?
-            """, (self.usuario, ejercicio))
+            """, (self.usuario["email"], ejercicio))
             max_peso = self.cursor.fetchone()[0]
             texto = f"{ejercicio}: {max_peso if max_peso else '-'} kg"
             label.setText(texto)
