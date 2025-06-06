@@ -4,18 +4,15 @@ import hashlib
 
 from src.Modelo.BO.UserBO import UserBO
 from src.Modelo.VO.LoginVo import LoginVo
-from src.Vista.VistaMenuAdministrador import VistaMenuAdministrador
-from src.Vista.VistaMenuEntrenador import VistaMenuEntrenador
-from src.Vista.VistaMenuAtleta import VistaMenuAtleta
 
 Form, _ = uic.loadUiType("./src/Vista/Ui/VistaLogin.ui")
 
 class Login(QMainWindow, Form):
-    def __init__(self):
+    def __init__(self, callback_login_exitoso=None):
         super().__init__()
         self.setupUi(self)
         self.botonaceptar.clicked.connect(self.on_button_click)
-        self.menu_window = None
+        self.callback_login_exitoso = callback_login_exitoso
 
     def on_button_click(self):
         email = self.Nombreusuario.text().strip()
@@ -33,24 +30,15 @@ class Login(QMainWindow, Form):
         if user_bo.comprobar_login(login_vo):
             usuario = user_bo.obtener_usuario_por_email(email)
             if not usuario:
-                QMessageBox.critical(self, "Error", "No se pudo recuperar la información del usuario.")
+                QMessageBox.critical(self, "Error", "No se pudo obtener el rol del usuario.")
                 return
 
             rol = usuario.get("rol", "")
-            QMessageBox.information(self, "Login Exitoso", f"¡Bienvenido {rol}!")
+            QMessageBox.information(self, "Login Exitoso", f"Bienvenido {rol}.")
 
-            # Abrir el menú correspondiente según el rol
-            if rol == "Administrador":
-                self.menu_window = VistaMenuAdministrador()
-            elif rol == "Entrenador":
-                self.menu_window = VistaMenuEntrenador()
-            elif rol == "Atleta":
-                self.menu_window = VistaMenuAtleta()
-            else:
-                QMessageBox.critical(self, "Error", f"Rol desconocido: {rol}")
-                return
+            if self.callback_login_exitoso:
+                self.callback_login_exitoso(rol)
 
-            self.menu_window.show()
             self.close()
         else:
-            QMessageBox.critical(self, "Error de Login", "Usuario o contraseña incorrectos.")
+            QMessageBox.critical(self, "Error", "Usuario o contraseña incorrectos.")

@@ -1,37 +1,9 @@
-from PyQt5.QtWidgets import QApplication
 import sys
-from src.Vista.VistaLogin import Login
-from src.Vista.Principal import VistaPrincipal
-
-class ControladorAplicacion:
-    def __init__(self):
-        self.app = QApplication(sys.argv)
-        self.ventana_login = Login()
-        self.ventana_login.botonaceptar.clicked.connect(self.validar_login)
-        self.ventana_login.show()
-
-    def validar_login(self):
-        usuario = self.ventana_login.Nombreusuario.text()
-        contrasena = self.ventana_login.Contrasena.text()
-
-        if usuario == "admin" and contrasena == "1234":
-            self.ventana_login.close()
-            self.ventana_principal = VistaPrincipal("admin")
-            self.ventana_principal.show()
-        elif usuario == "entrenador" and contrasena == "5678":
-            self.ventana_login.close()
-            self.ventana_principal = VistaPrincipal("entrenador")
-            self.ventana_principal.show()
-        elif usuario == "atleta" and contrasena == "0000":
-            self.ventana_login.close()
-            self.ventana_principal = VistaPrincipal("atleta")
-            self.ventana_principal.show()
-        else:
-            print("Credenciales incorrectas")
-
-    def ejecutar(self):
-        sys.exit(self.app.exec_())
+from PyQt5.QtWidgets import QApplication
+from src.Vista.VistaInicial import VistaInicial
 
 if __name__ == "__main__":
-    app = ControladorAplicacion()
-    app.ejecutar()
+    app = QApplication(sys.argv)
+    ventana = VistaInicial()
+    ventana.show()
+    sys.exit(app.exec_())
