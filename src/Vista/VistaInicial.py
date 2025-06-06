@@ -1,44 +1,44 @@
 # src/Vista/VistaInicial.py
-from PyQt5.QtWidgets import QMainWindow 
-from PyQt5 import uic
-import sys 
-from src.Vista.VistaLogin import Login
-from src.Vista.VistaRegistro import VistaRegistro
 
-Form_Inicial, Window_Inicial = uic.loadUiType("./src/Vista/Ui/VistaInicial.ui")
+from PyQt5.QtWidgets import QMainWindow
+from PyQt5 import uic
+from src.Vista.VistaRegistro import VistaRegistro
+from src.Vista.VistaLogin import Login
+from src.Vista.VistaMenuAtleta import VistaMenuAtleta
+from src.Vista.VistaMenuEntrenador import VistaMenuEntrenador
+from src.Vista.VistaMenuAdministrador import VistaMenuAdministrador
+
+Form_Inicial, _ = uic.loadUiType("src/Vista/Ui/VistaInicial.ui")
 
 class VistaInicial(QMainWindow, Form_Inicial):
     def __init__(self):
         super().__init__()
-        self.setupUi(self) 
-
+        self.setupUi(self)
 
         self.Registrar.clicked.connect(self.mostrar_registro)
-
         self.YaRegistrado.clicked.connect(self.mostrar_login)
 
         self.registro_window = None
         self.login_window = None
 
     def mostrar_registro(self):
-        print("Botón 'Registrarme' presionado. Abriendo VistaRegistro...")
-        self.registro_window = VistaRegistro() 
-        self.registro_window.show()             
-        self.close()                            
+        self.registro_window = VistaRegistro()
+        self.registro_window.show()
+        self.close()
 
     def mostrar_login(self):
-        print("Botón 'Ya estoy registrado' presionado. Abriendo VistaLogin...")
-        self.login_window = Login() 
-        self.login_window.show()    
-        self.close()               
-    
+        self.login_window = Login(callback_login_exitoso=self.rol_login_exitoso)
+        self.login_window.show()
+        self.close()
 
-    def abrir_vista_menu_desde_login_exitoso(self):
-        print("Login exitoso detectado. Abriendo VistaMenu...")
-        # La ventana de login ya debería haberse cerrado si emitía la señal y luego se cerraba
-        # Pero si no lo hace, aquí la podemos cerrar:
-        # if self.login_window:
-        #     self.login_window.close()
+    def rol_login_exitoso(self, rol):
+        if rol == "Atleta":
+            self.menu_window = VistaMenuAtleta()
+        elif rol == "Entrenador":
+            self.menu_window = VistaMenuEntrenador()
+        elif rol == "Administrador":
+            self.menu_window = VistaMenuAdministrador()
+        else:
+            return
 
-        self.menu_window = VistaMenu()
         self.menu_window.show()
