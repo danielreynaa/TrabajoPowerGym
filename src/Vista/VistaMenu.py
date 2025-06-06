@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QApplication
 import sys
-from src.Vista.VistaLogin import Login
+from Vista.VistaLogin import Login
 from src.Vista.Principal import VistaPrincipal
 
 class ControladorAplicacion:
@@ -11,20 +11,14 @@ class ControladorAplicacion:
         self.ventana_login.show()
 
     def validar_login(self):
+        # Aquí se valida el login
         usuario = self.ventana_login.Nombreusuario.text()
         contrasena = self.ventana_login.Contrasena.text()
 
-        if usuario == "admin" and contrasena == "1234":
+        if usuario == "admin" and contrasena == "1234":  # Login simulado
+            print("Login exitoso. Abriendo VistaPrincipal...")
             self.ventana_login.close()
-            self.ventana_principal = VistaPrincipal("admin")
-            self.ventana_principal.show()
-        elif usuario == "entrenador" and contrasena == "5678":
-            self.ventana_login.close()
-            self.ventana_principal = VistaPrincipal("entrenador")
-            self.ventana_principal.show()
-        elif usuario == "atleta" and contrasena == "0000":
-            self.ventana_login.close()
-            self.ventana_principal = VistaPrincipal("atleta")
+            self.ventana_principal = VistaPrincipal()
             self.ventana_principal.show()
         else:
             print("Credenciales incorrectas")

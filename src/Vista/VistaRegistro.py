@@ -22,6 +22,7 @@ class VistaRegistro(QMainWindow, Form_Registro):
         email = self.txt_email.text().strip()
         contrasena = self.txt_password.text()
         confirm_contrasena = self.txt_confirm_password.text()
+        rol = self.combo_rol.currentText().strip()
 
         fecha_nacimiento_qdate = self.dateedit_fecha_nacimiento.date()
         fecha_nacimiento = (
@@ -35,9 +36,6 @@ class VistaRegistro(QMainWindow, Form_Registro):
             if self.spinbox_peso_corporal.value() > 0
             else None
         )
-
-        # Obtener el rol seleccionado
-        rol = self.combo_rol.currentText().strip()
 
         errores = []
 
