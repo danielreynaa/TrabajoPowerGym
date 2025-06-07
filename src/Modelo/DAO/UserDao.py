@@ -1,11 +1,11 @@
+# src/Modelo/DAO/UserDao.py
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.SuperVo import SuperVo
 from typing import List, Optional
 
 class UserDao(Conexion):
     SQL_SELECT = """
-        SELECT id_usuario,
-               nombre, apellidos, email, contrasena, rol,
+        SELECT id_usuario, nombre, apellidos, email, contrasena, rol,
                fecha_registro, fecha_nacimiento, telefono, peso_corporal
         FROM Usuarios
     """
@@ -19,8 +19,7 @@ class UserDao(Conexion):
         SELECT COUNT(*) FROM Usuarios WHERE email = ? AND contrasena = ?
     """
     SQL_SELECT_POR_EMAIL = """
-        SELECT id_usuario,
-               nombre, apellidos, email, contrasena, rol,
+        SELECT id_usuario, nombre, apellidos, email, contrasena, rol,
                fecha_registro, fecha_nacimiento, telefono, peso_corporal
         FROM Usuarios WHERE email = ?
     """
@@ -49,6 +48,7 @@ class UserDao(Conexion):
                 nombre, apellidos, email, contrasena, rol,
                 fecha_nacimiento, telefono, peso_corporal
             ))
+            self.conexion.commit()  # IMPORTANTE
             print("✅ Usuario insertado correctamente.")
         except Exception as e:
             print("❌ Error al INSERT:", e)
