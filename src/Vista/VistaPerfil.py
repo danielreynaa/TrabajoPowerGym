@@ -1,7 +1,7 @@
 # VistaPerfil.py actualizado con callback y boton para volver
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QPushButton
 from PyQt5 import uic
-from src.Conexion import Conexion
+from src.Conexion.Conexion import Conexion
 from datetime import datetime
 
 class VistaPerfil(QMainWindow):

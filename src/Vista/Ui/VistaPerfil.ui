@@ -6,69 +6,109 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>300</height>
+    <width>550</width>
+    <height>850</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Perfil del Usuario</string>
+   <string>POWERGYM - Perfil</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
-    
     <item>
-     <widget class="QLabel" name="labelTitulo">
+     <widget class="QLabel" name="lbl_titulo">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
-       <string>Mi Perfil</string>
+       <string>Editar Perfil</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
      </widget>
     </item>
-
     <item>
-     <widget class="QLabel" name="labelNombre">
-      <property name="text">
-       <string>Nombre: [nombre_usuario]</string>
+     <widget class="QLineEdit" name="inputNombre">
+      <property name="placeholderText">
+       <string>Nombre</string>
       </property>
      </widget>
     </item>
-
     <item>
-     <widget class="QLabel" name="labelCorreo">
-      <property name="text">
-       <string>Correo: [correo@ejemplo.com]</string>
+     <widget class="QLineEdit" name="inputApellidos">
+      <property name="placeholderText">
+       <string>Apellidos</string>
       </property>
      </widget>
     </item>
-
     <item>
-     <widget class="QLabel" name="labelFechaRegistro">
-      <property name="text">
-       <string>Fecha de registro: [yyyy-mm-dd]</string>
+     <widget class="QLineEdit" name="inputEmail">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Email (solo lectura)</string>
       </property>
      </widget>
     </item>
-
     <item>
-     <widget class="QPushButton" name="botonEditar">
-      <property name="text">
-       <string>Editar perfil</string>
+     <widget class="QLineEdit" name="inputContrasena">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Contraseña</string>
       </property>
      </widget>
     </item>
-
+    <item>
+     <widget class="QDateEdit" name="inpuFechaDeNacimiento">
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="inputTelefono">
+      <property name="placeholderText">
+       <string>Teléfono</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDoubleSpinBox" name="inputPeso">
+      <property name="suffix">
+       <string> kg</string>
+      </property>
+      <property name="minimum">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>300.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Guardar Cambios</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_volver">
+      <property name="text">
+       <string>Volver al Menú</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

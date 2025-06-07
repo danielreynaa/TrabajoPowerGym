@@ -38,6 +38,10 @@ class VistaMenuAtleta(QMainWindow):
         self.close()
 
     def abrir_perfil(self):
-        self.ventana_perfil = VistaPerfil(self.usuario["email"], self.mostrar)
-        self.ventana_perfil.show()
-        self.close()
+        try:
+            print("▶ Abriendo VistaPerfil")
+            self.ventana_perfil = VistaPerfil(self.usuario["email"], self.mostrar)
+            self.ventana_perfil.show()
+            self.close()
+        except Exception as e:
+            print("❌ Error al abrir VistaPerfil:", e)
