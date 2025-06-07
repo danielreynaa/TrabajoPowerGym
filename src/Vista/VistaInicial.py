@@ -1,44 +1,26 @@
-# src/Vista/VistaInicial.py
-
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import uic
-from src.Vista.VistaRegistro import VistaRegistro
-from src.Vista.VistaLogin import Login
-from src.Vista.VistaMenuAtleta import VistaMenuAtleta
-from src.Vista.VistaMenuEntrenador import VistaMenuEntrenador
-from src.Vista.VistaMenuAdministrador import VistaMenuAdministrador
 
-Form_Inicial, _ = uic.loadUiType("src/Vista/Ui/VistaInicial.ui")
+Form, _ = uic.loadUiType("./src/Vista/Ui/VistaInicial.ui")
 
-class VistaInicial(QMainWindow, Form_Inicial):
+class VistaInicial(QMainWindow, Form):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
+        # Botón “Registrarme” abre Registro
         self.Registrar.clicked.connect(self.mostrar_registro)
+        # Botón “Ya estoy registrado” abre Login
         self.YaRegistrado.clicked.connect(self.mostrar_login)
 
-        self.registro_window = None
-        self.login_window = None
-
-    def mostrar_registro(self):
-        self.registro_window = VistaRegistro()
-        self.registro_window.show()
-        self.close()
-
     def mostrar_login(self):
-        self.login_window = Login(callback_login_exitoso=self.abrir_menu_por_usuario)
+        from src.Vista.VistaLogin import Login
+        self.login_window = Login()
         self.login_window.show()
         self.close()
 
-    def abrir_menu_por_usuario(self, usuario):
-        rol = usuario.get("rol", "")
-        
-        if rol == "Administrador":
-            self.menu = VistaMenuAdministrador(usuario)
-        elif rol == "Entrenador":
-            self.menu = VistaMenuEntrenador(usuario)
-        else:
-            self.menu = VistaMenuAtleta(usuario)
-
-        self.menu.show()
+    def mostrar_registro(self):
+        from src.Vista.VistaRegistro import VistaRegistro
+        self.registro_window = VistaRegistro()
+        self.registro_window.show()
+        self.close()
