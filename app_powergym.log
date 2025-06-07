@@ -33,3 +33,28 @@
 [2025-06-07 21:01:03] [DEBUG] Modo de depuración de logs activado.
 [2025-06-07 21:01:30] [INFO] Aplicación PowerGym iniciada.
 [2025-06-07 21:01:30] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:39:41] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:39:41] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:45:46] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:45:46] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:46:56] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:46:56] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:49:17] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:49:17] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:51:31] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:51:31] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:53:13] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:53:13] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:54:53] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:54:53] [DEBUG] Modo de depuración de logs activado.
+[2025-06-07 21:54:53] [INFO] Vista Inicial cargada.
+[2025-06-07 21:54:55] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-07 21:54:56] [INFO] Vista Login cargada.
+[2025-06-07 21:55:06] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-07 21:55:06] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-07 21:59:18] [INFO] Aplicación PowerGym iniciada.
+[2025-06-07 21:59:18] [INFO] Vista Inicial cargada.
+[2025-06-07 21:59:19] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-07 21:59:20] [INFO] Vista Login cargada.
+[2025-06-07 21:59:26] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-07 21:59:26] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.

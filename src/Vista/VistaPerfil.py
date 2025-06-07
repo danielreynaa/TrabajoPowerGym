@@ -1,4 +1,3 @@
-# VistaPerfil.py actualizado con callback y boton para volver
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QPushButton
 from PyQt5 import uic
 from src.Conexion.Conexion import Conexion

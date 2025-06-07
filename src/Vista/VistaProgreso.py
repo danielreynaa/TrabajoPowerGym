@@ -1,4 +1,3 @@
-# VistaProgreso.py
 from PyQt5.QtWidgets import QMainWindow, QVBoxLayout
 from PyQt5 import uic
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas

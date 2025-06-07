@@ -1,9 +1,12 @@
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5 import uic
 import hashlib
+from datetime import date 
 
 from src.Vista.VistaLogin import Login
 from src.Modelo.BO.UserBO import UserBO
+
+from src.Logs.Logger import CustomLogger 
 
 Form_Registro, _ = uic.loadUiType("./src/Vista/Ui/VistaRegistro.ui")
 
@@ -16,13 +19,16 @@ class VistaRegistro(QMainWindow, Form_Registro):
         self.btn_volver_login.clicked.connect(self.volver_a_login)
         self.login_window = None
 
+        self.logger = CustomLogger() 
+        self.logger.info("Vista Registro cargada.") 
+
     def procesar_registro(self):
         nombre = self.txt_nombre.text().strip()
         apellidos = self.txt_apellidos.text().strip()
         email = self.txt_email.text().strip()
         contrasena = self.txt_password.text()
         confirm_contrasena = self.txt_confirm_password.text()
-        rol = self.combo_rol.currentText().strip()
+        rol = self.combo_rol.currentText().strip() 
 
         fecha_nacimiento_qdate = self.dateedit_fecha_nacimiento.date()
         fecha_nacimiento = (
@@ -57,6 +63,7 @@ class VistaRegistro(QMainWindow, Form_Registro):
             errores.append("Debe seleccionar un tipo de usuario.")
 
         if errores:
+            self.logger.warning(f"Errores de validación en el registro para {email}: {', '.join(errores)}")
             QMessageBox.warning(self, "Error de Registro", "\n".join(errores))
             return
 
@@ -69,11 +76,12 @@ class VistaRegistro(QMainWindow, Form_Registro):
                 apellidos=apellidos,
                 email=email,
                 contrasena=contrasena_hash,
-                rol=rol,
+                rol=rol, 
                 fecha_nacimiento=fecha_nacimiento,
                 telefono=telefono,
                 peso_corporal=peso_corporal,
             )
+            self.logger.info(f"Nuevo usuario {email} registrado exitosamente con rol: {rol}.")
             QMessageBox.information(
                 self,
                 "Registro Exitoso",
@@ -82,6 +90,7 @@ class VistaRegistro(QMainWindow, Form_Registro):
             self.volver_a_login()
 
         except Exception as e:
+            self.logger.error(f"Fallo al registrar usuario {email}: {e}")
             QMessageBox.critical(
                 self, "Error de Registro", f"No se pudo registrar el usuario: {e}"
             )
@@ -89,7 +98,7 @@ class VistaRegistro(QMainWindow, Form_Registro):
             self.txt_confirm_password.clear()
 
     def volver_a_login(self):
-        print("Volviendo a la pantalla de Login...")
+        self.logger.info("Volviendo de VistaRegistro a VistaLogin (botón 'Volver').")
         self.login_window = Login()
         self.login_window.show()
         self.close()
