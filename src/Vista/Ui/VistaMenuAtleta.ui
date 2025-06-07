@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>PowerGym - Menú Atleta</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="botonProgreso">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -27,7 +27,7 @@
      <string>Ver progreso</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="botonHistorial">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -40,7 +40,7 @@
      <string>Historial de entrenamientos</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="botonPerfil">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -53,7 +53,7 @@
      <string>Ver perfil</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="botonEntrenamiento">
     <property name="geometry">
      <rect>
       <x>100</x>
