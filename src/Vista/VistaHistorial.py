@@ -1,29 +1,34 @@
-# src/Vista/VistaHistorial.py
-
-import sqlite3
+# VistaHistorial.py
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt5 import uic
+from src.Conexion.Conexion import Conexion
 
 class VistaHistorial(QMainWindow):
     def __init__(self, usuario):
         super().__init__()
         uic.loadUi("src/Vista/Ui/VistaHistorial.ui", self)
 
-        self.usuario = usuario  # usuario es un dict con al menos el campo "email"
-
-        self.conn = sqlite3.connect("powergym.db")
+        self.usuario = usuario
+        self.conn = Conexion().conexion
         self.cursor = self.conn.cursor()
 
         self.cargar_historial()
         self.mostrar_records()
 
+    def obtener_id_usuario(self):
+        self.cursor.execute("SELECT id_usuario FROM Usuarios WHERE email = ?", (self.usuario["email"],))
+        return self.cursor.fetchone()[0]
+
     def cargar_historial(self):
+        id_usuario = self.obtener_id_usuario()
+
         self.cursor.execute("""
-            SELECT fecha, ejercicio, peso
-            FROM historial
-            WHERE usuario = ?
-            ORDER BY fecha DESC
-        """, (self.usuario["email"],))
+            SELECT e.fecha_entrenamiento, r.tipo_levantamiento, r.peso_kg
+            FROM Entrenamientos e
+            JOIN RegistrosLevantamientos r ON e.id_entrenamiento = r.id_entrenamiento
+            WHERE e.id_atleta = ?
+            ORDER BY e.fecha_entrenamiento DESC
+        """, (id_usuario,))
         registros = self.cursor.fetchall()
 
         self.tablaHistorial.setRowCount(len(registros))
@@ -31,22 +36,26 @@ class VistaHistorial(QMainWindow):
         self.tablaHistorial.setHorizontalHeaderLabels(["Fecha", "Ejercicio", "Peso (kg)"])
 
         for fila, (fecha, ejercicio, peso) in enumerate(registros):
-            self.tablaHistorial.setItem(fila, 0, QTableWidgetItem(fecha))
+            self.tablaHistorial.setItem(fila, 0, QTableWidgetItem(str(fecha)))
             self.tablaHistorial.setItem(fila, 1, QTableWidgetItem(ejercicio))
             self.tablaHistorial.setItem(fila, 2, QTableWidgetItem(str(peso)))
 
     def mostrar_records(self):
+        id_usuario = self.obtener_id_usuario()
+
         ejercicios = {
             "Sentadilla": self.recordSentadilla,
-            "Press Banca": self.recordPressBanca,
+            "Banca": self.recordPressBanca,
             "Peso Muerto": self.recordPesoMuerto
         }
 
         for ejercicio, label in ejercicios.items():
             self.cursor.execute("""
-                SELECT MAX(peso) FROM historial
-                WHERE usuario = ? AND ejercicio = ?
-            """, (self.usuario["email"], ejercicio))
+                SELECT MAX(r.peso_kg)
+                FROM Entrenamientos e
+                JOIN RegistrosLevantamientos r ON e.id_entrenamiento = r.id_entrenamiento
+                WHERE e.id_atleta = ? AND r.tipo_levantamiento = ?
+            """, (id_usuario, ejercicio))
             max_peso = self.cursor.fetchone()[0]
             texto = f"{ejercicio}: {max_peso if max_peso else '-'} kg"
             label.setText(texto)
