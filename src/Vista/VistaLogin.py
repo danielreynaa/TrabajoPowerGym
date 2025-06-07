@@ -4,6 +4,7 @@ import hashlib
 
 from src.Modelo.BO.UserBO import UserBO
 from src.Modelo.VO.LoginVo import LoginVo
+from src.controlador.ControladorUser import ControladorUser
 
 Form, _ = uic.loadUiType("./src/Vista/Ui/VistaLogin.ui")
 
@@ -13,6 +14,7 @@ class Login(QMainWindow, Form):
         self.setupUi(self)
         self.botonaceptar.clicked.connect(self.on_button_click)
         self.callback_login_exitoso = callback_login_exitoso
+        self.controller= ControladorUser()
 
     def on_button_click(self):
         email = self.Nombreusuario.text().strip()
@@ -25,10 +27,8 @@ class Login(QMainWindow, Form):
         contrasena_hash = hashlib.sha256(contrasena.encode()).hexdigest()
         login_vo = LoginVo(email=email, contrasena=contrasena_hash)
 
-        user_bo = UserBO()
-
-        if user_bo.comprobar_login(login_vo):
-            usuario = user_bo.obtener_usuario_por_email(email)
+        if self.controller.login(login_vo):
+            usuario = self.controller.obtener_usuario_por_email(email)
             if not usuario:
                 QMessageBox.critical(self, "Error", "No se pudo obtener el rol del usuario.")
                 return
