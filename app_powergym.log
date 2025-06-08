@@ -1561,3 +1561,264 @@
 [2025-06-08 17:13:43] [INFO] Visa inicial cargada.
 [2025-06-08 17:13:43] [INFO] Usuario regresó a la VistaInicial desde Login.
 >>>>>>> 9aa65463be24853019a5848e558d3715da098eb7
+[2025-06-08 17:16:04] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:16:04] [INFO] Vista Inicial cargada.
+[2025-06-08 17:16:04] [INFO] Visa inicial cargada.
+[2025-06-08 17:16:06] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:16:06] [INFO] UserDao inicializado.
+[2025-06-08 17:16:06] [INFO] UserBO inicializado.
+[2025-06-08 17:16:06] [INFO] Vista Login cargada.
+[2025-06-08 17:16:11] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 17:16:11] [INFO] Usuario admin@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:16:11] [INFO] Vista Menu Administrador cargada para usuario: admin@gmail.com
+[2025-06-08 17:16:11] [INFO] Navegando a VistaMenuAdministrador para admin@gmail.com.
+[2025-06-08 17:16:12] [INFO] Navegando a VistaTipoUsuarios para admin@gmail.com
+[2025-06-08 17:16:12] [INFO] VistaTipoUsuarios: cargada para admin@gmail.com (ID 9).
+[2025-06-08 17:16:13] [INFO] VistaTipoUsuarios: viendo lista de 'Atleta'.
+[2025-06-08 17:16:13] [INFO] UserDao inicializado.
+[2025-06-08 17:16:13] [INFO] UserBO inicializado.
+[2025-06-08 17:16:16] [INFO] VistaTipoUsuarios: viendo lista de 'Entrenador'.
+[2025-06-08 17:16:16] [INFO] UserDao inicializado.
+[2025-06-08 17:16:16] [INFO] UserBO inicializado.
+[2025-06-08 17:16:18] [INFO] VistaTipoUsuarios: volviendo al menú para admin@gmail.com.
+[2025-06-08 17:16:18] [INFO] Volviendo a VistaMenuAdministrador para usuario: admin@gmail.com
+[2025-06-08 17:18:04] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:18:04] [INFO] Vista Inicial cargada.
+[2025-06-08 17:18:04] [INFO] Visa inicial cargada.
+[2025-06-08 17:18:07] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:18:07] [INFO] UserDao inicializado.
+[2025-06-08 17:18:07] [INFO] UserBO inicializado.
+[2025-06-08 17:18:07] [INFO] Vista Login cargada.
+[2025-06-08 17:18:13] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:18:13] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:18:13] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:18:13] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:18:15] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:18:15] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:18:15] [INFO] UserDao inicializado.
+[2025-06-08 17:18:15] [INFO] UserBO inicializado.
+[2025-06-08 17:18:15] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:18:17] [INFO] VistaSeleccionAtletasAsignados: volviendo al menú entrenador.
+[2025-06-08 17:18:17] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.
+[2025-06-08 17:18:19] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 17:19:26] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:19:26] [INFO] Vista Inicial cargada.
+[2025-06-08 17:19:26] [INFO] Visa inicial cargada.
+[2025-06-08 17:19:29] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:19:29] [INFO] UserDao inicializado.
+[2025-06-08 17:19:29] [INFO] UserBO inicializado.
+[2025-06-08 17:19:29] [INFO] Vista Login cargada.
+[2025-06-08 17:19:40] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:19:40] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:19:40] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:19:40] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:19:41] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:19:41] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:19:41] [INFO] UserDao inicializado.
+[2025-06-08 17:19:41] [INFO] UserBO inicializado.
+[2025-06-08 17:19:41] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:19:43] [INFO] Seleccionado atleta atleta@gmail.com para ver progreso.
+[2025-06-08 17:19:43] [INFO] UserDao inicializado.
+[2025-06-08 17:19:43] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:19:43] [INFO] ProgresoBO inicializado.
+[2025-06-08 17:19:43] [INFO] VistaProgreso: inicializada para atleta@gmail.com.
+[2025-06-08 17:19:43] [INFO] VistaProgreso: actualizando gráfica de 'Sentadilla' para atleta@gmail.com.
+[2025-06-08 17:19:43] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: atleta@gmail.com.
+[2025-06-08 17:19:43] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 0 puntos.
+[2025-06-08 17:19:43] [INFO] VistaProgreso: sin datos para 'Sentadilla' de atleta@gmail.com.
+[2025-06-08 17:21:15] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:21:15] [INFO] Vista Inicial cargada.
+[2025-06-08 17:21:15] [INFO] Visa inicial cargada.
+[2025-06-08 17:21:16] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:21:16] [INFO] UserDao inicializado.
+[2025-06-08 17:21:16] [INFO] UserBO inicializado.
+[2025-06-08 17:21:16] [INFO] Vista Login cargada.
+[2025-06-08 17:21:21] [INFO] BO: Comprobando login para email: atleta@gmail.com.
+[2025-06-08 17:21:22] [INFO] Usuario atleta@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:21:22] [INFO] Vista Menu Atleta cargada para usuario: atleta@gmail.com
+[2025-06-08 17:21:22] [INFO] Navegando a VistaMenuAtleta para atleta@gmail.com.
+[2025-06-08 17:21:28] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:21:28] [INFO] Vista Inicial cargada.
+[2025-06-08 17:21:28] [INFO] Visa inicial cargada.
+[2025-06-08 17:21:29] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:21:30] [INFO] UserDao inicializado.
+[2025-06-08 17:21:30] [INFO] UserBO inicializado.
+[2025-06-08 17:21:30] [INFO] Vista Login cargada.
+[2025-06-08 17:21:35] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 17:21:35] [INFO] Usuario admin@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:21:35] [INFO] Vista Menu Administrador cargada para usuario: admin@gmail.com
+[2025-06-08 17:21:35] [INFO] Navegando a VistaMenuAdministrador para admin@gmail.com.
+[2025-06-08 17:21:39] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:21:39] [INFO] Vista Inicial cargada.
+[2025-06-08 17:21:39] [INFO] Visa inicial cargada.
+[2025-06-08 17:21:40] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:21:40] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:21:54] [INFO] UserDao inicializado.
+[2025-06-08 17:21:54] [INFO] UserBO inicializado.
+[2025-06-08 17:21:54] [INFO] BO: Intentando registrar usuario: aaa@gmail.com con rol: Administrador.
+[2025-06-08 17:21:54] [ERROR] Error al insertar usuario aaa@gmail.com: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('Fernando', 'aa', 'aaa@gmail.com', '9834876dcfb05cb16' at line 3
+[2025-06-08 17:21:54] [ERROR] BO: Error al registrar usuario aaa@gmail.com: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('Fernando', 'aa', 'aaa@gmail.com', '9834876dcfb05cb16' at line 3
+[2025-06-08 17:21:54] [ERROR] VistaRegistro: error al registrar 'aaa@gmail.com' → java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('Fernando', 'aa', 'aaa@gmail.com', '9834876dcfb05cb16' at line 3
+[2025-06-08 17:36:01] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:36:01] [INFO] Vista Inicial cargada.
+[2025-06-08 17:36:01] [INFO] Visa inicial cargada.
+[2025-06-08 17:36:03] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:36:03] [INFO] UserDao inicializado.
+[2025-06-08 17:36:03] [INFO] UserBO inicializado.
+[2025-06-08 17:36:03] [INFO] Vista Login cargada.
+[2025-06-08 17:36:09] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:36:09] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:36:09] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:36:09] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:36:10] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:36:10] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:36:10] [INFO] UserDao inicializado.
+[2025-06-08 17:36:10] [INFO] UserBO inicializado.
+[2025-06-08 17:36:10] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:36:11] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 17:36:11] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 17:36:11] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 17:36:11] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:36:11] [INFO] UserDao inicializado.
+[2025-06-08 17:36:11] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 17:37:15] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:37:15] [INFO] Vista Inicial cargada.
+[2025-06-08 17:37:15] [INFO] Visa inicial cargada.
+[2025-06-08 17:37:21] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:37:22] [INFO] UserDao inicializado.
+[2025-06-08 17:37:22] [INFO] UserBO inicializado.
+[2025-06-08 17:37:22] [INFO] Vista Login cargada.
+[2025-06-08 17:37:29] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:37:29] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:37:29] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:37:29] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:37:30] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:37:30] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:37:30] [INFO] UserDao inicializado.
+[2025-06-08 17:37:30] [INFO] UserBO inicializado.
+[2025-06-08 17:37:30] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:37:31] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 17:37:31] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 17:37:31] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 17:37:31] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:37:31] [INFO] UserDao inicializado.
+[2025-06-08 17:37:31] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 17:40:12] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:40:12] [INFO] Vista Inicial cargada.
+[2025-06-08 17:40:12] [INFO] Visa inicial cargada.
+[2025-06-08 17:40:13] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:40:14] [INFO] UserDao inicializado.
+[2025-06-08 17:40:14] [INFO] UserBO inicializado.
+[2025-06-08 17:40:14] [INFO] Vista Login cargada.
+[2025-06-08 17:40:20] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:40:20] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:40:20] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:40:20] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:40:21] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:40:21] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:40:21] [INFO] UserDao inicializado.
+[2025-06-08 17:40:21] [INFO] UserBO inicializado.
+[2025-06-08 17:40:21] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:40:22] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 17:40:22] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 17:40:22] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 17:40:22] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:40:22] [INFO] UserDao inicializado.
+[2025-06-08 17:40:22] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 17:42:57] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:42:57] [INFO] Vista Inicial cargada.
+[2025-06-08 17:42:57] [INFO] Visa inicial cargada.
+[2025-06-08 17:42:58] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:42:59] [INFO] UserDao inicializado.
+[2025-06-08 17:42:59] [INFO] UserBO inicializado.
+[2025-06-08 17:42:59] [INFO] Vista Login cargada.
+[2025-06-08 17:43:07] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:43:07] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:43:07] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:43:07] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:43:08] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:43:08] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:43:08] [INFO] UserDao inicializado.
+[2025-06-08 17:43:08] [INFO] UserBO inicializado.
+[2025-06-08 17:43:08] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:43:09] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 17:43:09] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 17:43:09] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 17:43:09] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:43:09] [INFO] UserDao inicializado.
+[2025-06-08 17:43:09] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 17:43:53] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:43:53] [INFO] Vista Inicial cargada.
+[2025-06-08 17:43:53] [INFO] Visa inicial cargada.
+[2025-06-08 17:43:54] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:43:55] [INFO] UserDao inicializado.
+[2025-06-08 17:43:55] [INFO] UserBO inicializado.
+[2025-06-08 17:43:55] [INFO] Vista Login cargada.
+[2025-06-08 17:44:03] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:44:03] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:44:03] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:44:03] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:44:04] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:44:04] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:44:04] [INFO] UserDao inicializado.
+[2025-06-08 17:44:04] [INFO] UserBO inicializado.
+[2025-06-08 17:44:04] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:44:05] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 17:44:05] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 17:44:05] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 17:44:05] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:44:05] [INFO] UserDao inicializado.
+[2025-06-08 17:44:05] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 17:44:20] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:44:20] [INFO] Vista Inicial cargada.
+[2025-06-08 17:44:20] [INFO] Visa inicial cargada.
+[2025-06-08 17:44:21] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:44:21] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:44:22] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 17:44:22] [INFO] UserDao inicializado.
+[2025-06-08 17:44:22] [INFO] UserBO inicializado.
+[2025-06-08 17:44:22] [INFO] Vista Login cargada.
+[2025-06-08 17:44:22] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 17:44:23] [INFO] UserDao inicializado.
+[2025-06-08 17:44:23] [INFO] UserBO inicializado.
+[2025-06-08 17:44:23] [INFO] Vista Login cargada.
+[2025-06-08 17:44:32] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:44:32] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:44:32] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:44:32] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:44:33] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:44:33] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:44:33] [INFO] UserDao inicializado.
+[2025-06-08 17:44:33] [INFO] UserBO inicializado.
+[2025-06-08 17:44:33] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:44:34] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 17:44:34] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 17:44:34] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 17:44:34] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:44:34] [INFO] UserDao inicializado.
+[2025-06-08 17:44:34] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 17:44:42] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:44:42] [INFO] Vista Inicial cargada.
+[2025-06-08 17:44:42] [INFO] Visa inicial cargada.
+[2025-06-08 17:44:51] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 17:44:51] [INFO] UserDao inicializado.
+[2025-06-08 17:44:51] [INFO] UserBO inicializado.
+[2025-06-08 17:44:51] [INFO] Vista Login cargada.
+[2025-06-08 17:44:58] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 17:44:58] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:44:58] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 17:44:58] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 17:44:59] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 17:44:59] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 17:44:59] [INFO] UserDao inicializado.
+[2025-06-08 17:44:59] [INFO] UserBO inicializado.
+[2025-06-08 17:44:59] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 17:44:59] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 17:44:59] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 17:44:59] [INFO] EntrenamientoDAO: inicializado.
+[2025-06-08 17:44:59] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 17:45:00] [INFO] UserDao inicializado.
+[2025-06-08 17:45:00] [INFO] EntrenamientoBO inicializado.

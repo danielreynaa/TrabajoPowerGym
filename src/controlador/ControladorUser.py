@@ -19,4 +19,4 @@ class ControladorUser:
         
     def listar_usuarios_por_rol(self, rol: str) -> List[SuperVo]:
         return self.user_bo.listar_usuarios_por_rol(rol)
-    
+

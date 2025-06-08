@@ -6,6 +6,7 @@ from PyQt5 import uic
 from src.controlador.ControladorUser import ControladorUser
 from src.Logs.Logger import CustomLogger
 from src.Vista.VistaProgreso import VistaProgreso
+from src.Vista.VistaEntrenamientosAsignados import VistaEntrenamientosAsignados
 
 class VistaSeleccionAtletasAsignados(QMainWindow):
     def __init__(self, entrenador_vo, volver_callback):
@@ -40,6 +41,17 @@ class VistaSeleccionAtletasAsignados(QMainWindow):
         atleta = self.atletas[row]
         self.logger.info(f"Seleccionado atleta {atleta.email} para ver progreso.")
         ventana = VistaProgreso(atleta, self.show)
+        ventana.show()
+        self.close()
+    
+    def abrir_progreso_atleta(self, row, _col):
+        atleta = self.atletas[row]
+        self.logger.info(f"Seleccionado atleta {atleta.email} para ver entrenamientos asignados.")
+        ventana = VistaEntrenamientosAsignados(
+            entrenador_vo   = self.entrenador,
+            atleta_vo       = atleta,
+            volver_callback = self.show
+        )
         ventana.show()
         self.close()
 

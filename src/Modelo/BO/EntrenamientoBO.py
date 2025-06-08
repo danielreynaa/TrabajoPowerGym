@@ -73,3 +73,11 @@ class EntrenamientoBO:
         except Exception as e:
             self.logger.error(f"BO: Error general al registrar entrenamiento para {email_atleta}: {e}")
             return False, f"Fallo en la lógica de negocio al registrar el entrenamiento: {e}", []
+        
+    def listar_entrenamientos_asignados(self, id_entrenador: int, id_atleta: int):
+        # Si en el futuro filtras por entrenador, aquí lo harás;
+        # por ahora devolvemos todos los del atleta.
+        return self.listar_entrenamientos_por_atleta(id_atleta)
+    
+    def listar_entrenamientos_por_atleta(self, id_atleta: int):
+        return self.entrenamiento_dao.listar_por_atleta(id_atleta)

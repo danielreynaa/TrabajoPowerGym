@@ -1,33 +1,50 @@
-
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.EntrenamientoVo import EntrenamientoVo
 from src.Logs.Logger import CustomLogger
+from typing import List
 
-class EntrenamientoDAO:
+class EntrenamientoDAO(Conexion):
+    SQL_LISTAR_POR_ATLETA = """
+        SELECT id_entrenamiento,
+               id_atleta,
+               fecha_entrenamiento,
+               notas
+          FROM Entrenamientos
+         WHERE id_atleta = ?
+      ORDER BY fecha_entrenamiento DESC
+    """
+
     def __init__(self):
-        self.conexion_db = Conexion() # Crea una instancia de Conexión
-        self.conn = self.conexion_db.conexion
-        self.cursor = self.conn.cursor()
-        self.logger = CustomLogger()
-        self.logger.info("EntrenamientoDAO inicializado.")
+        super().__init__()  # Inicializa self.conexion
+        self.logger = CustomLogger(log_file="app_powergym.log", log_level="DEBUG")
+        self.logger.info("EntrenamientoDAO: inicializado.")
 
-    def crear_entrenamiento(self, entrenamiento_vo: EntrenamientoVo):
-        self.logger.debug(f"DAO: Creando nuevo entrenamiento para id_atleta {entrenamiento_vo.id_atleta} en fecha {entrenamiento_vo.fecha_entrenamiento}.")
+    def crear_entrenamiento(self, vo: EntrenamientoVo) -> int:
+        cursor = self.getCursor()
         try:
-            self.cursor.execute(
-                "INSERT INTO Entrenamientos (id_atleta, fecha_entrenamiento, notas) VALUES (?, ?, ?)",
-                (entrenamiento_vo.id_atleta, entrenamiento_vo.fecha_entrenamiento, entrenamiento_vo.notas)
+            self.logger.debug(
+                f"DAO: Insertando Entrenamiento para atleta {vo.id_atleta} en {vo.fecha_entrenamiento}"
             )
-            self.cursor.execute("SELECT LAST_INSERT_ID()")
-            result = self.cursor.fetchone()
-            id_entrenamiento = result[0] if result else None
+            cursor.execute(
+                "INSERT INTO Entrenamientos (id_atleta, fecha_entrenamiento, notas) VALUES (?, ?, ?)",
+                (vo.id_atleta, vo.fecha_entrenamiento, vo.notas)
+            )
+            # Obtener ID generado
+            cursor.execute("SELECT LAST_INSERT_ID()")
+            result = cursor.fetchone()
+            return result[0] if result else None
+        finally:
+            cursor.close()
 
-            if id_entrenamiento:
-                self.logger.debug(f"DAO: Entrenamiento {id_entrenamiento} insertado correctamente.")
-                return id_entrenamiento
-            else:
-                self.logger.error("DAO: No se pudo obtener el ID del entrenamiento recién insertado.")
-                return None
-        except Exception as e:
-            self.logger.error(f"DAO: Error al crear entrenamiento para atleta {entrenamiento_vo.id_atleta}: {e}")
-            raise 
+    def listar_por_atleta(self, id_atleta: int) -> List[EntrenamientoVo]:
+        cursor = self.getCursor()
+        sesiones: List[EntrenamientoVo] = []
+        try:
+            cursor.execute(self.SQL_LISTAR_POR_ATLETA, (id_atleta,))
+            rows = cursor.fetchall()
+            self.logger.debug(f"DAO: {len(rows)} sesiones obtenidas para atleta {id_atleta}.")
+            for row in rows:
+                sesiones.append(EntrenamientoVo(*row))
+        finally:
+            cursor.close()
+        return sesiones
