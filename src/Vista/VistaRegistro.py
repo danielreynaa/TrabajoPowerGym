@@ -1,12 +1,11 @@
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5 import uic
 import hashlib
-from datetime import date 
+from datetime import date
 
 from src.Vista.VistaLogin import Login
 from src.Modelo.BO.UserBO import UserBO
-
-from src.Logs.Logger import CustomLogger 
+from src.Logs.Logger import CustomLogger
 
 Form_Registro, _ = uic.loadUiType("./src/Vista/Ui/VistaRegistro.ui")
 
@@ -15,36 +14,28 @@ class VistaRegistro(QMainWindow, Form_Registro):
         super().__init__()
         self.setupUi(self)
 
+        # Logger configurado igual que en main.py
+        self.logger = CustomLogger(log_file="app_powergym.log", log_level="DEBUG")
+        self.logger.info("VistaRegistro: inicializada.")
+
+        # Conexiones de los botones
         self.btn_registrar.clicked.connect(self.procesar_registro)
         self.btn_volver_login.clicked.connect(self.volver_a_login)
-        self.login_window = None
-
-        self.logger = CustomLogger() 
-        self.logger.info("Vista Registro cargada.") 
 
     def procesar_registro(self):
-        nombre = self.txt_nombre.text().strip()
-        apellidos = self.txt_apellidos.text().strip()
-        email = self.txt_email.text().strip()
-        contrasena = self.txt_password.text()
+        nombre             = self.txt_nombre.text().strip()
+        apellidos          = self.txt_apellidos.text().strip()
+        email              = self.txt_email.text().strip()
+        contrasena         = self.txt_password.text()
         confirm_contrasena = self.txt_confirm_password.text()
-        rol = self.combo_rol.currentText().strip() 
+        rol                = self.combo_rol.currentText().strip()
 
-        fecha_nacimiento_qdate = self.dateedit_fecha_nacimiento.date()
-        fecha_nacimiento = (
-            fecha_nacimiento_qdate.toString("yyyy-MM-dd")
-            if fecha_nacimiento_qdate.isValid()
-            else None
-        )
-        telefono = self.txt_telefono.text().strip()
-        peso_corporal = (
-            self.spinbox_peso_corporal.value()
-            if self.spinbox_peso_corporal.value() > 0
-            else None
-        )
+        fecha_qdate  = self.dateedit_fecha_nacimiento.date()
+        fecha_nac    = fecha_qdate.toString("yyyy-MM-dd") if fecha_qdate.isValid() else None
+        telefono     = self.txt_telefono.text().strip()
+        peso_corp    = self.spinbox_peso_corporal.value() if self.spinbox_peso_corporal.value() > 0 else None
 
         errores = []
-
         if not nombre:
             errores.append("El Nombre es obligatorio.")
         if not apellidos:
@@ -63,10 +54,12 @@ class VistaRegistro(QMainWindow, Form_Registro):
             errores.append("Debe seleccionar un tipo de usuario.")
 
         if errores:
-            self.logger.warning(f"Errores de validación en el registro para {email}: {', '.join(errores)}")
+            msg = "; ".join(errores)
+            self.logger.warning(f"VistaRegistro: validación fallida para '{email}' → {msg}")
             QMessageBox.warning(self, "Error de Registro", "\n".join(errores))
             return
 
+        # Hash de la contraseña
         contrasena_hash = hashlib.sha256(contrasena.encode()).hexdigest()
         user_bo = UserBO()
 
@@ -76,29 +69,29 @@ class VistaRegistro(QMainWindow, Form_Registro):
                 apellidos=apellidos,
                 email=email,
                 contrasena=contrasena_hash,
-                rol=rol, 
-                fecha_nacimiento=fecha_nacimiento,
+                rol=rol,
+                fecha_nacimiento=fecha_nac,
                 telefono=telefono,
-                peso_corporal=peso_corporal,
+                peso_corporal=peso_corp
             )
-            self.logger.info(f"Nuevo usuario {email} registrado exitosamente con rol: {rol}.")
+            self.logger.info(f"VistaRegistro: usuario '{email}' registrado exitosamente con rol '{rol}'.")
             QMessageBox.information(
-                self,
-                "Registro Exitoso",
-                "¡Usuario registrado correctamente! Ahora puede iniciar sesión.",
+                self, "Registro Exitoso",
+                "¡Usuario registrado correctamente! Ahora puede iniciar sesión."
             )
             self.volver_a_login()
 
         except Exception as e:
-            self.logger.error(f"Fallo al registrar usuario {email}: {e}")
+            self.logger.error(f"VistaRegistro: error al registrar '{email}' → {e}")
             QMessageBox.critical(
-                self, "Error de Registro", f"No se pudo registrar el usuario: {e}"
+                self, "Error de Registro",
+                f"No se pudo registrar el usuario: {e}"
             )
             self.txt_password.clear()
             self.txt_confirm_password.clear()
 
     def volver_a_login(self):
-        self.logger.info("Volviendo de VistaRegistro a VistaLogin (botón 'Volver').")
+        self.logger.info("VistaRegistro: volviendo a VistaLogin.")
         self.login_window = Login()
         self.login_window.show()
         self.close()
