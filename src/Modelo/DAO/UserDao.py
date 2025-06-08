@@ -1,9 +1,11 @@
-# src/Modelo/DAO/UserDao.py
+
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.SuperVo import SuperVo
 from typing import List, Optional
 
-class UserDao(Conexion):
+from src.Logs.Logger import CustomLogger # AÑADIDO
+
+class UserDao(Conexion): 
     SQL_SELECT = """
         SELECT id_usuario, nombre, apellidos, email, contrasena, rol,
                fecha_registro, fecha_nacimiento, telefono, peso_corporal
@@ -25,7 +27,9 @@ class UserDao(Conexion):
     """
 
     def __init__(self):
-        super().__init__()
+        super().__init__() # Llama al constructor de Conexion
+        self.logger = CustomLogger() # AÑADIDO: Inicializa el Logger
+        self.logger.info("UserDao inicializado.") # AÑADIDO: Log de inicialización
 
     def select(self) -> List[SuperVo]:
         cursor = self.getCursor()
@@ -35,23 +39,22 @@ class UserDao(Conexion):
             for row in cursor.fetchall():
                 usuarios.append(SuperVo(*row))
         except Exception as e:
-            print("❌ Error en SELECT:", e)
+            self.logger.error(f"Error en SELECT de Usuarios: {e}") # AÑADIDO: Usa el logger
         finally:
             cursor.close()
         return usuarios
 
     def insert_user(self, nombre, apellidos, email, contrasena, rol,
-                    fecha_nacimiento=None, telefono=None, peso_corporal=None):
+                     fecha_nacimiento=None, telefono=None, peso_corporal=None):
         cursor = self.getCursor()
         try:
             cursor.execute(self.SQL_INSERT, (
                 nombre, apellidos, email, contrasena, rol,
                 fecha_nacimiento, telefono, peso_corporal
             ))
-            self.conexion.commit()  # IMPORTANTE
-            print("✅ Usuario insertado correctamente.")
+            self.logger.info(f"Usuario {email} insertado correctamente en BD.") # AÑADIDO: Usa el logger
         except Exception as e:
-            print("❌ Error al INSERT:", e)
+            self.logger.error(f"Error al insertar usuario {email}: {e}") # AÑADIDO: Usa el logger
         finally:
             cursor.close()
 
@@ -60,9 +63,10 @@ class UserDao(Conexion):
         try:
             cursor.execute(self.SQL_CONSULTA_LOGIN, (email, contrasena))
             count = cursor.fetchone()[0]
+            self.logger.debug(f"Consulta login para {email}. Coincidencias: {count}") # AÑADIDO: Log
             return count == 1
         except Exception as e:
-            print("❌ Error en login:", e)
+            self.logger.error(f"Error en consulta de login para {email}: {e}") # AÑADIDO: Usa el logger
             return False
         finally:
             cursor.close()
@@ -74,10 +78,12 @@ class UserDao(Conexion):
             fila = cursor.fetchone()
             if fila:
                 columnas = [desc[0] for desc in cursor.description]
+                self.logger.debug(f"Usuario {email} encontrado por email.") # AÑADIDO: Log
                 return dict(zip(columnas, fila))
+            self.logger.warning(f"Usuario {email} no encontrado por email.") # AÑADIDO: Log
             return None
         except Exception as e:
-            print("❌ Error al obtener usuario por email:", e)
+            self.logger.error(f"Error al obtener usuario por email {email}: {e}") # AÑADIDO: Usa el logger
             return None
         finally:
             cursor.close()

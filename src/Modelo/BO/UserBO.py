@@ -1,26 +1,43 @@
-from src.Modelo.DAO.UserDao import UserDao
-from src.Modelo.VO.SuperVo import SuperVo
-from src.Modelo.VO.LoginVo import LoginVo
+# C:\Users\elded\OneDrive\Escritorio\POWER GYM\TrabajoPowerGym\src\Modelo\BO\UserBO.py
+
+from src.Modelo.DAO.UserDao import UserDao # Ya existe
+from src.Modelo.VO.SuperVo import SuperVo # Ya existe
+from src.Modelo.VO.LoginVo import LoginVo # Ya existe
 from typing import List, Optional
+
+# Importa el Logger
+from src.Logs.Logger import CustomLogger # AÑADIDO
 
 class UserBO:
     def __init__(self):
         self.user_dao = UserDao()
+        self.logger = CustomLogger() # AÑADIDO: Inicializa el Logger
+        self.logger.info("UserBO inicializado.") # AÑADIDO: Log de inicialización
 
     def registrar_usuario(self, nombre, apellidos, email, contrasena, rol,
-                          fecha_nacimiento=None, telefono=None, peso_corporal=None):
+                             fecha_nacimiento=None, telefono=None, peso_corporal=None):
+        self.logger.info(f"BO: Intentando registrar usuario: {email} con rol: {rol}.") # AÑADIDO
         if not email or "@" not in email:
+            self.logger.warning(f"BO: Fallo de validación de email al registrar usuario: {email}.") # AÑADIDO
             raise ValueError("Email no válido.")
-        self.user_dao.insert_user(
-            nombre, apellidos, email, contrasena, rol,
-            fecha_nacimiento, telefono, peso_corporal
-        )
+        try:
+            self.user_dao.insert_user(
+                nombre, apellidos, email, contrasena, rol,
+                fecha_nacimiento, telefono, peso_corporal
+            )
+            self.logger.info(f"BO: Usuario {email} registrado con éxito.") # AÑADIDO
+        except Exception as e:
+            self.logger.error(f"BO: Error al registrar usuario {email}: {e}") # AÑADIDO
+            raise
 
     def listar_usuarios(self) -> List[SuperVo]:
+        self.logger.debug("BO: Listando todos los usuarios.") # AÑADIDO
         return self.user_dao.select()
 
     def comprobar_login(self, login_vo: LoginVo) -> bool:
+        self.logger.info(f"BO: Comprobando login para email: {login_vo.email}.") # AÑADIDO
         return self.user_dao.consulta_login(login_vo.email, login_vo.contrasena)
 
     def obtener_usuario_por_email(self, email: str) -> Optional[dict]:
+        self.logger.debug(f"BO: Obteniendo usuario por email: {email}.") # AÑADIDO
         return self.user_dao.obtener_usuario_por_email(email)
