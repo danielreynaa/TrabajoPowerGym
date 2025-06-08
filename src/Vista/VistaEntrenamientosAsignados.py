@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt5 import uic
 
 from src.Logs.Logger import CustomLogger
+from src.controlador.ControladorRegistroLevantamiento import ControladorRegistroLevantamiento
 from src.controlador.ControladorEntrenamiento import ControladorEntrenamiento
 
 class VistaEntrenamientosAsignados(QMainWindow):
@@ -22,25 +23,48 @@ class VistaEntrenamientosAsignados(QMainWindow):
         )
 
         # Controlador de sesiones
+        self.ctrl_registro = ControladorRegistroLevantamiento()
         self.ctrl_entreno = ControladorEntrenamiento()
-        # Debes implementar este método en el controlador:
-        #   listar_entrenamientos_asignados(id_entrenador, id_atleta)
+
+        # Obtener las sesiones asignadas
         sesiones = self.ctrl_entreno.listar_entrenamientos_asignados(
             id_entrenador = self.entrenador.id_usuario,
             id_atleta     = self.atleta.id_usuario
         )
 
-        # Poblar la tabla ordenadas por fecha desc
+        # Configurar tabla: Fecha | Movimientos | Series | Repeticiones | RPE | Notas
+        self.tblEntrenamientos.setColumnCount(6)
+        self.tblEntrenamientos.setHorizontalHeaderLabels([
+            "Fecha", "Movimientos", "Series", "Repeticiones", "RPE", "Notas"
+        ])
+
         self.tblEntrenamientos.setRowCount(len(sesiones))
         for row, sesion in enumerate(sesiones):
-            # sesion.fecha_entrenamiento es un datetime.date o str "YYYY-MM-DD"
+            # Fecha
             fecha = (
                 sesion.fecha_entrenamiento
                 if isinstance(sesion.fecha_entrenamiento, str)
                 else sesion.fecha_entrenamiento.isoformat()
             )
             self.tblEntrenamientos.setItem(row, 0, QTableWidgetItem(fecha))
-            self.tblEntrenamientos.setItem(row, 1, QTableWidgetItem(sesion.notas or ""))
+
+            # Aquí va el cambio: llamamos al método correcto
+            detalles = self.ctrl_registro.listar_movimientos_por_sesion(
+                id_sesion = sesion.id_entrenamiento
+            )
+
+            movimientos  = ", ".join(d.tipo_levantamiento        for d in detalles)
+            series       = ", ".join(str(d.series)      for d in detalles)
+            repeticiones = ", ".join(str(d.repeticiones)for d in detalles)
+            rpes         = ", ".join(str(d.rpe)         for d in detalles)
+
+            self.tblEntrenamientos.setItem(row, 1, QTableWidgetItem(movimientos))
+            self.tblEntrenamientos.setItem(row, 2, QTableWidgetItem(series))
+            self.tblEntrenamientos.setItem(row, 3, QTableWidgetItem(repeticiones))
+            self.tblEntrenamientos.setItem(row, 4, QTableWidgetItem(rpes))
+
+            # Notas al final
+            self.tblEntrenamientos.setItem(row, 5, QTableWidgetItem(sesion.notas or ""))
 
         # Conectar botón volver
         self.btn_volver.clicked.connect(self.volver)

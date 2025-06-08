@@ -1,5 +1,6 @@
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.EntrenamientoVo import EntrenamientoVo
+from src.Modelo.VO.MovimientoVo import MovimientoVo
 from src.Logs.Logger import CustomLogger
 from typing import List
 

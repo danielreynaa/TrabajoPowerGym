@@ -37,3 +37,6 @@ class RegistroLevantamientoBO:
         fechas  = [row[0] for row in datos]
         pesos   = [row[1] for row in datos]
         return fechas, pesos
+    
+    def listar_movimientos_por_sesion(self, id_sesion: int):
+        return self.dao.listar_por_entrenamiento(id_sesion)

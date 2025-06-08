@@ -2,6 +2,7 @@ from src.Modelo.DAO.EntrenamientoDAO import EntrenamientoDAO
 from src.Modelo.DAO.RegistroLevantamientoDAO import RegistroLevantamientoDAO
 from src.Modelo.DAO.UserDao import UserDao
 from src.Modelo.VO.EntrenamientoVo import EntrenamientoVo
+from src.Modelo.VO.MovimientoVo import MovimientoVo
 from src.Modelo.VO.RegistroLevantamientoVo import RegistroLevantamientoVo
 from src.Logs.Logger import CustomLogger
 from datetime import datetime
@@ -88,3 +89,6 @@ class EntrenamientoBO:
 
     def listar_entrenamientos_asignados(self, id_entrenador: int, id_atleta: int) -> List[EntrenamientoVo]:
         return self.entrenamiento_dao.listar_por_entrenador_y_atleta(id_entrenador, id_atleta)
+
+    def listar_movimientos_por_sesion(self, id_entrenamiento: int) -> List[MovimientoVo]:
+        return self.entrenamiento_dao.listar_movimientos_por_sesion(id_entrenamiento)

@@ -1,6 +1,7 @@
 from src.Modelo.BO.EntrenamientoBO import EntrenamientoBO
 from typing import List
 from src.Modelo.VO.EntrenamientoVo import EntrenamientoVo
+from src.Modelo.VO.MovimientoVo import MovimientoVo
 
 class ControladorEntrenamiento:
     def __init__(self):
@@ -25,3 +26,6 @@ class ControladorEntrenamiento:
 
     def listar_entrenamientos_asignados(self, id_entrenador: int, id_atleta: int) -> List[EntrenamientoVo]:
         return self.entrenamiento_bo.listar_entrenamientos_asignados(id_entrenador, id_atleta)
+
+    def listar_movimientos_por_sesion(self, id_sesion: int) -> List[MovimientoVo]:
+        return self.entrenamiento_bo.listar_movimientos_por_sesion(id_sesion)

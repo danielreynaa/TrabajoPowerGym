@@ -34,3 +34,7 @@ class ControladorRegistroLevantamiento:
 
     def obtener_progreso(self, id_atleta: int, tipo: str) -> tuple[list, list]:
         return self.bo.obtener_progreso(id_atleta, tipo)
+
+    def listar_movimientos_por_sesion(self, id_sesion: int):
+        return self.bo.listar_movimientos_por_sesion(id_sesion)
+

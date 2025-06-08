@@ -89,3 +89,44 @@ class RegistroLevantamientoDAO:
         except Exception as e:
             self.logger.error(f"DAO: Error al contar entrenamientos de {tipo_levantamiento} para atleta {id_atleta}: {e}")
             raise 
+        
+
+    def listar_por_entrenamiento(self, id_entrenamiento: int) -> list[RegistroLevantamientoVo]:
+        """
+        Devuelve todos los registros de levantamiento para una sesión (id_entrenamiento),
+        incluyendo tipo_levantamiento, series, repeticiones y rpe.
+        """
+        self.logger.debug(f"DAO: listando levantamientos para sesión {id_entrenamiento}")
+        try:
+            self.cursor.execute("""
+                SELECT id_registro,
+                       id_entrenamiento,
+                       tipo_levantamiento,
+                       peso_kg,
+                       repeticiones,
+                       series,
+                       rpe,
+                       id_usuario
+                  FROM RegistrosLevantamientos
+                 WHERE id_entrenamiento = ?
+              ORDER BY id_registro ASC
+            """, (id_entrenamiento,))
+            filas = self.cursor.fetchall()
+            movimientos = []
+            for id_registro, id_entrenamiento, tipo_levantamiento, peso_kg, repeticiones, series, rpe, id_usuario in filas:
+                 movimientos.append(RegistroLevantamientoVo(
+                    id_registro       = id_registro,
+                    id_entrenamiento  = id_entrenamiento,
+                    tipo_levantamiento= tipo_levantamiento,
+                    peso_kg           = peso_kg,
+                    repeticiones      = repeticiones,
+                    series            = series,
+                    rpe               = rpe,
+                    id_usuario        = id_usuario,
+                 ))
+            self.logger.debug(f"DAO: {len(movimientos)} levantamientos obtenidos")
+            return movimientos
+
+        except Exception as e:
+            self.logger.error(f"DAO: Error listando levantamientos para sesión {id_entrenamiento}: {e}")
+            raise
