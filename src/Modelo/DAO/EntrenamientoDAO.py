@@ -18,7 +18,6 @@ class EntrenamientoDAO:
                 "INSERT INTO Entrenamientos (id_atleta, fecha_entrenamiento, notas) VALUES (?, ?, ?)",
                 (entrenamiento_vo.id_atleta, entrenamiento_vo.fecha_entrenamiento, entrenamiento_vo.notas)
             )
-            # Obtener el ID de la última fila insertada con la consulta específica de MySQL
             self.cursor.execute("SELECT LAST_INSERT_ID()")
             result = self.cursor.fetchone()
             id_entrenamiento = result[0] if result else None
@@ -31,4 +30,4 @@ class EntrenamientoDAO:
                 return None
         except Exception as e:
             self.logger.error(f"DAO: Error al crear entrenamiento para atleta {entrenamiento_vo.id_atleta}: {e}")
-            raise # Propagar la excepción
+            raise 

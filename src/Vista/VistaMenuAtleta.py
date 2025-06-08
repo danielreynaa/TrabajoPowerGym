@@ -1,6 +1,6 @@
+
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import uic
-
 from src.Vista.VistaEntrenamiento import VistaEntrenamiento
 from src.Vista.VistaHistorial import VistaHistorial
 from src.Vista.VistaProgreso import VistaProgreso
@@ -12,10 +12,10 @@ class VistaMenuAtleta(QMainWindow):
     def __init__(self, usuario):
         super().__init__()
         uic.loadUi("src/Vista/Ui/VistaMenuAtleta.ui", self)
-        self.usuario = usuario  # ahora es un SuperVo
+        self.usuario = usuario  # ahora es un SuperVo, como hemos depurado
 
         self.logger = CustomLogger()
-        # Accedemos al atributo .email en lugar de .get()
+        # Accedemos al atributo .email del objeto SuperVo
         self.logger.info(f"Vista Menu Atleta cargada para usuario: {self.usuario.email}")
 
         self.botonEntrenamiento.clicked.connect(self.abrir_entrenamiento)
@@ -48,7 +48,8 @@ class VistaMenuAtleta(QMainWindow):
     def abrir_perfil(self):
         try:
             self.logger.info(f"Navegando de VistaMenuAtleta a VistaPerfil para usuario: {self.usuario.email}")
-            # Pasamos solo el email (string) y el callback
+            # Pasamos solo el email (string) a VistaPerfil.
+            # Accedemos al atributo .email del objeto SuperVo
             self.ventana_perfil = VistaPerfil(self.usuario.email, self.mostrar)
             self.ventana_perfil.show()
             self.close()
