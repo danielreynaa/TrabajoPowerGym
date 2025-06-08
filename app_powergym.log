@@ -2598,3 +2598,89 @@
 [2025-06-08 20:02:13] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
 [2025-06-08 20:02:20] [INFO] Sesión creada con ID=14
 [2025-06-08 20:02:22] [INFO] VistaAsignarEntrenamiento: volviendo.
+[2025-06-08 20:05:21] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 20:05:21] [INFO] Vista Inicial cargada.
+[2025-06-08 20:05:21] [INFO] Visa inicial cargada.
+[2025-06-08 20:05:23] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 20:05:25] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:05:25] [INFO] UserBO inicializado.
+[2025-06-08 20:05:25] [INFO] Vista Login cargada.
+[2025-06-08 20:05:30] [INFO] BO: Comprobando login para email: at@gmail.com.
+[2025-06-08 20:05:30] [INFO] Usuario at@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 20:05:31] [INFO] Vista Menu Atleta cargada para usuario: at@gmail.com
+[2025-06-08 20:05:31] [INFO] Navegando a VistaMenuAtleta para at@gmail.com.
+[2025-06-08 20:05:32] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: at@gmail.com
+[2025-06-08 20:05:32] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 20:05:32] [INFO] VistaEntrenamiento: cargada para at@gmail.com (ID 13).
+[2025-06-08 20:05:35] [INFO] VistaEntrenamiento: regresando al menú para at@gmail.com.
+[2025-06-08 20:05:35] [INFO] Volviendo a Vista Menu Atleta para usuario: at@gmail.com
+[2025-06-08 20:05:36] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: at@gmail.com
+[2025-06-08 20:05:36] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:05:36] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 20:05:36] [INFO] HistorialBO inicializado.
+[2025-06-08 20:05:36] [INFO] Vista Historial cargada para usuario: at@gmail.com.
+[2025-06-08 20:05:36] [INFO] Cargando historial de entrenamientos para usuario: at@gmail.com.
+[2025-06-08 20:05:36] [INFO] BO: Obteniendo historial completo para atleta: at@gmail.com.
+[2025-06-08 20:05:36] [INFO] BO: Historial completo para atleta at@gmail.com obtenido: 0 registros.
+[2025-06-08 20:05:36] [INFO] Mostrando récords de levantamiento para usuario: at@gmail.com.
+[2025-06-08 20:05:36] [INFO] BO: Obteniendo récords para atleta: at@gmail.com.
+[2025-06-08 20:05:36] [INFO] BO: Récords para atleta at@gmail.com obtenidos: {'Sentadilla': 44.0, 'Banca': 5.0, 'Peso Muerto': 5.0}.
+[2025-06-08 20:05:36] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: at@gmail.com.
+[2025-06-08 20:05:36] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: at@gmail.com.
+[2025-06-08 20:05:36] [INFO] BO: Conteo de entrenamientos por ejercicio para atleta at@gmail.com obtenido: {'Sentadilla': 2, 'Banca': 2, 'Peso Muerto': 2}.
+[2025-06-08 20:05:37] [INFO] Volviendo de Vista Historial a Vista Menu Atleta para usuario: at@gmail.com.
+[2025-06-08 20:05:37] [INFO] Volviendo a Vista Menu Atleta para usuario: at@gmail.com
+[2025-06-08 20:05:37] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: at@gmail.com
+[2025-06-08 20:05:37] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:05:37] [INFO] UserBO inicializado.
+[2025-06-08 20:05:37] [INFO] VistaPerfil cargada para at@gmail.com
+[2025-06-08 20:05:38] [INFO] Volviendo a Vista Menu Atleta para usuario: at@gmail.com
+[2025-06-08 20:05:39] [INFO] Navegando de VistaMenuAtleta a VistaProgreso para usuario: at@gmail.com
+[2025-06-08 20:05:39] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:05:39] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 20:05:39] [INFO] ProgresoBO inicializado.
+[2025-06-08 20:05:39] [INFO] VistaProgreso: inicializada para at@gmail.com.
+[2025-06-08 20:05:39] [INFO] VistaProgreso: actualizando gráfica de 'Sentadilla' para at@gmail.com.
+[2025-06-08 20:05:39] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: at@gmail.com.
+[2025-06-08 20:05:39] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 0 puntos.
+[2025-06-08 20:05:39] [INFO] VistaProgreso: sin datos para 'Sentadilla' de at@gmail.com.
+[2025-06-08 20:05:40] [INFO] VistaProgreso: regresando al menú para at@gmail.com.
+[2025-06-08 20:05:40] [INFO] Volviendo a Vista Menu Atleta para usuario: at@gmail.com
+[2025-06-08 20:05:44] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 20:05:44] [INFO] Vista Inicial cargada.
+[2025-06-08 20:05:44] [INFO] Visa inicial cargada.
+[2025-06-08 20:05:46] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 20:05:47] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:05:47] [INFO] UserBO inicializado.
+[2025-06-08 20:05:47] [INFO] Vista Login cargada.
+[2025-06-08 20:05:52] [INFO] BO: Comprobando login para email: a@gmail.com.
+[2025-06-08 20:05:52] [INFO] Usuario a@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 20:05:52] [INFO] Vista Menu Administrador cargada para usuario: a@gmail.com
+[2025-06-08 20:05:52] [INFO] Navegando a VistaMenuAdministrador para a@gmail.com.
+[2025-06-08 20:05:53] [INFO] Navegando a VistaTipoUsuarios para a@gmail.com
+[2025-06-08 20:05:53] [INFO] VistaTipoUsuarios: cargada para a@gmail.com (ID 11).
+[2025-06-08 20:05:54] [INFO] VistaTipoUsuarios: viendo lista de 'Atleta'.
+[2025-06-08 20:05:54] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:05:54] [INFO] UserBO inicializado.
+[2025-06-08 20:05:57] [INFO] VistaTipoUsuarios: viendo lista de 'Entrenador'.
+[2025-06-08 20:05:57] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:05:57] [INFO] UserBO inicializado.
+[2025-06-08 20:07:11] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 20:07:11] [INFO] Vista Inicial cargada.
+[2025-06-08 20:07:11] [INFO] Visa inicial cargada.
+[2025-06-08 20:07:13] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 20:07:14] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:07:14] [INFO] UserBO inicializado.
+[2025-06-08 20:07:14] [INFO] Vista Login cargada.
+[2025-06-08 20:07:19] [INFO] BO: Comprobando login para email: a@gmail.com.
+[2025-06-08 20:07:19] [INFO] Usuario a@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 20:07:19] [INFO] Vista Menu Administrador cargada para usuario: a@gmail.com
+[2025-06-08 20:07:19] [INFO] Navegando a VistaMenuAdministrador para a@gmail.com.
+[2025-06-08 20:07:20] [INFO] Navegando a VistaTipoUsuarios para a@gmail.com
+[2025-06-08 20:07:20] [INFO] VistaTipoUsuarios: cargada para a@gmail.com (ID 11).
+[2025-06-08 20:07:21] [INFO] VistaTipoUsuarios: viendo lista de 'Atleta'.
+[2025-06-08 20:07:21] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:07:21] [INFO] UserBO inicializado.
+[2025-06-08 20:07:23] [INFO] VistaTipoUsuarios: viendo lista de 'Entrenador'.
+[2025-06-08 20:07:23] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:07:23] [INFO] UserBO inicializado.
