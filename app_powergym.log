@@ -2073,3 +2073,88 @@
 [2025-06-08 19:00:56] [INFO] Encontrados 1 atletas para asignar entrenamiento.
 [2025-06-08 19:00:59] [INFO] VistaSeleccionAtletaAsignarEntrenamiento: volviendo al menú.
 [2025-06-08 19:00:59] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.
+[2025-06-08 19:03:56] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:03:56] [INFO] Vista Inicial cargada.
+[2025-06-08 19:03:56] [INFO] Visa inicial cargada.
+[2025-06-08 19:03:57] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:03:59] [INFO] UserDao inicializado.
+[2025-06-08 19:03:59] [INFO] UserBO inicializado.
+[2025-06-08 19:03:59] [INFO] Vista Login cargada.
+[2025-06-08 19:04:06] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 19:04:06] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:04:06] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
+[2025-06-08 19:04:06] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
+[2025-06-08 19:04:07] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
+[2025-06-08 19:04:07] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:04:07] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
+[2025-06-08 19:04:13] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
+[2025-06-08 19:04:13] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
+[2025-06-08 19:04:14] [INFO] Navegando de VistaMenuAtleta a VistaProgreso para usuario: hola@gmail.com
+[2025-06-08 19:04:14] [INFO] UserDao inicializado.
+[2025-06-08 19:04:14] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:04:14] [INFO] ProgresoBO inicializado.
+[2025-06-08 19:04:14] [INFO] VistaProgreso: inicializada para hola@gmail.com.
+[2025-06-08 19:04:14] [INFO] VistaProgreso: actualizando gráfica de 'Sentadilla' para hola@gmail.com.
+[2025-06-08 19:04:14] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: hola@gmail.com.
+[2025-06-08 19:04:14] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 0 puntos.
+[2025-06-08 19:04:14] [INFO] VistaProgreso: sin datos para 'Sentadilla' de hola@gmail.com.
+[2025-06-08 19:04:15] [INFO] VistaProgreso: regresando al menú para hola@gmail.com.
+[2025-06-08 19:04:15] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
+[2025-06-08 19:04:16] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
+[2025-06-08 19:04:16] [INFO] UserDao inicializado.
+[2025-06-08 19:04:16] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:04:16] [INFO] HistorialBO inicializado.
+[2025-06-08 19:04:16] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
+[2025-06-08 19:04:16] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
+[2025-06-08 19:04:16] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
+[2025-06-08 19:04:16] [ERROR] DAO: Error al obtener ID de usuario por email hola@gmail.com: 'UserDao' object has no attribute 'cursor'
+[2025-06-08 19:04:16] [ERROR] BO: Error al obtener historial completo para atleta hola@gmail.com: 'UserDao' object has no attribute 'cursor'
+[2025-06-08 19:04:16] [ERROR] Fallo al cargar historial para hola@gmail.com. Mensaje: Fallo al cargar el historial: 'UserDao' object has no attribute 'cursor'
+[2025-06-08 19:04:20] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
+[2025-06-08 19:04:20] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
+[2025-06-08 19:04:20] [ERROR] DAO: Error al obtener ID de usuario por email hola@gmail.com: 'UserDao' object has no attribute 'cursor'
+[2025-06-08 19:04:20] [ERROR] BO: Error al obtener récords para atleta hola@gmail.com: 'UserDao' object has no attribute 'cursor'
+[2025-06-08 19:04:20] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
+[2025-06-08 19:04:20] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
+[2025-06-08 19:04:20] [ERROR] DAO: Error al obtener ID de usuario por email hola@gmail.com: 'UserDao' object has no attribute 'cursor'
+[2025-06-08 19:04:20] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'UserDao' object has no attribute 'cursor'
+[2025-06-08 19:04:21] [INFO] Volviendo de Vista Historial a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 19:04:21] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
+[2025-06-08 19:04:22] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: hola@gmail.com
+[2025-06-08 19:04:22] [INFO] UserDao inicializado.
+[2025-06-08 19:04:22] [INFO] UserBO inicializado.
+[2025-06-08 19:04:22] [INFO] VistaPerfil cargada para hola@gmail.com
+[2025-06-08 19:04:23] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
+[2025-06-08 19:07:37] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:07:37] [INFO] Vista Inicial cargada.
+[2025-06-08 19:07:37] [INFO] Visa inicial cargada.
+[2025-06-08 19:07:38] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:07:40] [INFO] UserDao inicializado.
+[2025-06-08 19:07:40] [INFO] UserBO inicializado.
+[2025-06-08 19:07:40] [INFO] Vista Login cargada.
+[2025-06-08 19:07:46] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 19:07:47] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:07:47] [ERROR] Error al obtener usuario por email hola@gmail.com: 'NoneType' object has no attribute '_closed'
+[2025-06-08 19:07:51] [ERROR] No se pudieron obtener datos de hola@gmail.com tras login exitoso.
+[2025-06-08 19:09:51] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:09:51] [INFO] Vista Inicial cargada.
+[2025-06-08 19:09:51] [INFO] Visa inicial cargada.
+[2025-06-08 19:09:53] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:09:54] [INFO] UserDao inicializado.
+[2025-06-08 19:09:54] [INFO] UserBO inicializado.
+[2025-06-08 19:09:54] [INFO] Vista Login cargada.
+[2025-06-08 19:09:59] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 19:09:59] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:09:59] [ERROR] Error al obtener usuario por email hola@gmail.com: 'NoneType' object has no attribute '_closed'
+[2025-06-08 19:10:00] [ERROR] No se pudieron obtener datos de hola@gmail.com tras login exitoso.
+[2025-06-08 19:11:25] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:11:25] [INFO] Vista Inicial cargada.
+[2025-06-08 19:11:25] [INFO] Visa inicial cargada.
+[2025-06-08 19:11:26] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:11:28] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:11:28] [INFO] UserBO inicializado.
+[2025-06-08 19:11:28] [INFO] Vista Login cargada.
+[2025-06-08 19:11:35] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 19:11:35] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:11:35] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
+[2025-06-08 19:11:35] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.

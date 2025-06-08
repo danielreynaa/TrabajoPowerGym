@@ -1,5 +1,3 @@
-# C:\Users\elded\OneDrive\Escritorio\INGENIERÍA DE SOFTWARE\POWER GYM\TrabajoPowerGym\src\Modelo\DAO\UserDao.py
-
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.SuperVo import SuperVo
 from typing import List, Optional
@@ -7,14 +5,16 @@ from typing import List, Optional
 from src.Logs.Logger import CustomLogger 
 
 class UserDao(Conexion): 
-    # --- MODIFICACIÓN CLAVE AQUÍ: SQL_INSERT en una sola línea y sin saltos de línea innecesarios ---
-    SQL_INSERT = "INSERT INTO Usuarios (nombre, apellidos, email, contrasena, rol, fecha_nacimiento, telefono, peso_corporal) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
-    # --- FIN MODIFICACIÓN ---
-
     SQL_SELECT = """
         SELECT id_usuario, nombre, apellidos, email, contrasena, rol,
                fecha_registro, fecha_nacimiento, telefono, peso_corporal
         FROM Usuarios
+    """
+    SQL_INSERT = """
+        INSERT INTO Usuarios (
+            nombre, apellidos, email, contrasena, rol,
+            fecha_nacimiento, telefono, peso_corporal
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     """
     SQL_CONSULTA_LOGIN = """
         SELECT COUNT(*) FROM Usuarios WHERE email = ? AND contrasena = ?
@@ -48,43 +48,53 @@ class UserDao(Conexion):
     """
 
     def __init__(self):
-        super().__init__()
+        super().__init__() 
+        # >>> Ya NO inicializamos self.cursor aquí. Cada método lo obtiene y cierra. <<<
+        # self.cursor = self.getCursor() 
         self.logger = CustomLogger() 
-        self.logger.info("UserDao inicializado.") 
+        self.logger.info("UserDao inicializado. Cursor gestionado por método.") 
 
     def select(self) -> List[SuperVo]:
-        cursor = self.getCursor()
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para SELECT de Usuarios.")
+            return [] 
         usuarios: List[SuperVo] = []
         try:
-            cursor.execute(self.SQL_SELECT)
-            for row in cursor.fetchall():
-                usuarios.append(SuperVo(*row))
+            cursor.execute(self.SQL_SELECT) 
+            usuarios = [SuperVo(*row) for row in cursor.fetchall()] 
         except Exception as e:
             self.logger.error(f"Error en SELECT de Usuarios: {e}") 
         finally:
-            cursor.close()
+            if cursor: cursor.close() # Cerrar solo si no es None
         return usuarios
 
     def insert_user(self, nombre, apellidos, email, contrasena, rol,
                      fecha_nacimiento=None, telefono=None, peso_corporal=None):
-        cursor = self.getCursor()
-        # --- AÑADIDO: Log para ver la SQL y los parámetros antes de ejecutar ---
-        params = (nombre, apellidos, email, contrasena, rol, fecha_nacimiento, telefono, peso_corporal)
-        self.logger.debug(f"DAO: Ejecutando INSERT: SQL='{self.SQL_INSERT}' con PARAMETROS={params}") # AÑADIDO
-        # --- FIN AÑADIDO ---
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para INSERT de Usuario.")
+            return False 
         try:
-            cursor.execute(self.SQL_INSERT, params) # Ahora usa la variable params
+            cursor.execute(self.SQL_INSERT, ( 
+                nombre, apellidos, email, contrasena, rol,
+                fecha_nacimiento, telefono, peso_corporal
+            ))
             self.logger.info(f"Usuario {email} insertado correctamente en BD.") 
+            return True # Asumimos éxito si no hay excepción
         except Exception as e:
             self.logger.error(f"Error al insertar usuario {email}: {e}") 
             raise 
         finally:
-            cursor.close()
+            if cursor: cursor.close() # Cerrar solo si no es None
 
     def consulta_login(self, email: str, contrasena: str) -> bool:
-        cursor = self.getCursor()
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para consulta de login.")
+            return False 
         try:
-            cursor.execute(self.SQL_CONSULTA_LOGIN, (email, contrasena))
+            cursor.execute(self.SQL_CONSULTA_LOGIN, (email, contrasena)) 
             count = cursor.fetchone()[0]
             self.logger.debug(f"Consulta login para {email}. Coincidencias: {count}") 
             return count == 1
@@ -92,14 +102,17 @@ class UserDao(Conexion):
             self.logger.error(f"Error en consulta de login para {email}: {e}") 
             return False
         finally:
-            cursor.close()
+            if cursor: cursor.close() # Cerrar solo si no es None
 
     def obtener_id_por_email(self, email: str) -> Optional[int]:
-        cursor = self.getCursor()
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para obtener ID de usuario por email.")
+            return None 
         try:
             self.logger.debug(f"DAO: Buscando ID de usuario para email: {email}.")
-            self.cursor.execute("SELECT id_usuario FROM Usuarios WHERE email = ?", (email,))
-            resultado = self.cursor.fetchone()
+            cursor.execute("SELECT id_usuario FROM Usuarios WHERE email = ?", (email,)) 
+            resultado = cursor.fetchone()
             if resultado:
                 self.logger.debug(f"DAO: ID de usuario {resultado[0]} encontrado para {email}.")
                 return resultado[0]
@@ -110,12 +123,15 @@ class UserDao(Conexion):
             self.logger.error(f"DAO: Error al obtener ID de usuario por email {email}: {e}")
             raise 
         finally:
-            cursor.close()
+            if cursor: cursor.close() # Cerrar solo si no es None
 
     def obtener_usuario_por_email(self, email: str) -> Optional[dict]:
-        cursor = self.getCursor()
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para obtener usuario por email.")
+            return None 
         try:
-            cursor.execute(self.SQL_SELECT_POR_EMAIL, (email,))
+            cursor.execute(self.SQL_SELECT_POR_EMAIL, (email,)) 
             fila = cursor.fetchone()
             if fila:
                 columnas = [desc[0] for desc in cursor.description]
@@ -127,10 +143,13 @@ class UserDao(Conexion):
             self.logger.error(f"Error al obtener usuario por email {email}: {e}") 
             return None
         finally:
-            cursor.close()
+            if cursor: cursor.close() # Cerrar solo si no es None
 
     def eliminar_usuario(self, email: str) -> bool: 
-        cursor = self.getCursor()
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para eliminar usuario.")
+            return False 
         try:
             self.logger.info(f"Intentando eliminar usuario: {email}.")
             cursor.execute(self.SQL_DELETE, (email,)) 
@@ -140,10 +159,13 @@ class UserDao(Conexion):
             self.logger.error(f"Error al eliminar usuario {email}: {e}")
             raise 
         finally:
-            cursor.close()
+            if cursor: cursor.close() # Cerrar solo si no es None
 
     def update_user(self, vo: SuperVo) -> bool: 
-        cursor = self.getCursor()
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para actualizar usuario.")
+            return False 
         try:
             self.logger.info(f"Actualizando usuario: {vo.email}.")
             cursor.execute(self.SQL_UPDATE, (
@@ -161,15 +183,22 @@ class UserDao(Conexion):
             self.logger.error(f"Error al actualizar usuario {vo.email}: {e}")
             return False
         finally:
-            cursor.close()
-            
-    def listar_por_rol(self, rol: str) -> List[SuperVo]:
-        cursor = self.getCursor()
-        usuarios = []
+            if cursor: cursor.close() # Cerrar solo si no es None
+
+    def listar_usuarios_por_rol(self, rol: str) -> List[SuperVo]:
+        cursor = self.getCursor() # Obtener cursor LOCAL
+        if cursor is None: 
+            self.logger.error("No se pudo obtener cursor para listar usuarios por rol.")
+            return [] 
+        usuarios: List[SuperVo] = []
         try:
+            self.logger.debug(f"DAO: Listando usuarios con rol: {rol}.")
             cursor.execute(self.SQL_LISTAR_POR_ROL, (rol,))
             for row in cursor.fetchall():
                 usuarios.append(SuperVo(*row))
+            self.logger.debug(f"DAO: {len(usuarios)} usuarios con rol '{rol}' encontrados.")
+        except Exception as e:
+            self.logger.error(f"DAO: Error al listar usuarios por rol '{rol}': {e}")
         finally:
-            cursor.close()
+            if cursor: cursor.close() # Cerrar solo si no es None
         return usuarios
