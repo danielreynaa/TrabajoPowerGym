@@ -6,6 +6,8 @@ from src.Vista.VistaLogin import Login
 from src.Vista.VistaRegistro import VistaRegistro 
 from src.Vista.VistaMenuAtleta import VistaMenuAtleta 
 
+from src.Logs.Logger import CustomLogger
+
 Form, _ = uic.loadUiType("./src/Vista/Ui/VistaInicial.ui")
 
 class VistaInicial(QMainWindow, Form):
@@ -21,6 +23,10 @@ class VistaInicial(QMainWindow, Form):
 
         self.registro_window = None
         self.login_window = None
+
+        self.logger = CustomLogger() 
+        self.logger.info("Visa inicial cargada.") 
+
 
     def mostrar_login(self):
         self.logger.info("Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').") 

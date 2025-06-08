@@ -3,6 +3,9 @@ from PyQt5 import uic
 from src.Conexion.Conexion import Conexion
 from datetime import datetime
 
+from src.Logs.Logger import CustomLogger
+
+
 class VistaPerfil(QMainWindow):
     def __init__(self, usuario_email, volver_callback):
         super().__init__()
@@ -20,6 +23,9 @@ class VistaPerfil(QMainWindow):
         self.btn_volver = QPushButton("Volver al menú", self)
         self.btn_volver.setGeometry(10, 10, 150, 30)
         self.btn_volver.clicked.connect(self.volver_al_menu)
+
+        self.logger = CustomLogger()
+        self.logger.info("vista del perfil cargada")
 
     def cargar_datos(self):
         self.cursor.execute("""

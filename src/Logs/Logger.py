@@ -1,11 +1,10 @@
-# C:\Users\elded\OneDrive\Escritorio\INGENIERÍA DE SOFTWARE\POWER GYM\TrabajoPowerGym\src\Logs\Logger.py
 
 import os
 from datetime import datetime
 
 class CustomLogger:
     _instance = None
-    _initialized = False # Para asegurar que la inicialización solo ocurra una vez
+    _initialized = False 
 
     def __new__(cls, log_file="app.log", log_level="INFO"):
         if cls._instance is None:
@@ -14,7 +13,6 @@ class CustomLogger:
         return cls._instance
 
     def __init__(self, log_file="app.log", log_level="INFO"):
-        # Solo inicializa la primera vez que se crea la instancia lógica
         if not CustomLogger._initialized:
             print(f"DEBUG: Inicializando CustomLogger con archivo '{log_file}' y nivel '{log_level}'.")
             self.log_file = log_file
@@ -22,16 +20,14 @@ class CustomLogger:
             self._setup_logger()
             CustomLogger._initialized = True
         else:
-            pass # Instancia ya inicializada, ignorar parámetros en llamadas subsecuentes.
+            pass 
 
     def _setup_logger(self):
-        """Configura el archivo de log y el nivel."""
         log_dir = os.path.dirname(self.log_file)
         if log_dir and not os.path.exists(log_dir):
             os.makedirs(log_dir)
 
     def _write_log(self, level, message):
-        """Escribe un mensaje en el archivo de log y lo imprime en consola."""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_message = f"[{timestamp}] [{level}] {message}\n"
 

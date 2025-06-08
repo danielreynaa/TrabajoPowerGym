@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt5 import uic
 from src.Conexion.Conexion import Conexion
 
+from src.Logs.Logger import CustomLogger
+
 class VistaHistorial(QMainWindow):
     def __init__(self, usuario):
         super().__init__()
@@ -14,6 +16,9 @@ class VistaHistorial(QMainWindow):
 
         self.cargar_historial()
         self.mostrar_records()
+
+        self.logger = CustomLogger() 
+        self.logger.info("Vista historial cargada.") 
 
     def obtener_id_usuario(self):
         self.cursor.execute("SELECT id_usuario FROM Usuarios WHERE email = ?", (self.usuario["email"],))
