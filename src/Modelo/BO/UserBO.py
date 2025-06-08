@@ -39,5 +39,8 @@ class UserBO:
         return self.user_dao.consulta_login(login_vo.email, login_vo.contrasena)
 
     def obtener_usuario_por_email(self, email: str) -> Optional[dict]:
-        self.logger.debug(f"BO: Obteniendo usuario por email: {email}.") # AÑADIDO
+        self.logger.debug(f"BO: Obteniendo usuario por email: {email}.")
         return self.user_dao.obtener_usuario_por_email(email)
+
+    def eliminar_usuario_por_email(self, email: str) -> bool:
+        return self.user_dao.eliminar_usuario(email)
