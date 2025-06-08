@@ -1,90 +1,90 @@
-
 from src.Modelo.DAO.EntrenamientoDAO import EntrenamientoDAO
 from src.Modelo.DAO.RegistroLevantamientoDAO import RegistroLevantamientoDAO
-from src.Modelo.DAO.UserDao import UserDao 
+from src.Modelo.DAO.UserDao import UserDao
 from src.Modelo.VO.EntrenamientoVo import EntrenamientoVo
 from src.Modelo.VO.RegistroLevantamientoVo import RegistroLevantamientoVo
 from src.Logs.Logger import CustomLogger
 from datetime import datetime
-from typing import List
+from typing import List, Tuple
 
 class EntrenamientoBO:
     def __init__(self):
         self.entrenamiento_dao = EntrenamientoDAO()
-        self.registro_levantamiento_dao = RegistroLevantamientoDAO()
-        self.user_dao = UserDao() 
-        self.logger = CustomLogger()
+        self.registro_dao      = RegistroLevantamientoDAO()
+        self.user_dao          = UserDao()
+        self.logger            = CustomLogger(log_file="app_powergym.log", log_level="DEBUG")
         self.logger.info("EntrenamientoBO inicializado.")
 
-    def registrar_entrenamiento_completo(self, email_atleta, ejercicios_data):
-        self.logger.info(f"BO: Iniciando registro de entrenamiento para atleta: {email_atleta}.")
+    def crear_entrenamiento(
+        self,
+        id_atleta: int,
+        id_entrenador: int,
+        fecha_entrenamiento: str,
+        notas: str = None
+    ) -> int:
+        vo = EntrenamientoVo(
+            id_entrenamiento=None,
+            id_atleta=id_atleta,
+            id_entrenador=id_entrenador,
+            fecha_entrenamiento=fecha_entrenamiento,
+            notas=notas
+        )
+        return self.entrenamiento_dao.crear_entrenamiento(vo)
+
+    def registrar_entrenamiento_completo(
+        self,
+        email_atleta: str,
+        id_entrenador: int,
+        ejercicios_data: dict
+    ) -> Tuple[bool, str, List[str]]:
+        self.logger.info(f"BO: registro completo para {email_atleta}")
         try:
-            # --- MODIFICACIÓN CLAVE: Llamar a user_dao.obtener_id_por_email directamente ---
-            id_atleta = self.user_dao.obtener_id_por_email(email_atleta) # Simplificado
+            # 1) obtengo ID atleta
+            id_atleta = self.user_dao.obtener_id_por_email(email_atleta)
             if id_atleta is None:
-                self.logger.warning(f"BO: No se pudo obtener ID de atleta para {email_atleta}. Abortando registro.")
-                return False, "No se encontró el atleta en la base de datos.", [] 
-            # --- FIN MODIFICACIÓN ---
+                return False, "Atleta no encontrado.", []
 
-            # 2. Crear Entrenamiento principal
-            fecha_entreno = datetime.now().strftime("%Y-%m-%d")
-            entrenamiento_vo = EntrenamientoVo(id_atleta=id_atleta, fecha_entrenamiento=fecha_entreno, notas=None)
-            id_entrenamiento = self.entrenamiento_dao.crear_entrenamiento(entrenamiento_vo)
+            # 2) creo sesión
+            fecha = datetime.now().strftime("%Y-%m-%d")
+            vo_ent = EntrenamientoVo(None, id_atleta, id_entrenador, fecha, None)
+            id_sesion = self.entrenamiento_dao.crear_entrenamiento(vo_ent)
+            if id_sesion is None:
+                return False, "Error al crear sesión.", []
 
-            if id_entrenamiento is None:
-                self.logger.error("BO: Fallo al crear el entrenamiento principal. Abortando registros de levantamientos.")
-                return False, "Fallo al crear el entrenamiento principal.", [] 
-
-            # 3. Registrar levantamientos y verificar récords
-            nuevos_maximos = []
-            for tipo_levantamiento, data in ejercicios_data.items():
-                peso = data.get("peso")
-                repeticiones = data.get("repeticiones")
-                series = data.get("series")
-                rpe = data.get("rpe")
-
-                if not peso: 
-                    continue
-
+            # 3) registro levantamientos
+            nuevos_max = []
+            for tipo, data in ejercicios_data.items():
                 try:
-                    peso_float = float(peso)
-                except ValueError:
-                    self.logger.warning(f"BO: Peso '{peso}' para {tipo_levantamiento} no es un número válido. Se omitirá este levantamiento.")
+                    peso = float(data.get("peso", 0))
+                except:
                     continue
+                reps   = data.get("repeticiones", 0)
+                series = data.get("series", 0)
+                rpe    = data.get("rpe", None)
 
-                maximo_actual = self.registro_levantamiento_dao.obtener_maximo_peso(id_atleta, tipo_levantamiento)
-                if peso_float > maximo_actual:
-                    nuevos_maximos.append(f"{tipo_levantamiento}: {peso_float} kg")
-                    self.logger.info(f"BO: ¡Nuevo récord personal para {tipo_levantamiento}: {peso_float} kg!")
+                max_ant = self.registro_dao.obtener_maximo_peso(id_atleta, tipo)
+                if peso > max_ant:
+                    nuevos_max.append(f"{tipo}: {peso} kg")
 
-                registro_vo = RegistroLevantamientoVo(
-                    id_entrenamiento=id_entrenamiento,
-                    tipo_levantamiento=tipo_levantamiento,
-                    peso_kg=peso_float,
-                    repeticiones=repeticiones,
+                vo_reg = RegistroLevantamientoVo(
+                    id_registro=None,
+                    id_entrenamiento=id_sesion,
+                    tipo_levantamiento=tipo,
+                    peso_kg=peso,
+                    repeticiones=reps,
                     series=series,
-                    rpe=rpe if rpe >= 1 and rpe <= 10 else None,
-                    id_usuario=id_atleta 
+                    rpe=(rpe if isinstance(rpe, (int, float)) and 1 <= rpe <= 10 else None)
                 )
-                self.registro_levantamiento_dao.crear_registro(registro_vo)
-            
-            self.logger.info(f"BO: Entrenamiento completo para atleta {email_atleta} registrado correctamente.")
-            return True, "Entrenamiento registrado correctamente.", nuevos_maximos
+                self.registro_dao.crear_registro(vo_reg)
+
+            return True, "Entrenamiento registrado.", nuevos_max
 
         except Exception as e:
-            self.logger.error(f"BO: Error general al registrar entrenamiento para {email_atleta}: {e}")
-            return False, f"Fallo en la lógica de negocio al registrar el entrenamiento: {e}", []
-        
-    def listar_entrenamientos_asignados(self, id_entrenador: int, id_atleta: int):
-        # Si en el futuro filtras por entrenador, aquí lo harás;
-        # por ahora devolvemos todos los del atleta.
-        return self.listar_entrenamientos_por_atleta(id_atleta)
-    
-    def listar_entrenamientos_por_atleta(self, id_atleta: int):
+            self.logger.error(f"BO: excepción → {e}")
+            return False, f"Error al registrar: {e}", []
+
+    def listar_entrenamientos_por_atleta(self, id_atleta: int) -> List[EntrenamientoVo]:
         return self.entrenamiento_dao.listar_por_atleta(id_atleta)
-    
-    def listar_entrenamientos_asignados(self,
-                                       id_entrenador: int,
-                                       id_atleta:    int
-                                      ) -> List[EntrenamientoVo]:
+
+    def listar_entrenamientos_asignados(self, id_entrenador: int, id_atleta: int) -> List[EntrenamientoVo]:
         return self.entrenamiento_dao.listar_por_entrenador_y_atleta(id_entrenador, id_atleta)

@@ -1,61 +1,60 @@
-# src/Vista/VistaAsignarEntrenamiento.py
-
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5 import uic
+from datetime import datetime
 
 from src.controlador.ControladorEntrenamiento import ControladorEntrenamiento
 from src.controlador.ControladorRegistroLevantamiento import ControladorRegistroLevantamiento
 from src.Logs.Logger import CustomLogger
 
 class VistaAsignarEntrenamiento(QMainWindow):
-    def __init__(self, entrenador_vo, atleta_vo, volver_callback):
+    def __init__(self, entrenador, atleta, volver_callback):
         super().__init__()
-        # Carga la UI correcta
         uic.loadUi("src/Vista/Ui/VistaAsignarEntrenamiento.ui", self)
 
-        # ValueObjects y callback
-        self.entrenador      = entrenador_vo
-        self.atleta          = atleta_vo
+        # Guardar parámetros
+        self.entrenador      = entrenador
+        self.atleta          = atleta
         self.volver_callback = volver_callback
 
-        # Controladores y logger
+        # Controladores y Logger
         self.ctrl_sesion   = ControladorEntrenamiento()
         self.ctrl_registro = ControladorRegistroLevantamiento()
         self.logger = CustomLogger(log_file="app_powergym.log", log_level="DEBUG")
         self.logger.info(
-            f"VistaAsignarEntrenamiento: Entrenador={self.entrenador.email} "
-            f"→ Atleta={self.atleta.email}"
+            f"VistaAsignarEntrenamiento: Entrenador={self.entrenador.email} → Atleta={self.atleta.email}"
         )
 
-        # Conexiones de botones
+        # Conectar botones
         self.btn_volver.clicked.connect(self.volver)
         self.botonGuardar.clicked.connect(self.guardar_entrenamiento)
 
     def guardar_entrenamiento(self):
-        """Crea sesión y registra los levantamientos introducidos."""
         try:
-            # 1) Crear sesión
-            fecha = self.fechaEntrenamiento.date().toString("yyyy-MM-dd")
+            # 1) Crear la sesión de entrenamiento
+            fecha_str = self.fechaEntrenamiento.date().toString("yyyy-MM-dd")
             id_sesion = self.ctrl_sesion.crear_sesion(
-                id_atleta=self.atleta.id_usuario,
-                fecha=fecha,
-                notas=None
+                self.atleta.id_usuario,          # id_atleta (INT)
+                self.entrenador.id_usuario,      # id_entrenador (INT)
+                fecha_str,                       # fecha (STR "YYYY-MM-DD")
+                None                             # notas
             )
-            self.logger.info(f"Sesión creada ID={id_sesion}")
+            self.logger.info(f"Sesión creada con ID={id_sesion}")
 
-            # 2) Datos de levantamientos
+            # 2) Recoger y registrar levantamientos
             ejercicios = [
-                ("Sentadilla",   self.pesoSentadilla,   self.spinRepeticionesSentadilla,   self.spinSeriesSentadilla,   self.spinRPESentadilla),
-                ("Press Banca",  self.pesoPressBanca,   self.spinRepeticionesBanca,        self.spinSeriesBanca,        self.spinRPEBanca),
-                ("Peso Muerto",  self.pesoPesoMuerto,   self.spinRepeticionesPesoMuerto,   self.spinSeriesPesoMuerto,   self.spinRPEPesoMuerto),
+                ("Sentadilla",  self.pesoSentadilla,  self.spinRepeticionesSentadilla,  self.spinSeriesSentadilla,  self.spinRPESentadilla),
+                ("Banca", self.pesoPressBanca,  self.spinRepeticionesBanca,       self.spinSeriesBanca,       self.spinRPEBanca),
+                ("Peso Muerto", self.pesoPesoMuerto,  self.spinRepeticionesPesoMuerto,  self.spinSeriesPesoMuerto,  self.spinRPEPesoMuerto),
             ]
-
-            resultados = []
+            report = []
             for tipo, wPeso, wRep, wSer, wRPE in ejercicios:
-                peso = float(wPeso.text() or 0)
-                reps = wRep.value()
+                try:
+                    peso = float(wPeso.text() or 0)
+                except ValueError:
+                    continue
+                reps   = wRep.value()
                 series = wSer.value()
-                rpe = wRPE.value()
+                rpe    = wRPE.value()
                 if peso > 0 and reps > 0 and series > 0:
                     ok = self.ctrl_registro.registrar_levantamiento(
                         id_entrenamiento=id_sesion,
@@ -66,34 +65,22 @@ class VistaAsignarEntrenamiento(QMainWindow):
                         series=series,
                         rpe=float(rpe)
                     )
-                    if ok:
-                        resultados.append(f"{tipo}: {peso}kg x{series}x{reps}")
-                    else:
-                        resultados.append(f"{tipo}: fallo al registrar")
+                    report.append(f"{tipo}: {'OK' if ok else 'FALLÓ'}")
 
-            # 3) Mensaje al usuario
-            if resultados:
-                QMessageBox.information(
-                    self,
-                    "Entrenamiento Asignado",
-                    "Se han registrado:\n" + "\n".join(resultados)
-                )
+            # 3) Mostrar resultado
+            if report:
+                QMessageBox.information(self, "Entrenamiento Asignado", "\n".join(report))
             else:
-                QMessageBox.warning(
-                    self,
-                    "Sin datos",
-                    "No introdujiste datos válidos para ningún levantamiento."
-                )
+                QMessageBox.warning(self, "Sin datos", "No se registraron levantamientos.")
 
-            # 4) Volver atrás
+            # 4) Volver
             self.volver()
 
         except Exception as e:
             self.logger.error(f"Error asignando entrenamiento: {e}")
-            QMessageBox.critical(self, "Error", f"No se pudo guardar:\n{e}")
+            QMessageBox.critical(self, "Error", str(e))
 
     def volver(self):
-        """Cierra esta ventana y llama al callback de la anterior."""
         self.logger.info("VistaAsignarEntrenamiento: volviendo.")
         self.close()
         if self.volver_callback:

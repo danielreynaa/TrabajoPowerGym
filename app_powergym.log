@@ -2158,3 +2158,443 @@
 [2025-06-08 19:11:35] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
 [2025-06-08 19:11:35] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
 [2025-06-08 19:11:35] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
+[2025-06-08 19:14:20] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:14:20] [INFO] Vista Inicial cargada.
+[2025-06-08 19:14:20] [INFO] Visa inicial cargada.
+[2025-06-08 19:14:21] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:14:22] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:14:22] [INFO] UserBO inicializado.
+[2025-06-08 19:14:22] [INFO] Vista Login cargada.
+[2025-06-08 19:14:28] [INFO] BO: Comprobando login para email: entrenador.
+[2025-06-08 19:14:30] [ERROR] Intento de login fallido para usuario: entrenador
+[2025-06-08 19:14:35] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:14:35] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:14:35] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:14:35] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:14:36] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:14:36] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:14:36] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:14:36] [INFO] UserBO inicializado.
+[2025-06-08 19:15:16] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:15:16] [INFO] Vista Inicial cargada.
+[2025-06-08 19:15:16] [INFO] Visa inicial cargada.
+[2025-06-08 19:15:19] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:15:19] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:15:19] [INFO] UserBO inicializado.
+[2025-06-08 19:15:19] [INFO] Vista Login cargada.
+[2025-06-08 19:15:24] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:15:24] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:15:24] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:15:24] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:15:25] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:15:25] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:15:25] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:15:25] [INFO] UserBO inicializado.
+[2025-06-08 19:15:27] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento.
+[2025-06-08 19:15:27] [INFO] EntrenamientoDAO: inicializado.
+[2025-06-08 19:15:27] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:15:27] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:15:27] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:15:27] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:15:27] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:15:45] [ERROR] Error asignando entrenamiento: 'ControladorEntrenamiento' object has no attribute 'crear_sesion'
+[2025-06-08 19:16:34] [ERROR] Error asignando entrenamiento: 'ControladorEntrenamiento' object has no attribute 'crear_sesion'
+[2025-06-08 19:23:18] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:23:18] [INFO] Vista Inicial cargada.
+[2025-06-08 19:23:18] [INFO] Visa inicial cargada.
+[2025-06-08 19:23:20] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:23:20] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:23:20] [INFO] UserBO inicializado.
+[2025-06-08 19:23:20] [INFO] Vista Login cargada.
+[2025-06-08 19:23:27] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:23:27] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:23:27] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:23:27] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:23:28] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:23:28] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:23:28] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:23:28] [INFO] UserBO inicializado.
+[2025-06-08 19:23:29] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento.
+[2025-06-08 19:23:29] [INFO] EntrenamientoDAO: inicializado.
+[2025-06-08 19:23:29] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:23:29] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:23:29] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:23:29] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:23:29] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:23:39] [ERROR] Error asignando entrenamiento: 'ControladorEntrenamiento' object has no attribute 'crear_sesion'
+[2025-06-08 19:26:08] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:26:08] [INFO] Vista Inicial cargada.
+[2025-06-08 19:26:08] [INFO] Visa inicial cargada.
+[2025-06-08 19:26:09] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:26:10] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:26:10] [INFO] UserBO inicializado.
+[2025-06-08 19:26:10] [INFO] Vista Login cargada.
+[2025-06-08 19:26:21] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:26:22] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:26:22] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:26:22] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:26:22] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:26:22] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:26:23] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:26:23] [INFO] UserBO inicializado.
+[2025-06-08 19:26:24] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento.
+[2025-06-08 19:26:24] [INFO] EntrenamientoDAO: inicializado.
+[2025-06-08 19:26:24] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:26:24] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:26:24] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:26:24] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:26:24] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:26:31] [ERROR] Error asignando entrenamiento: ControladorEntrenamiento.crear_sesion() got an unexpected keyword argument 'fecha'
+[2025-06-08 19:26:42] [ERROR] Error asignando entrenamiento: ControladorEntrenamiento.crear_sesion() got an unexpected keyword argument 'fecha'
+[2025-06-08 19:29:00] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:29:00] [INFO] Vista Inicial cargada.
+[2025-06-08 19:29:00] [INFO] Visa inicial cargada.
+[2025-06-08 19:29:01] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:29:01] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:29:01] [INFO] UserBO inicializado.
+[2025-06-08 19:29:01] [INFO] Vista Login cargada.
+[2025-06-08 19:29:01] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:29:01] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:29:01] [INFO] UserBO inicializado.
+[2025-06-08 19:29:01] [INFO] Vista Login cargada.
+[2025-06-08 19:29:01] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:29:02] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:29:02] [INFO] UserBO inicializado.
+[2025-06-08 19:29:02] [INFO] Vista Login cargada.
+[2025-06-08 19:29:09] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:29:09] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:29:09] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:29:09] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:29:10] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:29:10] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:29:10] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:29:10] [INFO] UserBO inicializado.
+[2025-06-08 19:29:11] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento.
+[2025-06-08 19:29:12] [INFO] EntrenamientoDAO: inicializado.
+[2025-06-08 19:29:12] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:29:12] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:29:12] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:29:12] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:29:12] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:29:17] [ERROR] Error asignando entrenamiento: ControladorEntrenamiento.crear_sesion() got an unexpected keyword argument 'fecha'
+[2025-06-08 19:31:35] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:31:35] [INFO] Vista Inicial cargada.
+[2025-06-08 19:31:35] [INFO] Visa inicial cargada.
+[2025-06-08 19:31:36] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:31:37] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:31:37] [INFO] UserBO inicializado.
+[2025-06-08 19:31:37] [INFO] Vista Login cargada.
+[2025-06-08 19:31:44] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:31:44] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:31:44] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:31:44] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:31:45] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:31:45] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:31:45] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:31:45] [INFO] UserBO inicializado.
+[2025-06-08 19:31:46] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento.
+[2025-06-08 19:31:46] [INFO] EntrenamientoDAO: inicializado.
+[2025-06-08 19:31:46] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:31:46] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:31:46] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:31:46] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:31:46] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:31:53] [ERROR] Error asignando entrenamiento: 'VistaAsignarEntrenamiento' object has no attribute 'atleta_vo'
+[2025-06-08 19:33:19] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:33:19] [INFO] Vista Inicial cargada.
+[2025-06-08 19:33:19] [INFO] Visa inicial cargada.
+[2025-06-08 19:33:21] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:33:21] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:33:21] [INFO] UserBO inicializado.
+[2025-06-08 19:33:21] [INFO] Vista Login cargada.
+[2025-06-08 19:33:28] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:33:28] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:33:28] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:33:28] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:33:29] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:33:29] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:33:29] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:33:29] [INFO] UserBO inicializado.
+[2025-06-08 19:33:31] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento.
+[2025-06-08 19:34:10] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:34:10] [INFO] Vista Inicial cargada.
+[2025-06-08 19:34:10] [INFO] Visa inicial cargada.
+[2025-06-08 19:34:11] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:34:12] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:34:12] [INFO] UserBO inicializado.
+[2025-06-08 19:34:12] [INFO] Vista Login cargada.
+[2025-06-08 19:34:18] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:34:18] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:34:18] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:34:18] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:34:19] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:34:19] [INFO] Cargando selección de atletas para asignar entrenamiento por entrenador@gmail.com
+[2025-06-08 19:34:19] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:34:19] [INFO] UserBO inicializado.
+[2025-06-08 19:34:20] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento.
+[2025-06-08 19:37:43] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:37:43] [INFO] Vista Inicial cargada.
+[2025-06-08 19:37:43] [INFO] Visa inicial cargada.
+[2025-06-08 19:37:44] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:37:45] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:37:45] [INFO] UserBO inicializado.
+[2025-06-08 19:37:45] [INFO] Vista Login cargada.
+[2025-06-08 19:37:50] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:37:51] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:37:51] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:37:51] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:37:51] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:37:51] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:37:51] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:37:51] [INFO] UserBO inicializado.
+[2025-06-08 19:37:51] [INFO] Encontrados 1 atletas
+[2025-06-08 19:37:52] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:37:52] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:37:52] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:37:52] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:37:52] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:37:52] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:37:52] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:37:58] [ERROR] Error asignando entrenamiento: EntrenamientoVo.__init__() missing 1 required positional argument: 'id_entrenador'
+[2025-06-08 19:40:17] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:40:17] [INFO] Vista Inicial cargada.
+[2025-06-08 19:40:17] [INFO] Visa inicial cargada.
+[2025-06-08 19:40:18] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:40:19] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:40:19] [INFO] UserBO inicializado.
+[2025-06-08 19:40:19] [INFO] Vista Login cargada.
+[2025-06-08 19:40:24] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:40:25] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:40:25] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:40:25] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:40:25] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:40:25] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:40:25] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:40:25] [INFO] UserBO inicializado.
+[2025-06-08 19:40:25] [INFO] Encontrados 1 atletas
+[2025-06-08 19:40:27] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:40:27] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:40:27] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:40:27] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:40:27] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:40:27] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:40:27] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:40:35] [ERROR] Error al crear entrenamiento: java.sql.SQLException: Data truncated for column 'id_entrenador' at row 1
+[2025-06-08 19:40:35] [ERROR] Error asignando entrenamiento: java.sql.SQLException: Data truncated for column 'id_entrenador' at row 1
+[2025-06-08 19:43:59] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:43:59] [INFO] Vista Inicial cargada.
+[2025-06-08 19:43:59] [INFO] Visa inicial cargada.
+[2025-06-08 19:44:03] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:44:04] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:44:04] [INFO] UserBO inicializado.
+[2025-06-08 19:44:04] [INFO] Vista Login cargada.
+[2025-06-08 19:44:11] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:44:11] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:44:11] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:44:11] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:44:12] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:44:12] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:44:12] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:44:12] [INFO] UserBO inicializado.
+[2025-06-08 19:44:12] [INFO] Encontrados 1 atletas
+[2025-06-08 19:44:13] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:44:13] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:44:13] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:44:13] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:44:13] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:44:13] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:44:13] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:44:19] [ERROR] DAO: error al crear entrenamiento: java.sql.SQLException: Data truncated for column 'id_entrenador' at row 1
+[2025-06-08 19:44:19] [ERROR] Error asignando entrenamiento: java.sql.SQLException: Data truncated for column 'id_entrenador' at row 1
+[2025-06-08 19:50:39] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:50:39] [INFO] Vista Inicial cargada.
+[2025-06-08 19:50:39] [INFO] Visa inicial cargada.
+[2025-06-08 19:50:42] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:50:43] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:50:43] [INFO] UserBO inicializado.
+[2025-06-08 19:50:43] [INFO] Vista Login cargada.
+[2025-06-08 19:50:50] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:50:50] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:50:50] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:50:50] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:50:51] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:50:51] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:50:51] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:50:51] [INFO] UserBO inicializado.
+[2025-06-08 19:50:51] [INFO] Encontrados 1 atletas
+[2025-06-08 19:50:52] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:50:52] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:50:52] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:50:52] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:50:52] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:50:52] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:50:52] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:50:56] [ERROR] DAO: error al crear entrenamiento: java.sql.SQLException: Data truncated for column 'id_entrenador' at row 1
+[2025-06-08 19:50:56] [ERROR] Error asignando entrenamiento: java.sql.SQLException: Data truncated for column 'id_entrenador' at row 1
+[2025-06-08 19:51:59] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:51:59] [INFO] Vista Inicial cargada.
+[2025-06-08 19:51:59] [INFO] Visa inicial cargada.
+[2025-06-08 19:52:00] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:52:01] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:52:01] [INFO] UserBO inicializado.
+[2025-06-08 19:52:01] [INFO] Vista Login cargada.
+[2025-06-08 19:52:06] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:52:06] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:52:06] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:52:06] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:52:07] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:52:07] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:52:07] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:52:07] [INFO] UserBO inicializado.
+[2025-06-08 19:52:07] [INFO] Encontrados 1 atletas
+[2025-06-08 19:52:08] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:52:08] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:52:08] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:52:08] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:52:08] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:52:08] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:52:08] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:52:12] [INFO] Sesión creada con ID=8
+[2025-06-08 19:52:14] [INFO] VistaAsignarEntrenamiento: volviendo.
+[2025-06-08 19:52:16] [INFO] Volviendo al menú del entrenador
+[2025-06-08 19:52:16] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.
+[2025-06-08 19:52:18] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 19:52:18] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 19:52:18] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:52:18] [INFO] UserBO inicializado.
+[2025-06-08 19:52:18] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 19:52:19] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 19:52:19] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 19:52:19] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:52:19] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:52:19] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:52:19] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:52:31] [INFO] VistaEntrenamientosAsignados: volviendo a selección de atletas.
+[2025-06-08 19:55:05] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:55:05] [INFO] Vista Inicial cargada.
+[2025-06-08 19:55:05] [INFO] Visa inicial cargada.
+[2025-06-08 19:55:07] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:55:07] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:55:07] [INFO] UserBO inicializado.
+[2025-06-08 19:55:07] [INFO] Vista Login cargada.
+[2025-06-08 19:55:16] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:55:16] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:55:16] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:55:16] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:56:07] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:56:07] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:56:07] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:56:07] [INFO] UserBO inicializado.
+[2025-06-08 19:56:07] [INFO] Encontrados 1 atletas
+[2025-06-08 19:56:08] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:56:08] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:56:08] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:56:08] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:56:08] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:56:08] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:56:08] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:56:17] [INFO] Sesión creada con ID=9
+[2025-06-08 19:56:17] [ERROR] DAO: Error al crear registro de levantamiento Press Banca para entrenamiento 9, usuario 5: java.sql.SQLException: Data truncated for column 'tipo_levantamiento' at row 1
+[2025-06-08 19:56:17] [ERROR] Error asignando entrenamiento: java.sql.SQLException: Data truncated for column 'tipo_levantamiento' at row 1
+[2025-06-08 19:56:35] [INFO] Sesión creada con ID=10
+[2025-06-08 19:56:37] [INFO] VistaAsignarEntrenamiento: volviendo.
+[2025-06-08 19:56:39] [INFO] Volviendo al menú del entrenador
+[2025-06-08 19:56:39] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.
+[2025-06-08 19:56:40] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 19:56:40] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 19:56:40] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:56:40] [INFO] UserBO inicializado.
+[2025-06-08 19:56:40] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 19:56:41] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 19:56:41] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 19:56:41] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:56:41] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:56:41] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:56:41] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:56:59] [INFO] VistaEntrenamientosAsignados: volviendo a selección de atletas.
+[2025-06-08 19:57:02] [INFO] VistaSeleccionAtletasAsignados: volviendo al menú entrenador.
+[2025-06-08 19:57:02] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.
+[2025-06-08 19:57:03] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:57:03] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:57:03] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:57:03] [INFO] UserBO inicializado.
+[2025-06-08 19:57:03] [INFO] Encontrados 1 atletas
+[2025-06-08 19:57:06] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:57:06] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:57:06] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:57:06] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:57:06] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:57:06] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:57:06] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:57:15] [INFO] Sesión creada con ID=11
+[2025-06-08 19:57:15] [ERROR] DAO: Error al crear registro de levantamiento Press Banca para entrenamiento 11, usuario 5: java.sql.SQLException: Data truncated for column 'tipo_levantamiento' at row 1
+[2025-06-08 19:57:15] [ERROR] Error asignando entrenamiento: java.sql.SQLException: Data truncated for column 'tipo_levantamiento' at row 1
+[2025-06-08 19:59:37] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:59:37] [INFO] Vista Inicial cargada.
+[2025-06-08 19:59:37] [INFO] Visa inicial cargada.
+[2025-06-08 19:59:38] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 19:59:39] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:59:39] [INFO] UserBO inicializado.
+[2025-06-08 19:59:39] [INFO] Vista Login cargada.
+[2025-06-08 19:59:47] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:59:47] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:59:47] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:59:47] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:59:48] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:59:48] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 19:59:48] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:59:48] [INFO] UserBO inicializado.
+[2025-06-08 19:59:48] [INFO] Encontrados 1 atletas
+[2025-06-08 19:59:49] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 19:59:49] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 19:59:49] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:59:49] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 19:59:49] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 19:59:49] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 19:59:49] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 19:59:55] [INFO] Sesión creada con ID=12
+[2025-06-08 19:59:55] [ERROR] DAO: Error al crear registro de levantamiento Press Banca para entrenamiento 12, usuario 5: java.sql.SQLException: Data truncated for column 'tipo_levantamiento' at row 1
+[2025-06-08 19:59:55] [ERROR] Error asignando entrenamiento: java.sql.SQLException: Data truncated for column 'tipo_levantamiento' at row 1
+[2025-06-08 20:00:07] [INFO] Sesión creada con ID=13
+[2025-06-08 20:00:08] [INFO] VistaAsignarEntrenamiento: volviendo.
+[2025-06-08 20:00:10] [INFO] Volviendo al menú del entrenador
+[2025-06-08 20:00:10] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.
+[2025-06-08 20:00:11] [INFO] Navegando a VistaSeleccionAtletasAsignados para entrenador@gmail.com.
+[2025-06-08 20:00:11] [INFO] VistaSeleccionAtletasAsignados: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 20:00:11] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:00:11] [INFO] UserBO inicializado.
+[2025-06-08 20:00:11] [INFO] VistaSeleccionAtletasAsignados: encontrados 1 atletas.
+[2025-06-08 20:00:12] [INFO] Seleccionado atleta atleta@gmail.com para ver entrenamientos asignados.
+[2025-06-08 20:00:12] [INFO] VistaEntrenamientosAsignados: cargada para entrenador entrenador@gmail.com viendo atleta atleta@gmail.com
+[2025-06-08 20:00:12] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 20:00:12] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 20:00:12] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:00:12] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 20:00:16] [INFO] VistaEntrenamientosAsignados: volviendo a selección de atletas.
+[2025-06-08 20:00:18] [INFO] VistaSeleccionAtletasAsignados: volviendo al menú entrenador.
+[2025-06-08 20:00:18] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.
+[2025-06-08 20:02:02] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 20:02:02] [INFO] Vista Inicial cargada.
+[2025-06-08 20:02:02] [INFO] Visa inicial cargada.
+[2025-06-08 20:02:03] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 20:02:04] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:02:04] [INFO] UserBO inicializado.
+[2025-06-08 20:02:04] [INFO] Vista Login cargada.
+[2025-06-08 20:02:11] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 20:02:11] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 20:02:11] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 20:02:11] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 20:02:12] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 20:02:12] [INFO] VistaSeleccionAtletaAsignarEntrenamiento cargada para entrenador@gmail.com
+[2025-06-08 20:02:12] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:02:12] [INFO] UserBO inicializado.
+[2025-06-08 20:02:12] [INFO] Encontrados 1 atletas
+[2025-06-08 20:02:13] [INFO] Seleccionado atleta atleta@gmail.com para asignar entrenamiento
+[2025-06-08 20:02:13] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 20:02:13] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 20:02:13] [INFO] UserDao inicializado. Cursor gestionado por método.
+[2025-06-08 20:02:13] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 20:02:13] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 20:02:13] [INFO] VistaAsignarEntrenamiento: Entrenador=entrenador@gmail.com → Atleta=atleta@gmail.com
+[2025-06-08 20:02:20] [INFO] Sesión creada con ID=14
+[2025-06-08 20:02:22] [INFO] VistaAsignarEntrenamiento: volviendo.
