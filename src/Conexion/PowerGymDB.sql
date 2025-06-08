@@ -96,3 +96,6 @@ ALTER TABLE Entrenamientos
       REFERENCES Usuarios(id_usuario)
       ON DELETE CASCADE
       ON UPDATE CASCADE;
+
+ALTER TABLE registro_levantamiento
+  MODIFY COLUMN tipo_levantamiento VARCHAR(50) NOT NULL
