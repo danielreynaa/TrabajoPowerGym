@@ -1,5 +1,7 @@
 from src.Modelo.BO.UserBO import UserBO
 
+from src.Modelo.VO.SuperVo import SuperVo
+
 class ControladorUser:
     def __init__(self):
         self.user_bo = UserBO()
@@ -9,3 +11,6 @@ class ControladorUser:
 
     def obtener_usuario_por_email(self, email):
         return self.user_bo.obtener_usuario_por_email(email)
+    
+    def actualizar_usuario(self, vo: SuperVo) -> None:
+        return self.user_bo.actualizar_usuario(vo)

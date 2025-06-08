@@ -38,9 +38,31 @@ class UserBO:
         self.logger.info(f"BO: Comprobando login para email: {login_vo.email}.") # AÑADIDO
         return self.user_dao.consulta_login(login_vo.email, login_vo.contrasena)
 
-    def obtener_usuario_por_email(self, email: str) -> Optional[dict]:
-        self.logger.debug(f"BO: Obteniendo usuario por email: {email}.")
-        return self.user_dao.obtener_usuario_por_email(email)
+    def obtener_usuario_por_email(self, email: str) -> Optional[SuperVo]:
+        data = self.user_dao.obtener_usuario_por_email(email)  # dict o None
+        if not data:
+            return None
+        return SuperVo(
+            id_usuario      = data["id_usuario"],
+            nombre          = data["nombre"],
+            apellidos       = data["apellidos"],
+            email           = data["email"],
+            contrasena      = data["contrasena"],
+            rol             = data["rol"],
+            fecha_registro  = data["fecha_registro"],
+            fecha_nacimiento= data.get("fecha_nacimiento"),
+            telefono        = data.get("telefono"),
+            peso_corporal   = data.get("peso_corporal")
+    )
 
     def eliminar_usuario_por_email(self, email: str) -> bool:
         return self.user_dao.eliminar_usuario(email)
+
+    def actualizar_usuario(self, vo: SuperVo):
+        """
+        Llama al DAO para actualizar el usuario.
+        Si falla, lanza excepción para que la vista la maneje.
+        """
+        success = self.user_dao.update_user(vo)
+        if not success:
+            raise Exception("No se pudo actualizar el perfil del usuario.")

@@ -94,7 +94,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btn_guardar">
       <property name="text">
        <string>Guardar Cambios</string>
       </property>

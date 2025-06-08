@@ -26,6 +26,16 @@ class UserDao(Conexion):
         FROM Usuarios WHERE email = ?
     """
 
+    SQL_UPDATE = """
+        UPDATE Usuarios
+        SET nombre = ?,
+            apellidos = ?,
+            contrasena = ?,
+            fecha_nacimiento = ?,
+            telefono = ?,
+            peso_corporal = ?
+        WHERE email = ?
+    """
     def __init__(self):
         super().__init__() # Llama al constructor de Conexion
         self.logger = CustomLogger() # AÑADIDO: Inicializa el Logger
@@ -96,6 +106,28 @@ class UserDao(Conexion):
             return True
         except Exception as e:
             print(f"❌ Error al eliminar usuario: {e}")
+            return False
+        finally:
+            cursor.close()
+            
+    def update_user(self, vo: SuperVo) -> bool:
+        cursor = self.getCursor()
+        try:
+            cursor.execute(self.SQL_UPDATE, (
+                vo.nombre,
+                vo.apellidos,
+                vo.contrasena,
+                vo.fecha_nacimiento,
+                vo.telefono,
+                vo.peso_corporal,
+                vo.email
+            ))
+            # Si usas autocommit, no llames a commit()
+            # self.conexion.commit()
+            self.logger.info(f"Usuario {vo.email} actualizado correctamente.")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error al actualizar usuario {vo.email}: {e}")
             return False
         finally:
             cursor.close()

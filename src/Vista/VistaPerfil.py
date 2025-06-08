@@ -1,71 +1,99 @@
-from PyQt5.QtWidgets import QMainWindow, QMessageBox, QPushButton
+# src/Vista/VistaPerfil.py
+
+from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5 import uic
-from src.Conexion.Conexion import Conexion
+import hashlib
 from datetime import datetime
 
+from src.controlador.ControladorUser import ControladorUser
 from src.Logs.Logger import CustomLogger
+from src.Modelo.VO.SuperVo import SuperVo
 
+Form, _ = uic.loadUiType("src/Vista/Ui/VistaPerfil.ui")
 
-class VistaPerfil(QMainWindow):
+class VistaPerfil(QMainWindow, Form):
     def __init__(self, usuario_email, volver_callback):
         super().__init__()
-        uic.loadUi("src/Vista/Ui/VistaPerfil.ui", self)
+        self.setupUi(self)
 
-        self.usuario = usuario_email  # debe ser string
+        self.usuario_email   = usuario_email
         self.volver_callback = volver_callback
-        self.conn = Conexion().conexion
-        self.cursor = self.conn.cursor()
 
-        self.cargar_datos()
-        self.pushButton.clicked.connect(self.guardar_cambios)
+        self.controller = ControladorUser()
+        self.logger     = CustomLogger()
+        self.logger.info(f"VistaPerfil cargada para {usuario_email}")
 
-        # Botón volver
-        self.btn_volver = QPushButton("Volver al menú", self)
-        self.btn_volver.setGeometry(10, 10, 150, 30)
-        self.btn_volver.clicked.connect(self.volver_al_menu)
+        # Carga datos al iniciar
+        self._cargar_datos()
 
-        self.logger = CustomLogger()
-        self.logger.info("vista del perfil cargada")
+        # Conectar botones (asegúrate de que btn_guardar y btn_volver existan en el .ui)
+        self.btn_guardar.clicked.connect(self._guardar_cambios)
+        self.btn_volver.clicked.connect(self._volver_al_menu)
 
-    def cargar_datos(self):
-        self.cursor.execute("""
-            SELECT nombre, apellidos, email, contrasena, fecha_nacimiento, telefono, peso_corporal
-            FROM Usuarios
-            WHERE email = ?
-        """, (self.usuario,))
-        datos = self.cursor.fetchone()
+    def _cargar_datos(self):
+        vo: SuperVo = self.controller.obtener_usuario_por_email(self.usuario_email)
+        if not vo:
+            QMessageBox.critical(self, "Error", "No se encontró el perfil del usuario.")
+            self.close()
+            return
 
-        if datos:
-            self.inputNombre.setText(datos[0])
-            self.inputApellidos.setText(datos[1])
-            self.inputEmail.setText(datos[2])
-            self.inputContrasena.setText(datos[3])
+        self.inputNombre.setText(vo.nombre)
+        self.inputApellidos.setText(vo.apellidos)
+        self.inputEmail.setText(vo.email)
+        # Mostrar el hash; si prefieres la contraseña en texto claro, omite esto
+        self.inputContrasena.setText(vo.contrasena)
 
-            if datos[4]:
-                fecha = datetime.strptime(datos[4], "%Y-%m-%d")
+        if vo.fecha_nacimiento:
+            # vo.fecha_nacimiento podría ser string "YYYY-MM-DD" o QDate
+            try:
+                fecha = datetime.strptime(vo.fecha_nacimiento, "%Y-%m-%d")
                 self.inpuFechaDeNacimiento.setDate(fecha)
+            except Exception:
+                pass
 
-            self.inputTelefono.setText(datos[5] if datos[5] else "")
-            self.inputPeso.setValue(float(datos[6] or 0))
+        self.inputTelefono.setText(vo.telefono or "")
+        self.inputPeso.setValue(vo.peso_corporal or 0.0)
 
-    def guardar_cambios(self):
-        nombre = self.inputNombre.text()
-        apellidos = self.inputApellidos.text()
-        contrasena = self.inputContrasena.text()
-        fecha_nac = self.inpuFechaDeNacimiento.date().toString("yyyy-MM-dd")
-        telefono = self.inputTelefono.text()
-        peso = self.inputPeso.value()
+    def _guardar_cambios(self):
+        # Recolectar los datos del formulario
+        nombre   = self.inputNombre.text().strip()
+        apellidos= self.inputApellidos.text().strip()
+        email    = self.inputEmail.text().strip()
+        passwd   = self.inputContrasena.text().strip()
 
-        self.cursor.execute("""
-            UPDATE Usuarios
-            SET nombre = ?, apellidos = ?, contrasena = ?, fecha_nacimiento = ?, telefono = ?, peso_corporal = ?
-            WHERE email = ?
-        """, (nombre, apellidos, contrasena, fecha_nac, telefono, peso, self.usuario))
+        # Hash de contraseña
+        contrasena_hash = hashlib.sha256(passwd.encode()).hexdigest()
 
-        self.conn.commit()
-        QMessageBox.information(self, "Perfil actualizado", "Los datos han sido guardados correctamente.")
+        fecha_qdate = self.inpuFechaDeNacimiento.date()
+        fecha_nac   = fecha_qdate.toString("yyyy-MM-dd")
 
-    def volver_al_menu(self):
+        telefono = self.inputTelefono.text().strip()
+        peso     = self.inputPeso.value()
+
+        # Crear el VO
+        vo = SuperVo(
+            id_usuario       = None,
+            nombre           = nombre,
+            apellidos        = apellidos,
+            email            = email,
+            contrasena       = contrasena_hash,
+            rol              = None,
+            fecha_registro   = None,
+            fecha_nacimiento = fecha_nac,
+            telefono         = telefono,
+            peso_corporal    = peso
+        )
+
+        # Opción A: BO lanza excepción si falla
+        try:
+            self.controller.actualizar_usuario(vo)
+            QMessageBox.information(self, "Perfil actualizado", "Los datos se guardaron correctamente.")
+            self.logger.info(f"Perfil de {email} actualizado con éxito")
+        except Exception as e:
+            QMessageBox.critical(self, "Error al guardar", str(e))
+            self.logger.error(f"Error al actualizar perfil de {email}: {e}")
+
+    def _volver_al_menu(self):
         if self.volver_callback:
             self.close()
             self.volver_callback()

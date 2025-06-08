@@ -483,3 +483,137 @@
 [2025-06-08 11:10:41] [INFO] Navegando de Vista Menu Atleta a VistaPerfil para usuario: hola@gmail.com.
 [2025-06-08 11:10:41] [INFO] vista del perfil cargada
 [2025-06-08 11:10:42] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:35:26] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:35:26] [INFO] Vista Inicial cargada.
+[2025-06-08 11:35:26] [INFO] Visa inicial cargada.
+[2025-06-08 11:43:17] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:43:17] [INFO] Vista Inicial cargada.
+[2025-06-08 11:43:17] [INFO] Visa inicial cargada.
+[2025-06-08 11:43:19] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:43:20] [INFO] UserDao inicializado.
+[2025-06-08 11:43:20] [INFO] UserBO inicializado.
+[2025-06-08 11:43:20] [INFO] Vista Login cargada.
+[2025-06-08 11:43:29] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 11:43:29] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:43:29] [INFO] Login exitoso para fp@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 11:43:29] [INFO] Vista Menu Atleta cargada para usuario: fp@gmail.com.
+[2025-06-08 11:43:31] [INFO] Navegando de Vista Menu Atleta a VistaPerfil para usuario: fp@gmail.com.
+[2025-06-08 11:43:31] [INFO] UserDao inicializado.
+[2025-06-08 11:43:31] [INFO] UserBO inicializado.
+[2025-06-08 11:43:31] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 11:43:31] [ERROR] Error al abrir VistaPerfil para usuario fp@gmail.com: 'dict' object has no attribute 'nombre'
+[2025-06-08 11:43:34] [INFO] Navegando de Vista Menu Atleta a VistaPerfil para usuario: fp@gmail.com.
+[2025-06-08 11:43:34] [INFO] UserDao inicializado.
+[2025-06-08 11:43:34] [INFO] UserBO inicializado.
+[2025-06-08 11:43:34] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 11:43:34] [ERROR] Error al abrir VistaPerfil para usuario fp@gmail.com: 'dict' object has no attribute 'nombre'
+[2025-06-08 11:48:26] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:48:26] [INFO] Vista Inicial cargada.
+[2025-06-08 11:48:26] [INFO] Visa inicial cargada.
+[2025-06-08 11:48:28] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:48:29] [INFO] UserDao inicializado.
+[2025-06-08 11:48:29] [INFO] UserBO inicializado.
+[2025-06-08 11:48:29] [INFO] Vista Login cargada.
+[2025-06-08 11:48:40] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 11:48:40] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:50:02] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:50:02] [INFO] Vista Inicial cargada.
+[2025-06-08 11:50:02] [INFO] Visa inicial cargada.
+[2025-06-08 11:50:03] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:50:04] [INFO] UserDao inicializado.
+[2025-06-08 11:50:04] [INFO] UserBO inicializado.
+[2025-06-08 11:50:04] [INFO] Vista Login cargada.
+[2025-06-08 11:50:10] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 11:50:10] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:50:10] [INFO] Login exitoso para fp@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 11:53:33] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:53:33] [INFO] Vista Inicial cargada.
+[2025-06-08 11:53:33] [INFO] Visa inicial cargada.
+[2025-06-08 11:53:35] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:53:36] [INFO] UserDao inicializado.
+[2025-06-08 11:53:36] [INFO] UserBO inicializado.
+[2025-06-08 11:53:36] [INFO] Vista Login cargada.
+[2025-06-08 11:53:41] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 11:53:41] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:53:41] [ERROR] Error al abrir la ventana de menú: 'SuperVo' object has no attribute 'get'
+[2025-06-08 11:53:45] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 11:53:45] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:53:45] [ERROR] Error al abrir la ventana de menú: 'SuperVo' object has no attribute 'get'
+[2025-06-08 11:57:23] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:57:23] [INFO] Vista Inicial cargada.
+[2025-06-08 11:57:23] [INFO] Visa inicial cargada.
+[2025-06-08 11:57:25] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 11:57:25] [INFO] Vista Registro cargada.
+[2025-06-08 11:57:26] [INFO] Volviendo de VistaRegistro a VistaLogin (botón 'Volver').
+[2025-06-08 11:57:27] [INFO] UserDao inicializado.
+[2025-06-08 11:57:27] [INFO] UserBO inicializado.
+[2025-06-08 11:57:27] [INFO] Vista Login cargada.
+[2025-06-08 11:57:33] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 11:57:33] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:57:33] [INFO] Vista Menu Atleta cargada para usuario: fp@gmail.com
+[2025-06-08 11:57:33] [INFO] Navegando a VistaMenuAtleta para fp@gmail.com.
+[2025-06-08 11:57:35] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: fp@gmail.com
+[2025-06-08 11:57:35] [INFO] UserDao inicializado.
+[2025-06-08 11:57:35] [INFO] UserBO inicializado.
+[2025-06-08 11:57:35] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 11:57:35] [ERROR] Error al abrir VistaPerfil para usuario fp@gmail.com: 'VistaPerfil' object has no attribute 'btn_guardar'
+[2025-06-08 11:57:37] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: fp@gmail.com
+[2025-06-08 11:57:38] [INFO] UserDao inicializado.
+[2025-06-08 11:57:38] [INFO] UserBO inicializado.
+[2025-06-08 11:57:38] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 11:57:38] [ERROR] Error al abrir VistaPerfil para usuario fp@gmail.com: 'VistaPerfil' object has no attribute 'btn_guardar'
+[2025-06-08 11:57:38] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: fp@gmail.com
+[2025-06-08 11:57:38] [INFO] UserDao inicializado.
+[2025-06-08 11:57:38] [INFO] UserBO inicializado.
+[2025-06-08 11:57:38] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 11:57:38] [ERROR] Error al abrir VistaPerfil para usuario fp@gmail.com: 'VistaPerfil' object has no attribute 'btn_guardar'
+[2025-06-08 11:59:28] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:59:28] [INFO] Vista Inicial cargada.
+[2025-06-08 11:59:28] [INFO] Visa inicial cargada.
+[2025-06-08 11:59:30] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:59:31] [INFO] UserDao inicializado.
+[2025-06-08 11:59:31] [INFO] UserBO inicializado.
+[2025-06-08 11:59:31] [INFO] Vista Login cargada.
+[2025-06-08 11:59:37] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 11:59:37] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:59:37] [INFO] Vista Menu Atleta cargada para usuario: fp@gmail.com
+[2025-06-08 11:59:37] [INFO] Navegando a VistaMenuAtleta para fp@gmail.com.
+[2025-06-08 11:59:44] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: fp@gmail.com
+[2025-06-08 11:59:44] [INFO] UserDao inicializado.
+[2025-06-08 11:59:44] [INFO] UserBO inicializado.
+[2025-06-08 11:59:44] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 12:00:06] [ERROR] Error al actualizar perfil de fp@gmail.com: 'ControladorUser' object has no attribute 'actualizar_usuario'
+[2025-06-08 12:02:50] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 12:02:50] [INFO] Vista Inicial cargada.
+[2025-06-08 12:02:50] [INFO] Visa inicial cargada.
+[2025-06-08 12:02:53] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 12:02:54] [INFO] UserDao inicializado.
+[2025-06-08 12:02:54] [INFO] UserBO inicializado.
+[2025-06-08 12:02:54] [INFO] Vista Login cargada.
+[2025-06-08 12:03:01] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 12:03:01] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 12:03:01] [INFO] Vista Menu Atleta cargada para usuario: fp@gmail.com
+[2025-06-08 12:03:01] [INFO] Navegando a VistaMenuAtleta para fp@gmail.com.
+[2025-06-08 12:03:03] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: fp@gmail.com
+[2025-06-08 12:03:03] [INFO] UserDao inicializado.
+[2025-06-08 12:03:03] [INFO] UserBO inicializado.
+[2025-06-08 12:03:03] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 12:03:26] [ERROR] Error al actualizar usuario fp@gmail.com: java.sql.SQLException: Can't call commit when autocommit=true
+[2025-06-08 12:03:29] [ERROR] Error al actualizar perfil de fp@gmail.com: No se pudo actualizar el perfil del usuario.
+[2025-06-08 12:05:50] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 12:05:50] [INFO] Vista Inicial cargada.
+[2025-06-08 12:05:50] [INFO] Visa inicial cargada.
+[2025-06-08 12:05:51] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 12:05:52] [INFO] UserDao inicializado.
+[2025-06-08 12:05:52] [INFO] UserBO inicializado.
+[2025-06-08 12:05:52] [INFO] Vista Login cargada.
+[2025-06-08 12:05:56] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 12:05:56] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 12:05:56] [INFO] Vista Menu Atleta cargada para usuario: fp@gmail.com
+[2025-06-08 12:05:56] [INFO] Navegando a VistaMenuAtleta para fp@gmail.com.
+[2025-06-08 12:05:57] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: fp@gmail.com
+[2025-06-08 12:05:57] [INFO] UserDao inicializado.
+[2025-06-08 12:05:57] [INFO] UserBO inicializado.
+[2025-06-08 12:05:57] [INFO] VistaPerfil cargada para fp@gmail.com
+[2025-06-08 12:06:01] [INFO] Usuario fp@gmail.com actualizado correctamente.
+[2025-06-08 12:06:02] [INFO] Perfil de fp@gmail.com actualizado con éxito
