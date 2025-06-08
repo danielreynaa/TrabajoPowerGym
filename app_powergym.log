@@ -1561,3 +1561,92 @@
 [2025-06-08 17:13:43] [INFO] Visa inicial cargada.
 [2025-06-08 17:13:43] [INFO] Usuario regresó a la VistaInicial desde Login.
 >>>>>>> 9aa65463be24853019a5848e558d3715da098eb7
+[2025-06-08 17:19:46] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:19:46] [INFO] Vista Inicial cargada.
+[2025-06-08 17:19:46] [INFO] Visa inicial cargada.
+[2025-06-08 17:19:47] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:19:47] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:20:16] [INFO] UserDao inicializado.
+[2025-06-08 17:20:16] [INFO] UserBO inicializado.
+[2025-06-08 17:20:16] [INFO] BO: Intentando registrar usuario: reyna@gmail.com con rol: Administrador.
+[2025-06-08 17:20:16] [ERROR] Error al insertar usuario reyna@gmail.com: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('daniel', 'daniel', 'reyna@gmail.com', '025155e9d6f35' at line 3
+[2025-06-08 17:20:16] [ERROR] BO: Error al registrar usuario reyna@gmail.com: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('daniel', 'daniel', 'reyna@gmail.com', '025155e9d6f35' at line 3
+[2025-06-08 17:20:16] [ERROR] VistaRegistro: error al registrar 'reyna@gmail.com' → java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('daniel', 'daniel', 'reyna@gmail.com', '025155e9d6f35' at line 3
+[2025-06-08 17:25:10] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:25:10] [INFO] Vista Inicial cargada.
+[2025-06-08 17:25:10] [INFO] Visa inicial cargada.
+[2025-06-08 17:25:11] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:25:11] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:25:42] [INFO] UserDao inicializado.
+[2025-06-08 17:25:42] [INFO] UserBO inicializado.
+[2025-06-08 17:25:42] [INFO] BO: Intentando registrar usuario: j@gmail.com con rol: Administrador.
+[2025-06-08 17:25:42] [ERROR] Error al insertar usuario j@gmail.com: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('j', 'j', 'j@gmail.com', 'de3bbd0fd7945e42581643b18cd' at line 3
+[2025-06-08 17:25:42] [ERROR] BO: Error al registrar usuario j@gmail.com: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('j', 'j', 'j@gmail.com', 'de3bbd0fd7945e42581643b18cd' at line 3
+[2025-06-08 17:25:42] [ERROR] VistaRegistro: error al registrar 'j@gmail.com' → java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'corporal
+        ) VALUES ('j', 'j', 'j@gmail.com', 'de3bbd0fd7945e42581643b18cd' at line 3
+[2025-06-08 17:28:25] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:28:25] [INFO] Vista Inicial cargada.
+[2025-06-08 17:28:25] [INFO] Visa inicial cargada.
+[2025-06-08 17:28:27] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:28:27] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:28:52] [INFO] UserDao inicializado.
+[2025-06-08 17:28:52] [INFO] UserBO inicializado.
+[2025-06-08 17:28:52] [INFO] BO: Intentando registrar usuario: j@gmail.com con rol: Administrador.
+[2025-06-08 17:28:53] [ERROR] Error al insertar usuario j@gmail.com: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'j@gmail.com' for key 'usuarios.email'
+[2025-06-08 17:28:53] [ERROR] BO: Error al registrar usuario j@gmail.com: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'j@gmail.com' for key 'usuarios.email'
+[2025-06-08 17:28:53] [ERROR] VistaRegistro: error al registrar 'j@gmail.com' → java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'j@gmail.com' for key 'usuarios.email'
+[2025-06-08 17:29:08] [INFO] UserDao inicializado.
+[2025-06-08 17:29:08] [INFO] UserBO inicializado.
+[2025-06-08 17:29:08] [INFO] BO: Intentando registrar usuario: jj@gmail.com con rol: Administrador.
+[2025-06-08 17:29:08] [INFO] Usuario jj@gmail.com insertado correctamente en BD.
+[2025-06-08 17:29:08] [INFO] BO: Usuario jj@gmail.com registrado con éxito.
+[2025-06-08 17:29:08] [INFO] VistaRegistro: usuario 'jj@gmail.com' registrado exitosamente con rol 'Administrador'.
+[2025-06-08 17:29:10] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 17:29:10] [INFO] UserDao inicializado.
+[2025-06-08 17:29:10] [INFO] UserBO inicializado.
+[2025-06-08 17:29:10] [INFO] Vista Login cargada.
+[2025-06-08 17:29:20] [INFO] BO: Comprobando login para email: jj@gmail.com.
+[2025-06-08 17:29:20] [INFO] Usuario jj@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:29:21] [INFO] Vista Menu Administrador cargada para usuario: jj@gmail.com
+[2025-06-08 17:29:21] [INFO] Navegando a VistaMenuAdministrador para jj@gmail.com.
+[2025-06-08 17:29:22] [INFO] Navegando a VistaTipoUsuarios para jj@gmail.com
+[2025-06-08 17:29:22] [INFO] VistaTipoUsuarios: cargada para jj@gmail.com (ID 6).
+[2025-06-08 17:29:24] [INFO] VistaTipoUsuarios: viendo lista de 'Atleta'.
+[2025-06-08 17:29:24] [INFO] UserDao inicializado.
+[2025-06-08 17:29:24] [INFO] UserBO inicializado.
+[2025-06-08 17:29:29] [INFO] UserDao inicializado.
+[2025-06-08 17:29:29] [INFO] UserBO inicializado.
+[2025-06-08 17:29:29] [INFO] Intentando eliminar usuario: felipe@gmail.com.
+[2025-06-08 17:29:29] [INFO] Usuario felipe@gmail.com eliminado correctamente.
+[2025-06-08 17:29:30] [INFO] UserDao inicializado.
+[2025-06-08 17:29:30] [INFO] UserBO inicializado.
+[2025-06-08 17:29:38] [INFO] VistaTipoUsuarios: volviendo al menú para jj@gmail.com.
+[2025-06-08 17:29:38] [INFO] Volviendo a VistaMenuAdministrador para usuario: jj@gmail.com
+[2025-06-08 17:29:46] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:29:46] [INFO] Vista Inicial cargada.
+[2025-06-08 17:29:46] [INFO] Visa inicial cargada.
+[2025-06-08 17:29:47] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:29:47] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:30:11] [INFO] UserDao inicializado.
+[2025-06-08 17:30:11] [INFO] UserBO inicializado.
+[2025-06-08 17:30:11] [INFO] BO: Intentando registrar usuario: fp@gmail.com con rol: Entrenador.
+[2025-06-08 17:30:11] [INFO] Usuario fp@gmail.com insertado correctamente en BD.
+[2025-06-08 17:30:11] [INFO] BO: Usuario fp@gmail.com registrado con éxito.
+[2025-06-08 17:30:11] [INFO] VistaRegistro: usuario 'fp@gmail.com' registrado exitosamente con rol 'Entrenador'.
+[2025-06-08 17:30:13] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 17:30:13] [INFO] UserDao inicializado.
+[2025-06-08 17:30:13] [INFO] UserBO inicializado.
+[2025-06-08 17:30:13] [INFO] Vista Login cargada.
+[2025-06-08 17:30:22] [INFO] BO: Comprobando login para email: fp@gmail.com.
+[2025-06-08 17:30:22] [INFO] Usuario fp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 17:30:22] [INFO] VistaMenuEntrenador: cargada para usuario fp@gmail.com (ID 7).
+[2025-06-08 17:30:22] [INFO] Navegando a VistaMenuEntrenador para fp@gmail.com.
+[2025-06-08 17:30:23] [INFO] Navegando a VistaSeleccionAtletasAsignados para fp@gmail.com.
+[2025-06-08 17:30:23] [INFO] VistaSeleccionAtletasAsignados: cargada para fp@gmail.com (ID 7).
+[2025-06-08 17:30:24] [INFO] UserDao inicializado.
+[2025-06-08 17:30:24] [INFO] UserBO inicializado.
