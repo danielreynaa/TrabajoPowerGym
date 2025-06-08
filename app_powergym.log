@@ -1070,438 +1070,251 @@
 [2025-06-08 13:28:10] [INFO] VistaEntrenamiento: todos los levantamientos guardados para atleta@gmail.com.
 [2025-06-08 13:28:12] [INFO] VistaEntrenamiento: regresando al menú para atleta@gmail.com.
 [2025-06-08 13:28:12] [INFO] Volviendo a Vista Menu Atleta para usuario: atleta@gmail.com
-[2025-06-08 15:54:30] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 15:54:30] [INFO] Vista Inicial cargada.
-[2025-06-08 15:54:30] [INFO] Visa inicial cargada.
-[2025-06-08 15:54:31] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 15:54:34] [INFO] UserDao inicializado.
-[2025-06-08 15:54:34] [INFO] UserBO inicializado.
-[2025-06-08 15:54:34] [INFO] Vista Login cargada.
-[2025-06-08 15:54:40] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 15:54:40] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 15:54:40] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 15:54:40] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 15:54:42] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 15:54:42] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 15:54:42] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 15:54:51] [INFO] VistaEntrenamiento: guardando levantamientos para hola@gmail.com (ID 1).
-[2025-06-08 15:54:51] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLSyntaxErrorException: Unknown column 'id_usuario' in 'field list'
-[2025-06-08 15:54:51] [ERROR] Error al registrar Sentadilla: java.sql.SQLSyntaxErrorException: Unknown column 'id_usuario' in 'field list'
-[2025-06-08 15:54:51] [ERROR] Error al registrar Banca: El peso debe ser un número positivo.
-[2025-06-08 15:54:51] [ERROR] Error al registrar Peso Muerto: El peso debe ser un número positivo.
-[2025-06-08 15:54:51] [ERROR] VistaEntrenamiento: errores al guardar → ["Sentadilla: java.sql.SQLSyntaxErrorException: Unknown column 'id_usuario' in 'field list'", 'Banca: El peso debe ser un número positivo.', 'Peso Muerto: El peso debe ser un número positivo.']
-[2025-06-08 15:54:54] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 15:54:54] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 15:54:56] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 15:54:56] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 15:54:56] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 15:55:14] [INFO] VistaEntrenamiento: guardando levantamientos para hola@gmail.com (ID 1).
-[2025-06-08 15:55:14] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLSyntaxErrorException: Unknown column 'id_usuario' in 'field list'
-[2025-06-08 15:55:14] [ERROR] Error al registrar Sentadilla: java.sql.SQLSyntaxErrorException: Unknown column 'id_usuario' in 'field list'
-[2025-06-08 15:55:14] [ERROR] Error al registrar Banca: El peso debe ser un número positivo.
-[2025-06-08 15:55:14] [ERROR] Error al registrar Peso Muerto: El peso debe ser un número positivo.
-[2025-06-08 15:55:14] [ERROR] VistaEntrenamiento: errores al guardar → ["Sentadilla: java.sql.SQLSyntaxErrorException: Unknown column 'id_usuario' in 'field list'", 'Banca: El peso debe ser un número positivo.', 'Peso Muerto: El peso debe ser un número positivo.']
-[2025-06-08 15:55:20] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 15:55:20] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 15:56:52] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 15:56:52] [INFO] Vista Inicial cargada.
-[2025-06-08 15:56:52] [INFO] Visa inicial cargada.
-[2025-06-08 15:56:53] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 15:56:55] [INFO] UserDao inicializado.
-[2025-06-08 15:56:55] [INFO] UserBO inicializado.
-[2025-06-08 15:56:55] [INFO] Vista Login cargada.
-[2025-06-08 15:57:02] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 15:57:02] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 15:57:02] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 15:57:02] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 15:57:03] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 15:57:03] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 15:57:03] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 15:57:21] [INFO] VistaEntrenamiento: guardando levantamientos para hola@gmail.com (ID 1).
-[2025-06-08 15:57:21] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:57:21] [ERROR] Error al registrar Sentadilla: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:57:21] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:57:21] [ERROR] Error al registrar Banca: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:57:21] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:57:21] [ERROR] Error al registrar Peso Muerto: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:57:21] [ERROR] VistaEntrenamiento: errores al guardar → ["Sentadilla: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null", "Banca: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null", "Peso Muerto: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null"]
-[2025-06-08 15:57:24] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 15:57:24] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 15:57:25] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 15:57:25] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 15:57:25] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 15:58:11] [INFO] VistaEntrenamiento: guardando levantamientos para hola@gmail.com (ID 1).
-[2025-06-08 15:58:11] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:58:11] [ERROR] Error al registrar Sentadilla: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:58:11] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:58:11] [ERROR] Error al registrar Banca: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:58:11] [ERROR] DAO: error al crear levantamiento para usuario 1, entrenamiento None: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:58:11] [ERROR] Error al registrar Peso Muerto: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null
-[2025-06-08 15:58:11] [ERROR] VistaEntrenamiento: errores al guardar → ["Sentadilla: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null", "Banca: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null", "Peso Muerto: java.sql.SQLIntegrityConstraintViolationException: Column 'id_entrenamiento' cannot be null"]
-[2025-06-08 15:58:33] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 15:58:33] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 15:59:27] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 15:59:27] [INFO] Vista Inicial cargada.
-[2025-06-08 15:59:27] [INFO] Visa inicial cargada.
-[2025-06-08 15:59:28] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 15:59:30] [INFO] UserDao inicializado.
-[2025-06-08 15:59:30] [INFO] UserBO inicializado.
-[2025-06-08 15:59:30] [INFO] Vista Login cargada.
-[2025-06-08 15:59:37] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 15:59:37] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 15:59:37] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 15:59:37] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 15:59:38] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 15:59:38] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 15:59:38] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 16:00:00] [INFO] VistaEntrenamiento: guardando levantamientos para hola@gmail.com (ID 1).
-[2025-06-08 16:00:00] [INFO] DAO: levantamiento 'Sentadilla' guardado para usuario 1.
-[2025-06-08 16:00:00] [INFO] DAO: levantamiento 'Banca' guardado para usuario 1.
-[2025-06-08 16:00:00] [INFO] DAO: levantamiento 'Peso Muerto' guardado para usuario 1.
-[2025-06-08 16:00:00] [INFO] VistaEntrenamiento: todos los levantamientos guardados para hola@gmail.com.
-[2025-06-08 16:00:02] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 16:00:02] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:00:08] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 16:00:08] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:00:08] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 16:08:20] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:08:20] [INFO] Vista Inicial cargada.
-[2025-06-08 16:08:20] [INFO] Visa inicial cargada.
-[2025-06-08 16:08:21] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:08:22] [INFO] UserDao inicializado.
-[2025-06-08 16:08:22] [INFO] UserBO inicializado.
-[2025-06-08 16:08:22] [INFO] Vista Login cargada.
-[2025-06-08 16:08:29] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:08:29] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:08:29] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:08:29] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:08:30] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 16:08:30] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:08:30] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 16:08:31] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 16:08:31] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:08:32] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:08:32] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:14:11] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:14:11] [INFO] Vista Inicial cargada.
-[2025-06-08 16:14:11] [INFO] Visa inicial cargada.
-[2025-06-08 16:14:12] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:14:14] [INFO] UserDao inicializado.
-[2025-06-08 16:14:14] [INFO] UserBO inicializado.
-[2025-06-08 16:14:14] [INFO] Vista Login cargada.
-[2025-06-08 16:14:21] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:14:21] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:14:21] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:14:21] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:14:23] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:14:23] [INFO] UserDao inicializado.
-[2025-06-08 16:14:23] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:14:23] [INFO] HistorialBO inicializado.
-[2025-06-08 16:14:23] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:16:16] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:16:16] [INFO] Vista Inicial cargada.
-[2025-06-08 16:16:16] [INFO] Visa inicial cargada.
-[2025-06-08 16:16:16] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:16:18] [INFO] UserDao inicializado.
-[2025-06-08 16:16:18] [INFO] UserBO inicializado.
-[2025-06-08 16:16:18] [INFO] Vista Login cargada.
-[2025-06-08 16:16:25] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:16:25] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:16:25] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:16:25] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:16:26] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 16:16:26] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:16:26] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 16:16:27] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 16:16:27] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:16:28] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:16:28] [INFO] UserDao inicializado.
-[2025-06-08 16:16:28] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:16:28] [INFO] HistorialBO inicializado.
-[2025-06-08 16:16:28] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:16:28] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:16:28] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:16:28] [ERROR] BO: Error al obtener historial completo para atleta hola@gmail.com: 'UserDao' object has no attribute 'obtener_id_por_email'
-[2025-06-08 16:16:28] [ERROR] Fallo al cargar historial para hola@gmail.com. Mensaje: Fallo al cargar el historial: 'UserDao' object has no attribute 'obtener_id_por_email'
-[2025-06-08 16:16:34] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:16:34] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:16:34] [ERROR] BO: Error al obtener récords para atleta hola@gmail.com: 'UserDao' object has no attribute 'obtener_id_por_email'
-[2025-06-08 16:16:34] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:16:34] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:16:34] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'UserDao' object has no attribute 'obtener_id_por_email'
-[2025-06-08 16:26:54] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:26:54] [INFO] Vista Inicial cargada.
-[2025-06-08 16:26:54] [INFO] Visa inicial cargada.
-[2025-06-08 16:26:57] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:26:58] [INFO] UserDao inicializado.
-[2025-06-08 16:26:58] [INFO] UserBO inicializado.
-[2025-06-08 16:26:58] [INFO] Vista Login cargada.
-[2025-06-08 16:27:06] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:27:06] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:27:06] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:27:06] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:27:07] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:27:07] [INFO] UserDao inicializado.
-[2025-06-08 16:27:07] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:27:07] [INFO] HistorialBO inicializado.
-[2025-06-08 16:27:07] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:27:07] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:27:07] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:27:07] [ERROR] DAO: Error al obtener ID de usuario por email hola@gmail.com: 'UserDao' object has no attribute 'cursor'
-[2025-06-08 16:27:07] [ERROR] BO: Error al obtener historial completo para atleta hola@gmail.com: 'UserDao' object has no attribute 'cursor'
-[2025-06-08 16:27:07] [ERROR] Fallo al cargar historial para hola@gmail.com. Mensaje: Fallo al cargar el historial: 'UserDao' object has no attribute 'cursor'
-[2025-06-08 16:27:15] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:27:15] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:27:15] [ERROR] DAO: Error al obtener ID de usuario por email hola@gmail.com: 'UserDao' object has no attribute 'cursor'
-[2025-06-08 16:27:15] [ERROR] BO: Error al obtener récords para atleta hola@gmail.com: 'UserDao' object has no attribute 'cursor'
-[2025-06-08 16:27:15] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:27:15] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:27:15] [ERROR] DAO: Error al obtener ID de usuario por email hola@gmail.com: 'UserDao' object has no attribute 'cursor'
-[2025-06-08 16:27:15] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'UserDao' object has no attribute 'cursor'
-[2025-06-08 16:30:00] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:30:00] [INFO] Vista Inicial cargada.
-[2025-06-08 16:30:00] [INFO] Visa inicial cargada.
-[2025-06-08 16:30:00] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:30:02] [INFO] UserDao inicializado.
-[2025-06-08 16:30:02] [INFO] UserBO inicializado.
-[2025-06-08 16:30:02] [INFO] Vista Login cargada.
-[2025-06-08 16:30:07] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:30:08] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:30:08] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:30:08] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:30:09] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:30:09] [INFO] UserDao inicializado.
-[2025-06-08 16:30:09] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:30:09] [INFO] HistorialBO inicializado.
-[2025-06-08 16:30:09] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:30:09] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:30:09] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:30:09] [INFO] BO: Historial completo para atleta hola@gmail.com obtenido: 18 registros.
-[2025-06-08 16:30:09] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:30:09] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:30:09] [INFO] BO: Récords para atleta hola@gmail.com obtenidos: {'Sentadilla': 105.0, 'Banca': 100.0, 'Peso Muerto': 130.0}.
-[2025-06-08 16:30:09] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:30:09] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:30:09] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'RegistroLevantamientoDAO' object has no attribute 'contar_entrenamientos_por_ejercicio'
-[2025-06-08 16:34:19] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:34:19] [INFO] Vista Inicial cargada.
-[2025-06-08 16:34:19] [INFO] Visa inicial cargada.
-[2025-06-08 16:34:20] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:34:22] [INFO] UserDao inicializado.
-[2025-06-08 16:34:22] [INFO] UserBO inicializado.
-[2025-06-08 16:34:22] [INFO] Vista Login cargada.
-[2025-06-08 16:34:30] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:34:30] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:34:30] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:34:30] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:34:31] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 16:34:31] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:34:31] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 16:34:58] [INFO] VistaEntrenamiento: guardando levantamientos para hola@gmail.com (ID 1).
-[2025-06-08 16:34:58] [INFO] DAO: levantamiento 'Sentadilla' guardado para usuario 1.
-[2025-06-08 16:34:58] [INFO] DAO: levantamiento 'Banca' guardado para usuario 1.
-[2025-06-08 16:34:58] [INFO] DAO: levantamiento 'Peso Muerto' guardado para usuario 1.
-[2025-06-08 16:34:58] [INFO] VistaEntrenamiento: todos los levantamientos guardados para hola@gmail.com.
-[2025-06-08 16:34:59] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 16:34:59] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:35:00] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 16:35:00] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:35:00] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 16:35:17] [INFO] VistaEntrenamiento: guardando levantamientos para hola@gmail.com (ID 1).
-[2025-06-08 16:35:17] [INFO] DAO: levantamiento 'Sentadilla' guardado para usuario 1.
-[2025-06-08 16:35:17] [INFO] DAO: levantamiento 'Banca' guardado para usuario 1.
-[2025-06-08 16:35:17] [INFO] DAO: levantamiento 'Peso Muerto' guardado para usuario 1.
-[2025-06-08 16:35:17] [INFO] VistaEntrenamiento: todos los levantamientos guardados para hola@gmail.com.
-[2025-06-08 16:35:18] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 16:35:18] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:35:18] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:35:18] [INFO] UserDao inicializado.
-[2025-06-08 16:35:19] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:35:19] [INFO] HistorialBO inicializado.
-[2025-06-08 16:35:19] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:35:19] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:35:19] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:35:19] [INFO] BO: Historial completo para atleta hola@gmail.com obtenido: 18 registros.
-[2025-06-08 16:35:19] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:35:19] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:35:19] [INFO] BO: Récords para atleta hola@gmail.com obtenidos: {'Sentadilla': 105.0, 'Banca': 100.0, 'Peso Muerto': 130.0}.
-[2025-06-08 16:35:19] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:35:19] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:35:19] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'RegistroLevantamientoDAO' object has no attribute 'contar_entrenamientos_por_ejercicio'
-[2025-06-08 16:37:21] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:37:21] [INFO] Vista Inicial cargada.
-[2025-06-08 16:37:21] [INFO] Visa inicial cargada.
-[2025-06-08 16:37:22] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:37:24] [INFO] UserDao inicializado.
-[2025-06-08 16:37:24] [INFO] UserBO inicializado.
-[2025-06-08 16:37:24] [INFO] Vista Login cargada.
-[2025-06-08 16:37:29] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:37:31] [ERROR] Intento de login fallido para usuario: hola@gmail.com
-[2025-06-08 16:37:34] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:37:34] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:37:34] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:37:34] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:37:35] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:37:35] [INFO] UserDao inicializado.
-[2025-06-08 16:37:36] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:37:36] [INFO] HistorialBO inicializado.
-[2025-06-08 16:37:36] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:37:36] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:37:36] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:37:36] [INFO] BO: Historial completo para atleta hola@gmail.com obtenido: 18 registros.
-[2025-06-08 16:37:36] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:37:36] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:37:36] [INFO] BO: Récords para atleta hola@gmail.com obtenidos: {'Sentadilla': 105.0, 'Banca': 100.0, 'Peso Muerto': 130.0}.
-[2025-06-08 16:37:36] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:37:36] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:37:36] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'RegistroLevantamientoDAO' object has no attribute 'contar_entrenamientos_por_ejercicio'
-[2025-06-08 16:37:52] [INFO] Volviendo de Vista Historial a Vista Menu Atleta para usuario: hola@gmail.com.
-[2025-06-08 16:37:52] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:39:27] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:39:27] [INFO] Vista Inicial cargada.
-[2025-06-08 16:39:27] [INFO] Visa inicial cargada.
-[2025-06-08 16:39:28] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:39:29] [INFO] UserDao inicializado.
-[2025-06-08 16:39:29] [INFO] UserBO inicializado.
-[2025-06-08 16:39:29] [INFO] Vista Login cargada.
-[2025-06-08 16:39:36] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:39:36] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:39:36] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:39:36] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:39:37] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:39:37] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:39:37] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:40:58] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:40:58] [INFO] Vista Inicial cargada.
-[2025-06-08 16:40:58] [INFO] Visa inicial cargada.
-[2025-06-08 16:40:59] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:41:01] [INFO] UserDao inicializado.
-[2025-06-08 16:41:01] [INFO] UserBO inicializado.
-[2025-06-08 16:41:01] [INFO] Vista Login cargada.
-[2025-06-08 16:41:06] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:41:06] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:41:06] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:41:06] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:41:07] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:41:07] [INFO] UserDao inicializado.
-[2025-06-08 16:41:07] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:41:07] [INFO] HistorialBO inicializado.
-[2025-06-08 16:41:07] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:41:07] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:41:07] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:41:07] [INFO] BO: Historial completo para atleta hola@gmail.com obtenido: 18 registros.
-[2025-06-08 16:41:07] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:41:07] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:41:07] [INFO] BO: Récords para atleta hola@gmail.com obtenidos: {'Sentadilla': 105.0, 'Banca': 100.0, 'Peso Muerto': 130.0}.
-[2025-06-08 16:41:07] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:41:07] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:41:07] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'RegistroLevantamientoDAO' object has no attribute 'contar_entrenamientos_por_ejercicio'
-[2025-06-08 16:44:53] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:44:53] [INFO] Vista Inicial cargada.
-[2025-06-08 16:44:53] [INFO] Visa inicial cargada.
-[2025-06-08 16:44:55] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:44:56] [INFO] UserDao inicializado.
-[2025-06-08 16:44:56] [INFO] UserBO inicializado.
-[2025-06-08 16:44:56] [INFO] Vista Login cargada.
-[2025-06-08 16:45:03] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:45:03] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:45:03] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:45:03] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:45:04] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:45:04] [INFO] UserDao inicializado.
-[2025-06-08 16:45:04] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:45:04] [INFO] HistorialBO inicializado.
-[2025-06-08 16:45:04] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:45:04] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:45:04] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:45:04] [INFO] BO: Historial completo para atleta hola@gmail.com obtenido: 18 registros.
-[2025-06-08 16:45:04] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:45:04] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:45:04] [INFO] BO: Récords para atleta hola@gmail.com obtenidos: {'Sentadilla': 105.0, 'Banca': 100.0, 'Peso Muerto': 130.0}.
-[2025-06-08 16:45:04] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:45:04] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:45:04] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'RegistroLevantamientoDAO' object has no attribute 'contar_entrenamientos_por_ejercicio'
-[2025-06-08 16:46:02] [INFO] Volviendo de Vista Historial a Vista Menu Atleta para usuario: hola@gmail.com.
-[2025-06-08 16:46:02] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:46:08] [INFO] Navegando de VistaMenuAtleta a VistaProgreso para usuario: hola@gmail.com
-[2025-06-08 16:46:08] [INFO] UserDao inicializado.
-[2025-06-08 16:46:08] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:46:08] [INFO] ProgresoBO inicializado.
-[2025-06-08 16:46:08] [INFO] VistaProgreso: inicializada para hola@gmail.com.
-[2025-06-08 16:46:08] [INFO] VistaProgreso: actualizando gráfica de 'Sentadilla' para hola@gmail.com.
-[2025-06-08 16:46:08] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: hola@gmail.com.
-[2025-06-08 16:46:08] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 1 puntos.
-[2025-06-08 16:46:09] [INFO] VistaProgreso: regresando al menú para hola@gmail.com.
-[2025-06-08 16:46:09] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:46:10] [INFO] Navegando de VistaMenuAtleta a VistaPerfil para usuario: hola@gmail.com
-[2025-06-08 16:46:10] [INFO] UserDao inicializado.
-[2025-06-08 16:46:10] [INFO] UserBO inicializado.
-[2025-06-08 16:46:10] [INFO] VistaPerfil cargada para hola@gmail.com
-[2025-06-08 16:46:12] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:46:13] [INFO] Navegando de VistaMenuAtleta a VistaEntrenamiento para usuario: hola@gmail.com
-[2025-06-08 16:46:13] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:46:13] [INFO] VistaEntrenamiento: cargada para hola@gmail.com (ID 1).
-[2025-06-08 16:46:14] [INFO] VistaEntrenamiento: regresando al menú para hola@gmail.com.
-[2025-06-08 16:46:14] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com
-[2025-06-08 16:46:25] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:46:25] [INFO] Vista Inicial cargada.
-[2025-06-08 16:46:25] [INFO] Visa inicial cargada.
-[2025-06-08 16:46:26] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:46:28] [INFO] UserDao inicializado.
-[2025-06-08 16:46:28] [INFO] UserBO inicializado.
-[2025-06-08 16:46:28] [INFO] Vista Login cargada.
-[2025-06-08 16:46:35] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:46:35] [INFO] Vista Inicial cargada.
-[2025-06-08 16:46:35] [INFO] Visa inicial cargada.
-[2025-06-08 16:46:36] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
-[2025-06-08 16:46:36] [INFO] VistaRegistro: inicializada.
-[2025-06-08 16:50:40] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:50:40] [INFO] Vista Inicial cargada.
-[2025-06-08 16:50:40] [INFO] Visa inicial cargada.
-[2025-06-08 16:50:41] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:50:43] [INFO] UserDao inicializado.
-[2025-06-08 16:50:43] [INFO] UserBO inicializado.
-[2025-06-08 16:50:43] [INFO] Vista Login cargada.
-[2025-06-08 16:50:50] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:50:50] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:50:50] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:50:50] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:50:52] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:50:52] [INFO] UserDao inicializado.
-[2025-06-08 16:50:52] [INFO] RegistroLevantamientoDAO: inicializado.
-[2025-06-08 16:50:52] [INFO] HistorialBO inicializado.
-[2025-06-08 16:50:52] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:50:52] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:50:52] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:50:52] [INFO] BO: Historial completo para atleta hola@gmail.com obtenido: 18 registros.
-[2025-06-08 16:50:52] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:50:52] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:50:52] [INFO] BO: Récords para atleta hola@gmail.com obtenidos: {'Sentadilla': 105.0, 'Banca': 100.0, 'Peso Muerto': 130.0}.
-[2025-06-08 16:50:52] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:50:52] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:50:52] [ERROR] BO: Error al obtener conteo de entrenamientos por ejercicio para atleta hola@gmail.com: 'RegistroLevantamientoDAO' object has no attribute 'contar_entrenamientos_por_ejercicio'
-[2025-06-08 16:51:13] [INFO] Aplicación PowerGym iniciada.
-[2025-06-08 16:51:13] [INFO] Vista Inicial cargada.
-[2025-06-08 16:51:13] [INFO] Visa inicial cargada.
-[2025-06-08 16:51:14] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
-[2025-06-08 16:51:16] [INFO] UserDao inicializado.
-[2025-06-08 16:51:16] [INFO] UserBO inicializado.
-[2025-06-08 16:51:16] [INFO] Vista Login cargada.
-[2025-06-08 16:51:22] [INFO] BO: Comprobando login para email: hola@gmail.com.
-[2025-06-08 16:51:22] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
-[2025-06-08 16:51:22] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com
-[2025-06-08 16:51:22] [INFO] Navegando a VistaMenuAtleta para hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] Navegando de VistaMenuAtleta a VistaHistorial para usuario: hola@gmail.com
-[2025-06-08 16:51:23] [INFO] UserDao inicializado.
-[2025-06-08 16:51:23] [INFO] RegistroLevantamientoDAO inicializado.
-[2025-06-08 16:51:23] [INFO] HistorialBO inicializado.
-[2025-06-08 16:51:23] [INFO] Vista Historial cargada para usuario: hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] Cargando historial de entrenamientos para usuario: hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] BO: Obteniendo historial completo para atleta: hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] BO: Historial completo para atleta hola@gmail.com obtenido: 0 registros.
-[2025-06-08 16:51:23] [INFO] Mostrando récords de levantamiento para usuario: hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] BO: Obteniendo récords para atleta: hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] BO: Récords para atleta hola@gmail.com obtenidos: {'Sentadilla': 88.0, 'Banca': 88.0, 'Peso Muerto': 103.0}.
-[2025-06-08 16:51:23] [INFO] Mostrando totales de entrenamiento por ejercicio para usuario: hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] BO: Obteniendo conteo de entrenamientos por ejercicio para atleta: hola@gmail.com.
-[2025-06-08 16:51:23] [INFO] BO: Conteo de entrenamientos por ejercicio para atleta hola@gmail.com obtenido: {'Sentadilla': 3, 'Banca': 3, 'Peso Muerto': 3}.
+[2025-06-08 15:55:56] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 15:55:56] [INFO] Vista Inicial cargada.
+[2025-06-08 15:55:56] [INFO] Visa inicial cargada.
+[2025-06-08 15:55:58] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 15:55:59] [INFO] UserDao inicializado.
+[2025-06-08 15:55:59] [INFO] UserBO inicializado.
+[2025-06-08 15:55:59] [INFO] Vista Login cargada.
+[2025-06-08 15:56:04] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 15:56:05] [ERROR] Intento de login fallido para usuario: admin@gmail.com
+[2025-06-08 15:57:51] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 15:57:51] [INFO] Vista Inicial cargada.
+[2025-06-08 15:57:51] [INFO] Visa inicial cargada.
+[2025-06-08 15:57:54] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 15:57:54] [INFO] UserDao inicializado.
+[2025-06-08 15:57:54] [INFO] UserBO inicializado.
+[2025-06-08 15:57:54] [INFO] Vista Login cargada.
+[2025-06-08 15:58:00] [INFO] BO: Comprobando login para email: jp@gmail.com.
+[2025-06-08 15:58:00] [INFO] Usuario jp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 15:58:00] [INFO] Vista Menu Administrador cargada para usuario: jp@gmail.com
+[2025-06-08 15:58:00] [INFO] Navegando a VistaMenuAdministrador para jp@gmail.com.
+[2025-06-08 15:58:02] [INFO] Navegando a VistaTipoUsuarios para jp@gmail.com
+[2025-06-08 16:04:43] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:04:43] [INFO] Vista Inicial cargada.
+[2025-06-08 16:04:43] [INFO] Visa inicial cargada.
+[2025-06-08 16:04:45] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 16:04:45] [INFO] UserDao inicializado.
+[2025-06-08 16:04:45] [INFO] UserBO inicializado.
+[2025-06-08 16:04:45] [INFO] Vista Login cargada.
+[2025-06-08 16:04:50] [INFO] BO: Comprobando login para email: jp@gmail.com.
+[2025-06-08 16:04:50] [INFO] Usuario jp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:04:51] [INFO] Vista Menu Administrador cargada para usuario: jp@gmail.com
+[2025-06-08 16:04:51] [INFO] Navegando a VistaMenuAdministrador para jp@gmail.com.
+[2025-06-08 16:04:52] [INFO] Navegando a VistaTipoUsuarios para jp@gmail.com
+[2025-06-08 16:04:56] [INFO] UserDao inicializado.
+[2025-06-08 16:04:56] [INFO] UserBO inicializado.
+[2025-06-08 16:05:14] [INFO] UserDao inicializado.
+[2025-06-08 16:05:14] [INFO] UserBO inicializado.
+[2025-06-08 16:07:24] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:07:24] [INFO] Vista Inicial cargada.
+[2025-06-08 16:07:24] [INFO] Visa inicial cargada.
+[2025-06-08 16:07:26] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 16:07:27] [INFO] UserDao inicializado.
+[2025-06-08 16:07:27] [INFO] UserBO inicializado.
+[2025-06-08 16:07:27] [INFO] Vista Login cargada.
+[2025-06-08 16:07:34] [INFO] BO: Comprobando login para email: jp@gmail.com.
+[2025-06-08 16:07:34] [INFO] Usuario jp@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:07:34] [INFO] Vista Menu Administrador cargada para usuario: jp@gmail.com
+[2025-06-08 16:07:34] [INFO] Navegando a VistaMenuAdministrador para jp@gmail.com.
+[2025-06-08 16:07:35] [INFO] Navegando a VistaTipoUsuarios para jp@gmail.com
+[2025-06-08 16:07:37] [INFO] UserDao inicializado.
+[2025-06-08 16:07:37] [INFO] UserBO inicializado.
+[2025-06-08 16:07:40] [INFO] UserDao inicializado.
+[2025-06-08 16:07:40] [INFO] UserBO inicializado.
+[2025-06-08 16:07:45] [INFO] UserDao inicializado.
+[2025-06-08 16:07:45] [INFO] UserBO inicializado.
+[2025-06-08 16:07:48] [INFO] UserDao inicializado.
+[2025-06-08 16:07:48] [INFO] UserBO inicializado.
+[2025-06-08 16:08:51] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:08:51] [INFO] Vista Inicial cargada.
+[2025-06-08 16:08:51] [INFO] Visa inicial cargada.
+[2025-06-08 16:08:53] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 16:08:53] [INFO] UserDao inicializado.
+[2025-06-08 16:08:53] [INFO] UserBO inicializado.
+[2025-06-08 16:08:53] [INFO] Vista Login cargada.
+[2025-06-08 16:08:58] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:08:58] [INFO] Vista Inicial cargada.
+[2025-06-08 16:08:58] [INFO] Visa inicial cargada.
+[2025-06-08 16:08:59] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:08:59] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:09:18] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 16:09:19] [INFO] UserDao inicializado.
+[2025-06-08 16:09:19] [INFO] UserBO inicializado.
+[2025-06-08 16:09:19] [INFO] Vista Login cargada.
+[2025-06-08 16:09:25] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:09:25] [INFO] Vista Inicial cargada.
+[2025-06-08 16:09:25] [INFO] Visa inicial cargada.
+[2025-06-08 16:09:27] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:09:27] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:09:44] [INFO] UserDao inicializado.
+[2025-06-08 16:09:44] [INFO] UserBO inicializado.
+[2025-06-08 16:09:44] [INFO] BO: Intentando registrar usuario: aa@gmail.com con rol: Atleta.
+[2025-06-08 16:09:44] [ERROR] Error al insertar usuario aa@gmail.com: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'aa@gmail.com' for key 'Usuarios.email'
+[2025-06-08 16:09:44] [INFO] BO: Usuario aa@gmail.com registrado con éxito.
+[2025-06-08 16:09:44] [INFO] VistaRegistro: usuario 'aa@gmail.com' registrado exitosamente con rol 'Atleta'.
+[2025-06-08 16:09:46] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 16:09:46] [INFO] UserDao inicializado.
+[2025-06-08 16:09:46] [INFO] UserBO inicializado.
+[2025-06-08 16:09:46] [INFO] Vista Login cargada.
+[2025-06-08 16:09:52] [INFO] BO: Comprobando login para email: aa@gmail.com.
+[2025-06-08 16:09:53] [ERROR] Intento de login fallido para usuario: aa@gmail.com
+[2025-06-08 16:09:56] [INFO] BO: Comprobando login para email: ala@gmail.com.
+[2025-06-08 16:09:57] [ERROR] Intento de login fallido para usuario: ala@gmail.com
+[2025-06-08 16:10:04] [INFO] BO: Comprobando login para email: aa@gmail.com.
+[2025-06-08 16:10:04] [INFO] Usuario aa@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:10:04] [INFO] Vista Menu Atleta cargada para usuario: aa@gmail.com
+[2025-06-08 16:10:04] [INFO] Navegando a VistaMenuAtleta para aa@gmail.com.
+[2025-06-08 16:10:09] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:10:09] [INFO] Vista Inicial cargada.
+[2025-06-08 16:10:09] [INFO] Visa inicial cargada.
+[2025-06-08 16:10:13] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 16:10:13] [INFO] UserDao inicializado.
+[2025-06-08 16:10:13] [INFO] UserBO inicializado.
+[2025-06-08 16:10:13] [INFO] Vista Login cargada.
+[2025-06-08 16:10:19] [INFO] BO: Comprobando login para email: jp@gmail.com.
+[2025-06-08 16:10:20] [ERROR] Intento de login fallido para usuario: jp@gmail.com
+[2025-06-08 16:10:24] [INFO] BO: Comprobando login para email: jp@gmail.com.
+[2025-06-08 16:10:25] [ERROR] Intento de login fallido para usuario: jp@gmail.com
+[2025-06-08 16:10:48] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:10:48] [INFO] Vista Inicial cargada.
+[2025-06-08 16:10:48] [INFO] Visa inicial cargada.
+[2025-06-08 16:10:53] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 16:10:53] [INFO] UserDao inicializado.
+[2025-06-08 16:10:53] [INFO] UserBO inicializado.
+[2025-06-08 16:10:53] [INFO] Vista Login cargada.
+[2025-06-08 16:11:02] [INFO] BO: Comprobando login para email: jp@gmail.com.
+[2025-06-08 16:11:03] [ERROR] Intento de login fallido para usuario: jp@gmail.com
+[2025-06-08 16:11:22] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:11:22] [INFO] Vista Inicial cargada.
+[2025-06-08 16:11:22] [INFO] Visa inicial cargada.
+[2025-06-08 16:11:24] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:11:24] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:11:41] [INFO] UserDao inicializado.
+[2025-06-08 16:11:41] [INFO] UserBO inicializado.
+[2025-06-08 16:11:41] [INFO] BO: Intentando registrar usuario: admin@gmail.com con rol: Administrador.
+[2025-06-08 16:11:41] [INFO] Usuario admin@gmail.com insertado correctamente en BD.
+[2025-06-08 16:11:41] [INFO] BO: Usuario admin@gmail.com registrado con éxito.
+[2025-06-08 16:11:41] [INFO] VistaRegistro: usuario 'admin@gmail.com' registrado exitosamente con rol 'Administrador'.
+[2025-06-08 16:11:43] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 16:11:43] [INFO] UserDao inicializado.
+[2025-06-08 16:11:43] [INFO] UserBO inicializado.
+[2025-06-08 16:11:43] [INFO] Vista Login cargada.
+[2025-06-08 16:11:49] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 16:11:49] [INFO] Usuario admin@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:11:49] [INFO] Vista Menu Administrador cargada para usuario: admin@gmail.com
+[2025-06-08 16:11:49] [INFO] Navegando a VistaMenuAdministrador para admin@gmail.com.
+[2025-06-08 16:11:50] [INFO] Navegando a VistaTipoUsuarios para admin@gmail.com
+[2025-06-08 16:11:52] [INFO] UserDao inicializado.
+[2025-06-08 16:11:52] [INFO] UserBO inicializado.
+[2025-06-08 16:11:57] [INFO] UserDao inicializado.
+[2025-06-08 16:11:57] [INFO] UserBO inicializado.
+[2025-06-08 16:12:25] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:12:25] [INFO] Vista Inicial cargada.
+[2025-06-08 16:12:25] [INFO] Visa inicial cargada.
+[2025-06-08 16:12:27] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:12:27] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:12:40] [INFO] UserDao inicializado.
+[2025-06-08 16:12:40] [INFO] UserBO inicializado.
+[2025-06-08 16:12:40] [INFO] BO: Intentando registrar usuario: aa@gmail.com con rol: Atleta.
+[2025-06-08 16:12:40] [INFO] Usuario aa@gmail.com insertado correctamente en BD.
+[2025-06-08 16:12:40] [INFO] BO: Usuario aa@gmail.com registrado con éxito.
+[2025-06-08 16:12:40] [INFO] VistaRegistro: usuario 'aa@gmail.com' registrado exitosamente con rol 'Atleta'.
+[2025-06-08 16:12:41] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 16:12:41] [INFO] UserDao inicializado.
+[2025-06-08 16:12:41] [INFO] UserBO inicializado.
+[2025-06-08 16:12:41] [INFO] Vista Login cargada.
+[2025-06-08 16:12:50] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 16:12:50] [INFO] Usuario admin@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:12:50] [INFO] Vista Menu Administrador cargada para usuario: admin@gmail.com
+[2025-06-08 16:12:50] [INFO] Navegando a VistaMenuAdministrador para admin@gmail.com.
+[2025-06-08 16:12:51] [INFO] Navegando a VistaTipoUsuarios para admin@gmail.com
+[2025-06-08 16:12:52] [INFO] UserDao inicializado.
+[2025-06-08 16:12:52] [INFO] UserBO inicializado.
+[2025-06-08 16:12:56] [INFO] UserDao inicializado.
+[2025-06-08 16:12:56] [INFO] UserBO inicializado.
+[2025-06-08 16:12:57] [INFO] UserDao inicializado.
+[2025-06-08 16:12:57] [INFO] UserBO inicializado.
+[2025-06-08 16:13:00] [INFO] UserDao inicializado.
+[2025-06-08 16:13:00] [INFO] UserBO inicializado.
+[2025-06-08 16:13:03] [INFO] Volviendo a VistaMenuAdministrador para usuario: admin@gmail.com
+[2025-06-08 16:16:01] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:16:01] [INFO] Vista Inicial cargada.
+[2025-06-08 16:16:01] [INFO] Visa inicial cargada.
+[2025-06-08 16:16:04] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 16:16:05] [INFO] UserDao inicializado.
+[2025-06-08 16:16:05] [INFO] UserBO inicializado.
+[2025-06-08 16:16:05] [INFO] Vista Login cargada.
+[2025-06-08 16:16:11] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 16:16:11] [INFO] Usuario admin@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:16:11] [INFO] Vista Menu Administrador cargada para usuario: admin@gmail.com
+[2025-06-08 16:16:11] [INFO] Navegando a VistaMenuAdministrador para admin@gmail.com.
+[2025-06-08 16:16:13] [INFO] Navegando a VistaTipoUsuarios para admin@gmail.com
+[2025-06-08 16:16:14] [INFO] UserDao inicializado.
+[2025-06-08 16:16:14] [INFO] UserBO inicializado.
+[2025-06-08 16:16:16] [INFO] Volviendo a VistaMenuAdministrador para usuario: admin@gmail.com
+[2025-06-08 16:19:03] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:19:03] [INFO] Vista Inicial cargada.
+[2025-06-08 16:19:03] [INFO] Visa inicial cargada.
+[2025-06-08 16:19:05] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:19:05] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:19:18] [INFO] UserDao inicializado.
+[2025-06-08 16:19:18] [INFO] UserBO inicializado.
+[2025-06-08 16:19:18] [INFO] BO: Intentando registrar usuario: elim@gmail.com con rol: Atleta.
+[2025-06-08 16:19:18] [INFO] Usuario elim@gmail.com insertado correctamente en BD.
+[2025-06-08 16:19:18] [INFO] BO: Usuario elim@gmail.com registrado con éxito.
+[2025-06-08 16:19:18] [INFO] VistaRegistro: usuario 'elim@gmail.com' registrado exitosamente con rol 'Atleta'.
+[2025-06-08 16:19:20] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 16:19:20] [INFO] UserDao inicializado.
+[2025-06-08 16:19:20] [INFO] UserBO inicializado.
+[2025-06-08 16:19:20] [INFO] Vista Login cargada.
+[2025-06-08 16:19:28] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 16:19:29] [INFO] Usuario admin@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:19:29] [INFO] Vista Menu Administrador cargada para usuario: admin@gmail.com
+[2025-06-08 16:19:29] [INFO] Navegando a VistaMenuAdministrador para admin@gmail.com.
+[2025-06-08 16:19:30] [INFO] Navegando a VistaTipoUsuarios para admin@gmail.com
+[2025-06-08 16:19:30] [INFO] VistaTipoUsuarios: cargada para admin@gmail.com (ID 9).
+[2025-06-08 16:19:31] [INFO] VistaTipoUsuarios: viendo lista de 'Atleta'.
+[2025-06-08 16:19:31] [INFO] UserDao inicializado.
+[2025-06-08 16:19:31] [INFO] UserBO inicializado.
+[2025-06-08 16:19:36] [INFO] UserDao inicializado.
+[2025-06-08 16:19:36] [INFO] UserBO inicializado.
+[2025-06-08 16:19:37] [INFO] UserDao inicializado.
+[2025-06-08 16:19:37] [INFO] UserBO inicializado.
+[2025-06-08 16:19:40] [INFO] VistaTipoUsuarios: volviendo al menú para admin@gmail.com.
+[2025-06-08 16:19:40] [INFO] Volviendo a VistaMenuAdministrador para usuario: admin@gmail.com
+[2025-06-08 16:20:16] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:20:16] [INFO] Vista Inicial cargada.
+[2025-06-08 16:20:16] [INFO] Visa inicial cargada.
+[2025-06-08 16:20:20] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:20:20] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:20:36] [INFO] UserDao inicializado.
+[2025-06-08 16:20:36] [INFO] UserBO inicializado.
+[2025-06-08 16:20:36] [INFO] BO: Intentando registrar usuario: aa@gmail.com con rol: Entrenador.
+[2025-06-08 16:20:36] [INFO] Usuario aa@gmail.com insertado correctamente en BD.
+[2025-06-08 16:20:36] [INFO] BO: Usuario aa@gmail.com registrado con éxito.
+[2025-06-08 16:20:36] [INFO] VistaRegistro: usuario 'aa@gmail.com' registrado exitosamente con rol 'Entrenador'.
+[2025-06-08 16:20:37] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 16:20:37] [INFO] UserDao inicializado.
+[2025-06-08 16:20:37] [INFO] UserBO inicializado.
+[2025-06-08 16:20:37] [INFO] Vista Login cargada.
+[2025-06-08 16:20:47] [INFO] BO: Comprobando login para email: admin@gmail.com.
+[2025-06-08 16:20:47] [INFO] Usuario admin@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 16:20:47] [INFO] Vista Menu Administrador cargada para usuario: admin@gmail.com
+[2025-06-08 16:20:47] [INFO] Navegando a VistaMenuAdministrador para admin@gmail.com.
+[2025-06-08 16:20:48] [INFO] Navegando a VistaTipoUsuarios para admin@gmail.com
+[2025-06-08 16:20:48] [INFO] VistaTipoUsuarios: cargada para admin@gmail.com (ID 9).
+[2025-06-08 16:20:49] [INFO] VistaTipoUsuarios: viendo lista de 'Entrenador'.
+[2025-06-08 16:20:49] [INFO] UserDao inicializado.
+[2025-06-08 16:20:49] [INFO] UserBO inicializado.
+[2025-06-08 16:20:52] [INFO] UserDao inicializado.
+[2025-06-08 16:20:52] [INFO] UserBO inicializado.
+[2025-06-08 16:20:53] [INFO] UserDao inicializado.
+[2025-06-08 16:20:53] [INFO] UserBO inicializado.
+[2025-06-08 16:20:58] [INFO] UserDao inicializado.
+[2025-06-08 16:20:58] [INFO] UserBO inicializado.
+[2025-06-08 16:21:00] [INFO] UserDao inicializado.
+[2025-06-08 16:21:00] [INFO] UserBO inicializado.
+[2025-06-08 16:21:02] [INFO] VistaTipoUsuarios: volviendo al menú para admin@gmail.com.
+[2025-06-08 16:21:02] [INFO] Volviendo a VistaMenuAdministrador para usuario: admin@gmail.com

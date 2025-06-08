@@ -8,8 +8,8 @@ class Conexion:
         self._user = user
         self._password = password
         self.conexion = self.createConnection()
-        self.conexion.autocommit=False
-
+        
+        
     def createConnection(self):
         try:
             jdbc_driver = "com.mysql.cj.jdbc.Driver"

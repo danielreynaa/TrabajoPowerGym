@@ -126,9 +126,13 @@ class UserDao(Conexion):
     def eliminar_usuario(self, email: str) -> bool: 
         cursor = self.getCursor() 
         try:
+<<<<<<< HEAD
             self.logger.info(f"Intentando eliminar usuario: {email}.")
             cursor.execute(self.SQL_DELETE, (email,)) 
             self.logger.info(f"Usuario {email} eliminado correctamente.")
+=======
+            cursor.execute("DELETE FROM Usuarios WHERE email = ?", (email,))
+>>>>>>> 441ccaac75bb8769064dfe5418e4d400450e4ec2
             return True
         except Exception as e:
             self.logger.error(f"Error al eliminar usuario {email}: {e}")
