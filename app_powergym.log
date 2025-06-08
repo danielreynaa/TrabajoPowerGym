@@ -2053,3 +2053,23 @@
 [2025-06-08 18:58:55] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
 [2025-06-08 18:58:55] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
 [2025-06-08 18:58:57] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:00:45] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 19:00:45] [INFO] Vista Inicial cargada.
+[2025-06-08 19:00:45] [INFO] Visa inicial cargada.
+[2025-06-08 19:00:47] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 19:00:47] [INFO] VistaRegistro: inicializada.
+[2025-06-08 19:00:49] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 19:00:49] [INFO] UserDao inicializado.
+[2025-06-08 19:00:49] [INFO] UserBO inicializado.
+[2025-06-08 19:00:49] [INFO] Vista Login cargada.
+[2025-06-08 19:00:55] [INFO] BO: Comprobando login para email: entrenador@gmail.com.
+[2025-06-08 19:00:55] [INFO] Usuario entrenador@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 19:00:55] [INFO] VistaMenuEntrenador: cargada para usuario entrenador@gmail.com (ID 13).
+[2025-06-08 19:00:55] [INFO] Navegando a VistaMenuEntrenador para entrenador@gmail.com.
+[2025-06-08 19:00:56] [INFO] Navegando a VistaSeleccionAtletaRutina para entrenador@gmail.com.
+[2025-06-08 19:00:56] [INFO] VistaSeleccionAtletaAsignarEntrenamiento: cargada para entrenador@gmail.com (ID 13).
+[2025-06-08 19:00:56] [INFO] UserDao inicializado.
+[2025-06-08 19:00:56] [INFO] UserBO inicializado.
+[2025-06-08 19:00:56] [INFO] Encontrados 1 atletas para asignar entrenamiento.
+[2025-06-08 19:00:59] [INFO] VistaSeleccionAtletaAsignarEntrenamiento: volviendo al menú.
+[2025-06-08 19:00:59] [INFO] VistaMenuEntrenador: mostrado de nuevo para entrenador@gmail.com.

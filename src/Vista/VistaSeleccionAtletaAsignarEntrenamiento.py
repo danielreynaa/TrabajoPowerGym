@@ -11,8 +11,7 @@ class VistaSeleccionAtletaAsignarEntrenamiento(QMainWindow):
     def __init__(self, entrenador_vo, volver_callback):
         super().__init__()
         # Reutilizamos la misma UI de selección de atletas
-        uic.loadUi("src/Vista/Ui/VistaSeleccionAtletaAsignados.ui", self)
-
+        uic.loadUi("src/Vista/Ui/VistaSeleccionAtletaAsignarEntrenamiento.ui", self)
         self.entrenador      = entrenador_vo
         self.volver_callback = volver_callback
 
