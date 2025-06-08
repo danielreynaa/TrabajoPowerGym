@@ -13,10 +13,8 @@ class VistaProgreso(QMainWindow):
         super().__init__()
         uic.loadUi("src/Vista/Ui/VistaProgreso.ui", self) 
 
-
         self.usuario = usuario
         self.volver_callback = volver_callback 
-
 
         self.progreso_bo = ProgresoBO() 
 
@@ -31,8 +29,7 @@ class VistaProgreso(QMainWindow):
         self.actualizar_grafica() 
 
         self.btn_volver.clicked.connect(self.volver_al_menu) 
-
-
+        
     def actualizar_grafica(self):
         self.logger.info(f"Actualizando gráfica para usuario {self.usuario.get('email', 'Desconocido')}.")
         ejercicio = self.comboEjercicio.currentText()
@@ -67,5 +64,4 @@ class VistaProgreso(QMainWindow):
         self.logger.info(f"Volviendo de Vista Progreso a Vista Menu Atleta para usuario: {self.usuario.get('email', 'Desconocido')}.") 
         self.close() 
         if self.volver_callback:
-
             self.volver_callback()

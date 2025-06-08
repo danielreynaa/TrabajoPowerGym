@@ -1,6 +1,6 @@
 
-from src.Modelo.DAO.UserDao import UserDao # Para obtener el ID del usuario
-from src.Modelo.DAO.RegistroLevantamientoDAO import RegistroLevantamientoDAO # Para obtener los datos de levantamientos
+from src.Modelo.DAO.UserDao import UserDao 
+from src.Modelo.DAO.RegistroLevantamientoDAO import RegistroLevantamientoDAO 
 from src.Logs.Logger import CustomLogger
 
 class ProgresoBO:
@@ -21,12 +21,12 @@ class ProgresoBO:
                 self.logger.warning(f"BO: No se pudo obtener ID de atleta para {email_atleta}. No se puede generar la gráfica.")
                 return None, "No se encontró el atleta en la base de datos."
 
-            # 2. Obtener registros de levantamientos
+            # 2. Obtener registros de levantamientos (el DAO ya devuelve el máximo por fecha)
             datos_brutos = self.registro_levantamiento_dao.obtener_registros_para_progreso(id_atleta, tipo_levantamiento)
-
+            
             # Formatear datos para la gráfica (fechas y pesos)
-            fechas = [str(x[0]) for x in datos_brutos] # Convertir fecha a string
-            pesos = [float(x[1]) for x in datos_brutos] # Convertir peso a float
+            fechas = [str(x[0]) for x in datos_brutos] 
+            pesos = [float(x[1]) for x in datos_brutos] 
 
             self.logger.info(f"BO: Datos de gráfica para {tipo_levantamiento} obtenidos: {len(fechas)} puntos.")
             return fechas, pesos

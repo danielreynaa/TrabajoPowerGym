@@ -1,4 +1,3 @@
-
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.RegistroLevantamientoVo import RegistroLevantamientoVo
 from src.Logs.Logger import CustomLogger
@@ -42,21 +41,38 @@ class RegistroLevantamientoDAO:
         except Exception as e:
             self.logger.error(f"DAO: Error al obtener máximo peso para atleta {id_atleta}, tipo {tipo_levantamiento}: {e}")
             raise # Propagar la excepción
-
-    # ESTE MÉTODO ES NECESARIO PARA ProgesoBO
+            
     def obtener_registros_para_progreso(self, id_atleta, tipo_levantamiento):
-        self.logger.debug(f"DAO: Obteniendo registros para gráfica de progreso para atleta {id_atleta}, tipo {tipo_levantamiento}.")
+        self.logger.debug(f"DAO: Obteniendo registros para gráfica de progreso para atleta {id_atleta}, tipo {tipo_levantamiento} (máximo por fecha).")
         try:
             self.cursor.execute("""
-                SELECT e.fecha_entrenamiento, r.peso_kg
+                SELECT e.fecha_entrenamiento, MAX(r.peso_kg) AS max_peso_dia
                 FROM Entrenamientos e
                 JOIN RegistrosLevantamientos r ON e.id_entrenamiento = r.id_entrenamiento
                 WHERE e.id_atleta = ? AND r.tipo_levantamiento = ?
+                GROUP BY e.fecha_entrenamiento 
                 ORDER BY e.fecha_entrenamiento ASC
             """, (id_atleta, tipo_levantamiento))
             datos = self.cursor.fetchall()
-            self.logger.debug(f"DAO: {len(datos)} registros obtenidos para gráfica de {tipo_levantamiento}.")
+            self.logger.debug(f"DAO: {len(datos)} registros de progreso (máximo por fecha) obtenidos para gráfica de {tipo_levantamiento}.")
             return datos
         except Exception as e:
             self.logger.error(f"DAO: Error al obtener registros para gráfica de progreso para atleta {id_atleta}, tipo {tipo_levantamiento}: {e}")
+            raise # Propagar la excepción
+
+    def obtener_historial_levantamientos(self, id_atleta):
+        self.logger.debug(f"DAO: Obteniendo historial completo de levantamientos para atleta {id_atleta}.")
+        try:
+            self.cursor.execute("""
+                SELECT e.fecha_entrenamiento, r.tipo_levantamiento, r.peso_kg, r.repeticiones, r.series, r.rpe, e.id_entrenamiento
+                FROM Entrenamientos e
+                JOIN RegistrosLevantamientos r ON e.id_entrenamiento = r.id_entrenamiento
+                WHERE e.id_atleta = ?
+                ORDER BY e.fecha_entrenamiento DESC, e.id_entrenamiento DESC
+            """, (id_atleta,))
+            registros = self.cursor.fetchall()
+            self.logger.debug(f"DAO: {len(registros)} registros de historial obtenidos para atleta {id_atleta}.")
+            return registros
+        except Exception as e:
+            self.logger.error(f"DAO: Error al obtener historial completo de levantamientos para atleta {id_atleta}: {e}")
             raise # Propagar la excepción

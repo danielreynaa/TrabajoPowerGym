@@ -51,7 +51,7 @@ class VistaEntrenamiento(QMainWindow):
         }
 
         exito, mensaje, nuevos_maximos = self.entrenamiento_bo.registrar_entrenamiento_completo(
-            self.usuario.get('email'), # Pasamos el email del atleta
+            self.usuario.get('email'), 
             ejercicios_data
         )
 

@@ -325,3 +325,161 @@
 [2025-06-08 10:35:39] [INFO] BO: Obteniendo datos para gráfica de Press Banca para atleta: hola@gmail.com.
 [2025-06-08 10:35:39] [INFO] BO: Datos de gráfica para Press Banca obtenidos: 0 puntos.
 [2025-06-08 10:35:39] [INFO] No hay datos para Press Banca para el usuario hola@gmail.com.
+[2025-06-08 10:50:17] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 10:50:17] [INFO] Vista Inicial cargada.
+[2025-06-08 10:50:17] [INFO] Visa inicial cargada.
+[2025-06-08 10:50:18] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 10:50:19] [INFO] UserDao inicializado.
+[2025-06-08 10:50:19] [INFO] UserBO inicializado.
+[2025-06-08 10:50:19] [INFO] Vista Login cargada.
+[2025-06-08 10:50:25] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 10:50:25] [INFO] Vista Inicial cargada.
+[2025-06-08 10:50:25] [INFO] Visa inicial cargada.
+[2025-06-08 10:50:25] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 10:50:25] [INFO] Vista Registro cargada.
+[2025-06-08 10:51:09] [INFO] UserDao inicializado.
+[2025-06-08 10:51:09] [INFO] UserBO inicializado.
+[2025-06-08 10:51:09] [INFO] BO: Intentando registrar usuario: j@gmail.com con rol: Entrenador.
+[2025-06-08 10:51:10] [INFO] Usuario j@gmail.com insertado correctamente en BD.
+[2025-06-08 10:51:10] [INFO] BO: Usuario j@gmail.com registrado con éxito.
+[2025-06-08 10:51:10] [INFO] Nuevo usuario j@gmail.com registrado exitosamente con rol: Entrenador.
+[2025-06-08 10:51:11] [INFO] Volviendo de VistaRegistro a VistaLogin (botón 'Volver').
+[2025-06-08 10:51:11] [INFO] UserDao inicializado.
+[2025-06-08 10:51:11] [INFO] UserBO inicializado.
+[2025-06-08 10:51:11] [INFO] Vista Login cargada.
+[2025-06-08 10:51:20] [INFO] BO: Comprobando login para email: j@gmail.com.
+[2025-06-08 10:51:20] [INFO] Usuario j@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 10:51:20] [INFO] Login exitoso para j@gmail.com (Rol: Entrenador). Navegando a VistaMenuEntrenador.
+[2025-06-08 10:51:21] [INFO] UserDao inicializado.
+[2025-06-08 10:51:21] [INFO] UserBO inicializado.
+[2025-06-08 10:51:26] [INFO] UserDao inicializado.
+[2025-06-08 10:51:26] [INFO] UserBO inicializado.
+[2025-06-08 11:02:15] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:02:15] [INFO] Vista Inicial cargada.
+[2025-06-08 11:02:15] [INFO] Visa inicial cargada.
+[2025-06-08 11:02:16] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:02:18] [INFO] UserDao inicializado.
+[2025-06-08 11:02:18] [INFO] UserBO inicializado.
+[2025-06-08 11:02:18] [INFO] Vista Login cargada.
+[2025-06-08 11:02:23] [INFO] BO: Comprobando login para email: j@gmail.com.
+[2025-06-08 11:02:24] [INFO] Usuario j@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:02:24] [INFO] Login exitoso para j@gmail.com (Rol: Entrenador). Navegando a VistaMenuEntrenador.
+[2025-06-08 11:02:28] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:02:28] [INFO] Vista Inicial cargada.
+[2025-06-08 11:02:28] [INFO] Visa inicial cargada.
+[2025-06-08 11:02:28] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:02:30] [INFO] UserDao inicializado.
+[2025-06-08 11:02:30] [INFO] UserBO inicializado.
+[2025-06-08 11:02:30] [INFO] Vista Login cargada.
+[2025-06-08 11:02:36] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 11:02:36] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:02:36] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 11:02:36] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 11:02:38] [INFO] Navegando de Vista Menu Atleta a VistaEntrenamiento para usuario: hola@gmail.com.
+[2025-06-08 11:02:38] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 11:02:38] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 11:02:38] [INFO] UserDao inicializado.
+[2025-06-08 11:02:38] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 11:02:38] [INFO] Vista Entrenamiento cargada para usuario: hola@gmail.com.
+[2025-06-08 11:02:39] [INFO] Volviendo de Vista Entrenamiento a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:02:39] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:02:40] [INFO] Navegando de Vista Menu Atleta a VistaPerfil para usuario: hola@gmail.com.
+[2025-06-08 11:02:40] [INFO] vista del perfil cargada
+[2025-06-08 11:02:40] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:02:41] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 11:02:41] [INFO] UserDao inicializado.
+[2025-06-08 11:02:41] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 11:02:41] [INFO] ProgresoBO inicializado.
+[2025-06-08 11:02:41] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 11:02:41] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:02:41] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: hola@gmail.com.
+[2025-06-08 11:02:41] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 7 puntos.
+[2025-06-08 11:02:43] [INFO] Volviendo de Vista Progreso a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:02:43] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:05:17] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:05:17] [INFO] Vista Inicial cargada.
+[2025-06-08 11:05:17] [INFO] Visa inicial cargada.
+[2025-06-08 11:05:18] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:05:19] [INFO] UserDao inicializado.
+[2025-06-08 11:05:19] [INFO] UserBO inicializado.
+[2025-06-08 11:05:19] [INFO] Vista Login cargada.
+[2025-06-08 11:05:27] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 11:05:27] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:05:27] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 11:05:27] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 11:05:29] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 11:05:29] [INFO] UserDao inicializado.
+[2025-06-08 11:05:29] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 11:05:29] [INFO] ProgresoBO inicializado.
+[2025-06-08 11:05:29] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 11:05:29] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:05:29] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: hola@gmail.com.
+[2025-06-08 11:05:29] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 7 puntos.
+[2025-06-08 11:08:46] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:08:46] [INFO] Vista Inicial cargada.
+[2025-06-08 11:08:46] [INFO] Visa inicial cargada.
+[2025-06-08 11:08:47] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:08:49] [INFO] UserDao inicializado.
+[2025-06-08 11:08:49] [INFO] UserBO inicializado.
+[2025-06-08 11:08:49] [INFO] Vista Login cargada.
+[2025-06-08 11:08:57] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 11:08:57] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:08:57] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 11:08:57] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 11:08:58] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 11:08:58] [INFO] UserDao inicializado.
+[2025-06-08 11:08:58] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 11:08:58] [INFO] ProgresoBO inicializado.
+[2025-06-08 11:08:58] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 11:08:58] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:08:58] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: hola@gmail.com.
+[2025-06-08 11:08:58] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 1 puntos.
+[2025-06-08 11:09:02] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:09:02] [INFO] BO: Obteniendo datos para gráfica de Peso Muerto para atleta: hola@gmail.com.
+[2025-06-08 11:09:02] [INFO] BO: Datos de gráfica para Peso Muerto obtenidos: 1 puntos.
+[2025-06-08 11:09:04] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:09:04] [INFO] BO: Obteniendo datos para gráfica de Press Banca para atleta: hola@gmail.com.
+[2025-06-08 11:09:04] [INFO] BO: Datos de gráfica para Press Banca obtenidos: 0 puntos.
+[2025-06-08 11:09:04] [INFO] No hay datos para Press Banca para el usuario hola@gmail.com.
+[2025-06-08 11:09:05] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:09:05] [INFO] BO: Obteniendo datos para gráfica de Peso Muerto para atleta: hola@gmail.com.
+[2025-06-08 11:09:05] [INFO] BO: Datos de gráfica para Peso Muerto obtenidos: 1 puntos.
+[2025-06-08 11:09:07] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:09:07] [INFO] BO: Obteniendo datos para gráfica de Press Banca para atleta: hola@gmail.com.
+[2025-06-08 11:09:07] [INFO] BO: Datos de gráfica para Press Banca obtenidos: 0 puntos.
+[2025-06-08 11:09:07] [INFO] No hay datos para Press Banca para el usuario hola@gmail.com.
+[2025-06-08 11:09:07] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:09:07] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: hola@gmail.com.
+[2025-06-08 11:09:07] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 1 puntos.
+[2025-06-08 11:10:25] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 11:10:25] [INFO] Vista Inicial cargada.
+[2025-06-08 11:10:25] [INFO] Visa inicial cargada.
+[2025-06-08 11:10:26] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 11:10:28] [INFO] UserDao inicializado.
+[2025-06-08 11:10:28] [INFO] UserBO inicializado.
+[2025-06-08 11:10:28] [INFO] Vista Login cargada.
+[2025-06-08 11:10:34] [INFO] BO: Comprobando login para email: hola@gmail.com.
+[2025-06-08 11:10:35] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 11:10:35] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 11:10:35] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 11:10:36] [INFO] Navegando de Vista Menu Atleta a VistaEntrenamiento para usuario: hola@gmail.com.
+[2025-06-08 11:10:36] [INFO] EntrenamientoDAO inicializado.
+[2025-06-08 11:10:36] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 11:10:36] [INFO] UserDao inicializado.
+[2025-06-08 11:10:36] [INFO] EntrenamientoBO inicializado.
+[2025-06-08 11:10:36] [INFO] Vista Entrenamiento cargada para usuario: hola@gmail.com.
+[2025-06-08 11:10:37] [INFO] Volviendo de Vista Entrenamiento a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:10:37] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:10:38] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 11:10:38] [INFO] UserDao inicializado.
+[2025-06-08 11:10:38] [INFO] RegistroLevantamientoDAO inicializado.
+[2025-06-08 11:10:38] [INFO] ProgresoBO inicializado.
+[2025-06-08 11:10:38] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 11:10:38] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 11:10:38] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: hola@gmail.com.
+[2025-06-08 11:10:38] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 1 puntos.
+[2025-06-08 11:10:40] [INFO] Volviendo de Vista Progreso a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:10:40] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 11:10:41] [INFO] Navegando de Vista Menu Atleta a VistaPerfil para usuario: hola@gmail.com.
+[2025-06-08 11:10:41] [INFO] vista del perfil cargada
+[2025-06-08 11:10:42] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
