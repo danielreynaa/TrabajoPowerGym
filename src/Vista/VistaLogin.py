@@ -27,6 +27,9 @@ class Login(QMainWindow, Form):
         # Conectar botón
         self.botonaceptar.clicked.connect(self.on_button_click)
 
+        #Volver al inicio
+        self.btn_volver_inicial.clicked.connect(self.volver_a_inicio)
+
     def on_button_click(self):
         email     = self.Nombreusuario.text().strip()
         password  = self.Contrasena.text().strip()
@@ -80,3 +83,17 @@ class Login(QMainWindow, Form):
         except Exception as e:
             self.logger.error(f"Error al abrir la ventana de menú: {e}")
             QMessageBox.critical(self, "Error", "No se pudo cargar la siguiente ventana.")
+    def volver_a_inicio(self):
+        try:
+            # Importación local para evitar circular import
+            from src.Vista.VistaInicial import VistaInicial
+            self.inicio_window = VistaInicial()
+            self.inicio_window.show()
+            self.close()
+            self.logger.info("Usuario regresó a la VistaInicial desde Login.")
+        except Exception as e:
+            self.logger.error(f"Error al volver a VistaInicial: {e}")
+            QMessageBox.critical(self, "Error", "No se pudo volver a la pantalla inicial.")
+
+
+

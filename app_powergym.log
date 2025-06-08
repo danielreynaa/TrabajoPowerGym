@@ -1318,6 +1318,7 @@
 [2025-06-08 16:21:00] [INFO] UserBO inicializado.
 [2025-06-08 16:21:02] [INFO] VistaTipoUsuarios: volviendo al menú para admin@gmail.com.
 [2025-06-08 16:21:02] [INFO] Volviendo a VistaMenuAdministrador para usuario: admin@gmail.com
+<<<<<<< HEAD
 [2025-06-08 16:23:48] [INFO] Aplicación PowerGym iniciada.
 [2025-06-08 16:23:48] [INFO] Vista Inicial cargada.
 [2025-06-08 16:23:48] [INFO] Visa inicial cargada.
@@ -1489,3 +1490,74 @@
 [2025-06-08 17:02:34] [INFO] VistaProgreso: actualizando gráfica de 'Sentadilla' para atleta@gmail.com.
 [2025-06-08 17:02:34] [INFO] BO: Obteniendo datos para gráfica de Sentadilla para atleta: atleta@gmail.com.
 [2025-06-08 17:02:34] [INFO] BO: Datos de gráfica para Sentadilla obtenidos: 1 puntos.
+=======
+[2025-06-08 16:35:32] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:35:32] [INFO] Vista Inicial cargada.
+[2025-06-08 16:35:32] [INFO] Visa inicial cargada.
+[2025-06-08 16:35:34] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:35:34] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:56:07] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:56:07] [INFO] Vista Inicial cargada.
+[2025-06-08 16:56:07] [INFO] Visa inicial cargada.
+[2025-06-08 16:56:08] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:56:08] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:56:40] [INFO] UserDao inicializado.
+[2025-06-08 16:56:40] [INFO] UserBO inicializado.
+[2025-06-08 16:56:40] [INFO] BO: Intentando registrar usuario: rober@gmail.com con rol: Atleta.
+[2025-06-08 16:56:40] [ERROR] BO: Error al registrar usuario rober@gmail.com: 'NoneType' object has no attribute 'cursor'
+[2025-06-08 16:56:40] [ERROR] VistaRegistro: error al registrar 'rober@gmail.com' → 'NoneType' object has no attribute 'cursor'
+[2025-06-08 16:58:27] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 16:58:27] [INFO] Vista Inicial cargada.
+[2025-06-08 16:58:27] [INFO] Visa inicial cargada.
+[2025-06-08 16:58:29] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 16:58:29] [INFO] VistaRegistro: inicializada.
+[2025-06-08 16:58:55] [INFO] UserDao inicializado.
+[2025-06-08 16:58:55] [INFO] UserBO inicializado.
+[2025-06-08 16:58:55] [INFO] BO: Intentando registrar usuario: rober@gmail.com con rol: Atleta.
+[2025-06-08 16:58:55] [ERROR] Error al insertar usuario rober@gmail.com: java.sql.SQLSyntaxErrorException: Table 'powergym.usuarios' doesn't exist
+[2025-06-08 16:58:55] [INFO] BO: Usuario rober@gmail.com registrado con éxito.
+[2025-06-08 16:58:55] [INFO] VistaRegistro: usuario 'rober@gmail.com' registrado exitosamente con rol 'Atleta'.
+[2025-06-08 16:58:57] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 16:58:57] [INFO] UserDao inicializado.
+[2025-06-08 16:58:57] [INFO] UserBO inicializado.
+[2025-06-08 16:58:57] [INFO] Vista Login cargada.
+[2025-06-08 17:01:32] [INFO] BO: Comprobando login para email: rober@gmail.com.
+[2025-06-08 17:01:32] [ERROR] Error en consulta de login para rober@gmail.com: java.sql.SQLSyntaxErrorException: Table 'powergym.usuarios' doesn't exist
+[2025-06-08 17:01:33] [ERROR] Intento de login fallido para usuario: rober@gmail.com
+[2025-06-08 17:01:52] [INFO] BO: Comprobando login para email: rober@gmail.com.
+[2025-06-08 17:01:52] [ERROR] Error en consulta de login para rober@gmail.com: java.sql.SQLSyntaxErrorException: Table 'powergym.usuarios' doesn't exist
+[2025-06-08 17:01:54] [ERROR] Intento de login fallido para usuario: rober@gmail.com
+[2025-06-08 17:12:44] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 17:12:44] [INFO] Vista Inicial cargada.
+[2025-06-08 17:12:44] [INFO] Visa inicial cargada.
+[2025-06-08 17:12:46] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:12:46] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:13:09] [INFO] UserDao inicializado.
+[2025-06-08 17:13:09] [INFO] UserBO inicializado.
+[2025-06-08 17:13:09] [INFO] BO: Intentando registrar usuario: rober@gmail.com con rol: Atleta.
+[2025-06-08 17:13:09] [ERROR] Error al insertar usuario rober@gmail.com: java.sql.SQLSyntaxErrorException: Table 'powergym.usuarios' doesn't exist
+[2025-06-08 17:13:09] [INFO] BO: Usuario rober@gmail.com registrado con éxito.
+[2025-06-08 17:13:09] [INFO] VistaRegistro: usuario 'rober@gmail.com' registrado exitosamente con rol 'Atleta'.
+[2025-06-08 17:13:10] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 17:13:10] [INFO] UserDao inicializado.
+[2025-06-08 17:13:10] [INFO] UserBO inicializado.
+[2025-06-08 17:13:10] [INFO] Vista Login cargada.
+[2025-06-08 17:13:15] [INFO] Vista Inicial cargada.
+[2025-06-08 17:13:15] [INFO] Visa inicial cargada.
+[2025-06-08 17:13:15] [INFO] Usuario regresó a la VistaInicial desde Login.
+[2025-06-08 17:13:16] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 17:13:16] [INFO] VistaRegistro: inicializada.
+[2025-06-08 17:13:19] [INFO] VistaRegistro: volviendo a VistaLogin.
+[2025-06-08 17:13:19] [INFO] UserDao inicializado.
+[2025-06-08 17:13:19] [INFO] UserBO inicializado.
+[2025-06-08 17:13:19] [INFO] Vista Login cargada.
+[2025-06-08 17:13:32] [INFO] BO: Comprobando login para email: rober@gmail.com.
+[2025-06-08 17:13:33] [ERROR] Error en consulta de login para rober@gmail.com: java.sql.SQLSyntaxErrorException: Table 'powergym.usuarios' doesn't exist
+[2025-06-08 17:13:33] [ERROR] Intento de login fallido para usuario: rober@gmail.com
+[2025-06-08 17:13:41] [INFO] BO: Comprobando login para email: rober@gmail.com.
+[2025-06-08 17:13:41] [ERROR] Error en consulta de login para rober@gmail.com: java.sql.SQLSyntaxErrorException: Table 'powergym.usuarios' doesn't exist
+[2025-06-08 17:13:42] [ERROR] Intento de login fallido para usuario: rober@gmail.com
+[2025-06-08 17:13:43] [INFO] Vista Inicial cargada.
+[2025-06-08 17:13:43] [INFO] Visa inicial cargada.
+[2025-06-08 17:13:43] [INFO] Usuario regresó a la VistaInicial desde Login.
+>>>>>>> 9aa65463be24853019a5848e558d3715da098eb7
