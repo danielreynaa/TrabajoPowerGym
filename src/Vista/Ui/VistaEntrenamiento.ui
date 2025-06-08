@@ -18,7 +18,6 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       
-      <!-- Sentadilla -->
       <item>
        <layout class="QVBoxLayout" name="layoutSentadilla">
         <item>
@@ -48,10 +47,57 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QLabel" name="labelRepeticionesSentadilla">
+          <property name="text">
+           <string>Repeticiones:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRepeticionesSentadilla">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSeriesSentadilla">
+          <property name="text">
+           <string>Series:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinSeriesSentadilla">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRPESentadilla">
+          <property name="text">
+           <string>RPE (1-10):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRPESentadilla"> <property name="minimum">
+           <number>1</number> </property>
+          <property name="maximum">
+           <number>10</number> </property>
+         </widget>
+        </item>
        </layout>
       </item>
 
-      <!-- Press Banca -->
       <item>
        <layout class="QVBoxLayout" name="layoutPressBanca">
         <item>
@@ -81,10 +127,59 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QLabel" name="labelRepeticionesBanca">
+          <property name="text">
+           <string>Repeticiones:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRepeticionesBanca">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSeriesBanca">
+          <property name="text">
+           <string>Series:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinSeriesBanca">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRPEBanca">
+          <property name="text">
+           <string>RPE (1-10):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRPEBanca"> <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
 
-      <!-- Peso Muerto -->
       <item>
        <layout class="QVBoxLayout" name="layoutPesoMuerto">
         <item>
@@ -114,13 +209,62 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QLabel" name="labelRepeticionesPesoMuerto">
+          <property name="text">
+           <string>Repeticiones:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRepeticionesPesoMuerto">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSeriesPesoMuerto">
+          <property name="text">
+           <string>Series:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinSeriesPesoMuerto">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRPEPesoMuerto">
+          <property name="text">
+           <string>RPE (1-10):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRPEPesoMuerto"> <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
 
      </layout>
     </item>
 
-        <!-- Campo Fecha -->
     <item>
      <widget class="QDateEdit" name="fechaEntrenamiento">
       <property name="calendarPopup">
@@ -132,8 +276,6 @@
      </widget>
     </item>
 
-
-    <!-- Botón Guardar -->
     <item>
      <widget class="QPushButton" name="botonGuardar">
       <property name="minimumHeight">

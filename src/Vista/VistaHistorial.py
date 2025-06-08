@@ -1,4 +1,3 @@
-# VistaHistorial.py
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem
 from PyQt5 import uic
 from src.Conexion.Conexion import Conexion
