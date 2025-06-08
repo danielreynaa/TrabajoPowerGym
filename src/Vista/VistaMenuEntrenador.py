@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QMainWindow
 from PyQt5 import uic
 
 from src.Vista.VistaSeleccionAtletasAsignados import VistaSeleccionAtletasAsignados
-from src.Vista.VistaSeleccionAtletaRutina     import VistaSeleccionAtletaRutina
+from src.Vista.VistaSeleccionAtletaAsignarEntrenamiento    import VistaSeleccionAtletaAsignarEntrenamiento
 from src.Logs.Logger import CustomLogger
 
 class VistaMenuEntrenador(QMainWindow):
@@ -34,8 +34,7 @@ class VistaMenuEntrenador(QMainWindow):
         self.close()
 
     def abrir_rutinas(self):
-        """Navega a la selección de atletas para asignar rutina."""
         self.logger.info(f"Navegando a VistaSeleccionAtletaRutina para {self.usuario.email}.")
-        self.ventana_rutinas = VistaSeleccionAtletaRutina(self.usuario, self.mostrar)
+        self.ventana_rutinas = VistaSeleccionAtletaAsignarEntrenamiento(self.usuario, self.mostrar)
         self.ventana_rutinas.show()
         self.close()
