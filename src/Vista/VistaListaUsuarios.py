@@ -52,22 +52,11 @@ class VistaListaUsuarios(QMainWindow):
         if confirmado != QMessageBox.Yes:
             return
 
-        # Paso 2: Preguntar razón de eliminación
-        razon, ok = QInputDialog.getText(
-            self,
-            "Razón de eliminación",
-            "¿Por qué estás eliminando a este usuario?"
-        )
-
-        if not ok or not razon.strip():
-            QMessageBox.information(self, "Cancelado", "Operación cancelada. No se eliminó el usuario.")
-            return
-
         # Paso 3: Eliminar usuario
         exito = UserBO().eliminar_usuario_por_email(email)
 
         if exito:
-            print(f"🗑️ Usuario eliminado: {email}. Razón: {razon}")
+            print(f"🗑️ Usuario eliminado: {email}.")
             QMessageBox.information(self, "Éxito", f"Usuario eliminado: {email}")
             self.cargar_usuarios()  # Recarga la lista al instante
         else:

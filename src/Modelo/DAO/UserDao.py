@@ -102,7 +102,6 @@ class UserDao(Conexion):
         cursor = self.getCursor()
         try:
             cursor.execute("DELETE FROM Usuarios WHERE email = ?", (email,))
-            self.conexion.commit()  # 🔥 IMPORTANTE: Forzar commit manual
             return True
         except Exception as e:
             print(f"❌ Error al eliminar usuario: {e}")
