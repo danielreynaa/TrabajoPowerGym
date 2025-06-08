@@ -1,63 +1,380 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VistaAsignarEntrenamiento</class>
- <widget class="QMainWindow" name="VistaAsignarEntrenamiento">
+ <class>VistaEntrenamiento</class>
+ <widget class="QMainWindow" name="VistaEntrenamiento">
   <property name="geometry">
-   <rect><x>0</x><y>0</y><width>900</width><height>600</height></rect>
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
   </property>
   <property name="windowTitle">
-   <string>POWERGYM - Asignar Entrenamiento</string>
+   <string>POWERGYM - Registro de Entrenamiento</string>
   </property>
   <property name="styleSheet">
    <string notr="true">
-    /* (tu stylesheet existente…) */
+    QMainWindow#VistaEntrenamiento {
+        background-color: #f0f0f0;
+    }
+    QWidget#centralwidget {
+        background-color: #f8f8f8;
+        padding: 20px;
+    }
+    
+    QLabel {
+        color: #333333;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 5px;
+    }
+
+    QLabel[objectName^="label"][objectName*="Sentadilla"],
+    QLabel[objectName^="label"][objectName*="Banca"],
+    QLabel[objectName^="label"][objectName*="PesoMuerto"] {
+        color: #B71C1C;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+
+    QLineEdit, QSpinBox, QDoubleSpinBox, QDateEdit, QComboBox {
+        background-color: white;
+        border: 2px solid #D32F2F;
+        border-radius: 8px;
+        padding: 8px;
+        color: black;
+        font-size: 14px;
+        min-height: 30px;
+    }
+    QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QDateEdit:focus, QComboBox:focus {
+        border: 2px solid #C62828;
+    }
+
+    QDateEdit::drop-down {
+        border-left: 1px solid #C62828;
+        width: 25px;
+    }
+    QDateEdit::down-arrow {
+        image: url(:/icons/calendar.png);
+        width: 16px;
+        height: 16px;
+    }
+    QSpinBox::up-button, QSpinBox::down-button, 
+    QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+        width: 25px;
+        border-left: 1px solid #C62828;
+    }
+    QSpinBox::up-arrow, QSpinBox::down-arrow, 
+    QDoubleSpinBox::up-arrow, QDoubleSpinBox::down-arrow {
+        image: url(:/icons/arrow_up.png);
+        width: 12px;
+        height: 12px;
+    }
+
+    QPushButton {
+        background-color: #D32F2F;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    QPushButton:hover {
+        background-color: #C62828;
+    }
    </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="mainVerticalLayout">
-    <!-- Botón Volver -->
     <item>
      <widget class="QPushButton" name="btn_volver">
-      <property name="text"><string>Volver</string></property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
      </widget>
     </item>
 
-    <!-- Selección de atleta -->
-    <item>
-     <layout class="QHBoxLayout" name="layoutSeleccionAtleta">
-      <item>
-       <widget class="QLabel" name="labelSeleccionAtleta">
-        <property name="text"><string>Atleta:</string></property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="comboAtleta"/>
-      </item>
-     </layout>
-    </item>
-
-    <!-- Campos de Sentadilla, Banca, Peso Muerto… igual que tenías -->
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
-       <!-- … tus layoutSentadilla, layoutPressBanca, layoutPesoMuerto … -->
+      
+      <item>
+       <layout class="QVBoxLayout" name="layoutSentadilla">
+        <item>
+         <widget class="QLabel" name="imagenSentadilla">
+          <property name="pixmap">
+           <pixmap resource="../recursos.qrc">:/imagenes/sentadilla.jpg</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSentadilla">
+          <property name="text">
+           <string>Sentadilla</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pesoSentadilla">
+          <property name="placeholderText">
+           <string>Kg levantados</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRepeticionesSentadilla">
+          <property name="text">
+           <string>Repeticiones:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRepeticionesSentadilla">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSeriesSentadilla">
+          <property name="text">
+           <string>Series:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinSeriesSentadilla">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRPESentadilla">
+          <property name="text">
+           <string>RPE (1-10):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRPESentadilla">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+      <item>
+       <layout class="QVBoxLayout" name="layoutPressBanca">
+        <item>
+         <widget class="QLabel" name="imagenPressBanca">
+          <property name="pixmap">
+           <pixmap resource="../recursos.qrc">:/imagenes/pressbanca.jpg</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelPressBanca">
+          <property name="text">
+           <string>Press Banca</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pesoPressBanca">
+          <property name="placeholderText">
+           <string>Kg levantados</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRepeticionesBanca">
+          <property name="text">
+           <string>Repeticiones:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRepeticionesBanca">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSeriesBanca">
+          <property name="text">
+           <string>Series:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinSeriesBanca">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRPEBanca">
+          <property name="text">
+           <string>RPE (1-10):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRPEBanca">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
+      <item>
+       <layout class="QVBoxLayout" name="layoutPesoMuerto">
+        <item>
+         <widget class="QLabel" name="imagenPesoMuerto">
+          <property name="pixmap">
+           <pixmap resource="../recursos.qrc">:/imagenes/pesomuelto.jpg</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelPesoMuerto">
+          <property name="text">
+           <string>Peso Muerto</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pesoPesoMuerto">
+          <property name="placeholderText">
+           <string>Kg levantados</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRepeticionesPesoMuerto">
+          <property name="text">
+           <string>Repeticiones:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRepeticionesPesoMuerto">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSeriesPesoMuerto">
+          <property name="text">
+           <string>Series:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinSeriesPesoMuerto">
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>999</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelRPEPesoMuerto">
+          <property name="text">
+           <string>RPE (1-10):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinRPEPesoMuerto">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+
      </layout>
     </item>
 
-    <!-- Fecha de entrenamiento -->
     <item>
      <widget class="QDateEdit" name="fechaEntrenamiento">
-      <property name="calendarPopup"><bool>true</bool></property>
-      <property name="displayFormat"><string>yyyy-MM-dd</string></property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy-MM-dd</string>
+      </property>
      </widget>
     </item>
 
-    <!-- Botón Guardar -->
     <item>
      <widget class="QPushButton" name="botonGuardar">
-      <property name="minimumHeight"><number>40</number></property>
-      <property name="text"><string>Guardar Sesión</string></property>
+      <property name="minimumHeight">
+       <number>40</number>
+      </property>
+      <property name="text">
+       <string>Guardar</string>
+      </property>
      </widget>
     </item>
+
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar"/>
