@@ -1,3 +1,4 @@
+# C:\Users\elded\OneDrive\Escritorio\INGENIERÍA DE SOFTWARE\POWER GYM\TrabajoPowerGym\src\Modelo\BO\ProgresoBO.py
 
 from src.Modelo.DAO.UserDao import UserDao 
 from src.Modelo.DAO.RegistroLevantamientoDAO import RegistroLevantamientoDAO 
@@ -13,18 +14,15 @@ class ProgresoBO:
     def obtener_datos_para_grafica(self, email_atleta, tipo_levantamiento):
         self.logger.info(f"BO: Obteniendo datos para gráfica de {tipo_levantamiento} para atleta: {email_atleta}.")
         try:
-            # 1. Obtener id_atleta
-            usuario_data = self.user_dao.obtener_usuario_por_email(email_atleta)
-            if usuario_data and 'id_usuario' in usuario_data:
-                id_atleta = usuario_data['id_usuario']
-            else:
+            # --- MODIFICACIÓN CLAVE: Llamar a user_dao.obtener_id_por_email directamente ---
+            id_atleta = self.user_dao.obtener_id_por_email(email_atleta) # Simplificado
+            if id_atleta is None:
                 self.logger.warning(f"BO: No se pudo obtener ID de atleta para {email_atleta}. No se puede generar la gráfica.")
                 return None, "No se encontró el atleta en la base de datos."
+            # --- FIN MODIFICACIÓN ---
 
-            # 2. Obtener registros de levantamientos (el DAO ya devuelve el máximo por fecha)
             datos_brutos = self.registro_levantamiento_dao.obtener_registros_para_progreso(id_atleta, tipo_levantamiento)
             
-            # Formatear datos para la gráfica (fechas y pesos)
             fechas = [str(x[0]) for x in datos_brutos] 
             pesos = [float(x[1]) for x in datos_brutos] 
 
