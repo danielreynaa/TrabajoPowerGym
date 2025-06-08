@@ -5,7 +5,6 @@ from PyQt5 import uic
 
 from src.controlador.ControladorUser import ControladorUser
 from src.Logs.Logger import CustomLogger
-from src.Vista.VistaProgreso import VistaProgreso
 from src.Vista.VistaEntrenamientosAsignados import VistaEntrenamientosAsignados
 
 class VistaSeleccionAtletasAsignados(QMainWindow):
@@ -13,46 +12,36 @@ class VistaSeleccionAtletasAsignados(QMainWindow):
         super().__init__()
         uic.loadUi("src/Vista/Ui/VistaSeleccionAtletasAsignados.ui", self)
 
-        # Datos del entrenador y callback para volver
-        self.entrenador = entrenador_vo
+        self.entrenador     = entrenador_vo
         self.volver_callback = volver_callback
 
-        # Logger
         self.logger = CustomLogger(log_file="app_powergym.log", log_level="DEBUG")
         self.logger.info(f"VistaSeleccionAtletasAsignados: cargada para {self.entrenador.email} (ID {self.entrenador.id_usuario}).")
 
-        # Controlador de usuarios
         self.ctrl_user = ControladorUser()
-        self.atletas = self.ctrl_user.listar_usuarios_por_rol("Atleta")
+        self.atletas   = self.ctrl_user.listar_usuarios_por_rol("Atleta")
         self.logger.info(f"VistaSeleccionAtletasAsignados: encontrados {len(self.atletas)} atletas.")
 
-        # Rellenar la tabla
         self.tblAtletas.setRowCount(len(self.atletas))
         for row, atleta in enumerate(self.atletas):
             self.tblAtletas.setItem(row, 0, QTableWidgetItem(str(atleta.id_usuario)))
             self.tblAtletas.setItem(row, 1, QTableWidgetItem(atleta.nombre))
             self.tblAtletas.setItem(row, 2, QTableWidgetItem(atleta.apellidos))
 
-        # Conectar dobles clics y botón volver
-        self.tblAtletas.cellDoubleClicked.connect(self.abrir_progreso_atleta)
+        # Ahora reaccionamos al doble‐clic (o un solo clic si prefieres)
+        self.tblAtletas.cellDoubleClicked.connect(self.abrir_entrenamientos_asignados)
         self.btn_volver.clicked.connect(self.volver)
 
-    def abrir_progreso_atleta(self, row, _col):
-        atleta = self.atletas[row]
-        self.logger.info(f"Seleccionado atleta {atleta.email} para ver progreso.")
-        ventana = VistaProgreso(atleta, self.show)
-        ventana.show()
-        self.close()
-    
-    def abrir_progreso_atleta(self, row, _col):
+    def abrir_entrenamientos_asignados(self, row, _col):
         atleta = self.atletas[row]
         self.logger.info(f"Seleccionado atleta {atleta.email} para ver entrenamientos asignados.")
-        ventana = VistaEntrenamientosAsignados(
+        # Guarda la ventana en un atributo, ¡muy importante!
+        self.ventana_entrenamientos = VistaEntrenamientosAsignados(
             entrenador_vo   = self.entrenador,
             atleta_vo       = atleta,
             volver_callback = self.show
         )
-        ventana.show()
+        self.ventana_entrenamientos.show()
         self.close()
 
     def volver(self):

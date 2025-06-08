@@ -38,6 +38,14 @@ class UserDao(Conexion):
     SQL_DELETE = """
         DELETE FROM Usuarios WHERE email = ?
     """ 
+    SQL_LISTAR_POR_ROL = """
+    SELECT
+      id_usuario, nombre, apellidos, email,
+      contrasena, rol, fecha_registro,
+      fecha_nacimiento, telefono, peso_corporal
+    FROM Usuarios
+    WHERE rol = ?
+    """
 
     def __init__(self):
         super().__init__()
@@ -154,3 +162,14 @@ class UserDao(Conexion):
             return False
         finally:
             cursor.close()
+            
+    def listar_por_rol(self, rol: str) -> List[SuperVo]:
+        cursor = self.getCursor()
+        usuarios = []
+        try:
+            cursor.execute(self.SQL_LISTAR_POR_ROL, (rol,))
+            for row in cursor.fetchall():
+                usuarios.append(SuperVo(*row))
+        finally:
+            cursor.close()
+        return usuarios

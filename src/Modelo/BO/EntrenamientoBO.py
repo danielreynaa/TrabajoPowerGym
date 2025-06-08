@@ -6,6 +6,7 @@ from src.Modelo.VO.EntrenamientoVo import EntrenamientoVo
 from src.Modelo.VO.RegistroLevantamientoVo import RegistroLevantamientoVo
 from src.Logs.Logger import CustomLogger
 from datetime import datetime
+from typing import List
 
 class EntrenamientoBO:
     def __init__(self):
@@ -81,3 +82,9 @@ class EntrenamientoBO:
     
     def listar_entrenamientos_por_atleta(self, id_atleta: int):
         return self.entrenamiento_dao.listar_por_atleta(id_atleta)
+    
+    def listar_entrenamientos_asignados(self,
+                                       id_entrenador: int,
+                                       id_atleta:    int
+                                      ) -> List[EntrenamientoVo]:
+        return self.entrenamiento_dao.listar_por_entrenador_y_atleta(id_entrenador, id_atleta)

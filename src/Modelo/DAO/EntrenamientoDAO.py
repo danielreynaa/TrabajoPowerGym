@@ -13,7 +13,18 @@ class EntrenamientoDAO(Conexion):
          WHERE id_atleta = ?
       ORDER BY fecha_entrenamiento DESC
     """
-
+    SQL_LISTAR_POR_ENTRENADOR_Y_ATLETA = """
+        SELECT id_entrenamiento,
+               id_atleta,
+               id_entrenador,
+               fecha_entrenamiento,
+               notas
+          FROM Entrenamientos
+         WHERE id_atleta = ? 
+           AND id_entrenador = ?
+      ORDER BY fecha_entrenamiento DESC
+    """
+    
     def __init__(self):
         super().__init__()  # Inicializa self.conexion
         self.logger = CustomLogger(log_file="app_powergym.log", log_level="DEBUG")
@@ -43,6 +54,25 @@ class EntrenamientoDAO(Conexion):
             cursor.execute(self.SQL_LISTAR_POR_ATLETA, (id_atleta,))
             rows = cursor.fetchall()
             self.logger.debug(f"DAO: {len(rows)} sesiones obtenidas para atleta {id_atleta}.")
+            for row in rows:
+                sesiones.append(EntrenamientoVo(*row))
+        finally:
+            cursor.close()
+        return sesiones
+    
+    def listar_por_entrenador_y_atleta(self,
+                                       id_entrenador: int,
+                                       id_atleta:    int
+                                      ) -> List[EntrenamientoVo]:
+        cursor = self.getCursor()
+        sesiones: List[EntrenamientoVo] = []
+        try:
+            cursor.execute(
+                self.SQL_LISTAR_POR_ENTRENADOR_Y_ATLETA,
+                (id_atleta, id_entrenador)
+            )
+            rows = cursor.fetchall()
+            self.logger.debug(f"DAO: {len(rows)} sesiones para entrenador={id_entrenador}, atleta={id_atleta}")
             for row in rows:
                 sesiones.append(EntrenamientoVo(*row))
         finally:

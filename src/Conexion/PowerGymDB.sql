@@ -86,3 +86,13 @@ ALTER TABLE RegistrosLevantamientos
 
 ALTER TABLE RegistrosLevantamientos
   MODIFY COLUMN id_entrenamiento INT NULL;
+
+ALTER TABLE Entrenamientos
+  ADD COLUMN id_entrenador INT NOT NULL AFTER id_atleta;
+
+ALTER TABLE Entrenamientos
+  ADD CONSTRAINT fk_entrenador
+    FOREIGN KEY (id_entrenador)
+      REFERENCES Usuarios(id_usuario)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE;
