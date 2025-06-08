@@ -2,6 +2,8 @@ from src.Modelo.BO.UserBO import UserBO
 
 from src.Modelo.VO.SuperVo import SuperVo
 
+from typing import List
+
 class ControladorUser:
     def __init__(self):
         self.user_bo = UserBO()
@@ -14,3 +16,7 @@ class ControladorUser:
     
     def actualizar_usuario(self, vo: SuperVo) -> None:
         return self.user_bo.actualizar_usuario(vo)
+        
+    def listar_usuarios_por_rol(self, rol: str) -> List[SuperVo]:
+        return self.user_bo.listar_usuarios_por_rol(rol)
+    

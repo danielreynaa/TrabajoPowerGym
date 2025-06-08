@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VistaSeleccionAtleta</class>
+ <widget class="QMainWindow" name="VistaSeleccionAtleta">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>500</width><height>400</height></rect></property>
+  <property name="windowTitle"><string>Seleccione Atleta</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="tblAtletas">
+      <column>
+        <property name="text"><string>ID</string></property>
+      </column>
+      <column>
+        <property name="text"><string>Nombre</string></property>
+      </column>
+      <column>
+        <property name="text"><string>Apellidos</string></property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_volver">
+      <property name="text"><string>Volver</string></property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

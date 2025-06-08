@@ -36,6 +36,14 @@ class UserDao(Conexion):
             peso_corporal = ?
         WHERE email = ?
     """
+    
+    SQL_LISTAR_POR_ROL = """
+        SELECT id_usuario,
+               nombre, apellidos, email, contrasena, rol,
+               fecha_registro, fecha_nacimiento, telefono, peso_corporal
+          FROM Usuarios
+         WHERE rol = ?
+    """
     def __init__(self):
         super().__init__() # Llama al constructor de Conexion
         self.logger = CustomLogger() # AÑADIDO: Inicializa el Logger
@@ -130,3 +138,16 @@ class UserDao(Conexion):
             return False
         finally:
             cursor.close()
+    
+    def listar_por_rol(self, rol: str) -> List[SuperVo]:
+        cursor = self.getCursor()
+        usuarios: List[SuperVo] = []
+        try:
+            cursor.execute(self.SQL_LISTAR_POR_ROL, (rol,))
+            for row in cursor.fetchall():
+                usuarios.append(SuperVo(*row))
+        except Exception as e:
+            print("❌ Error en listar_por_rol:", e)
+        finally:
+            cursor.close()
+        return usuarios

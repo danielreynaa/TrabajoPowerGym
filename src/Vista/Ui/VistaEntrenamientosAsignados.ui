@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VistaEntrenamientosAsignados</class>
+ <widget class="QMainWindow" name="VistaEntrenamientosAsignados">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>500</width><height>400</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Entrenamientos Asignados</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <!-- Tabla de sesiones -->
+    <item>
+     <widget class="QTableWidget" name="tblEntrenamientos">
+      <column><property name="text"><string>Fecha</string></property></column>
+      <column><property name="text"><string>Notas</string></property></column>
+     </widget>
+    </item>
+    <!-- Botón Volver -->
+    <item>
+     <widget class="QPushButton" name="btn_volver">
+      <property name="text"><string>Volver</string></property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

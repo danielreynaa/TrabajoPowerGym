@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Ver progreso</string>
+     <string>Ver Atletas</string>
     </property>
    </widget>
    <widget class="QPushButton" name="botonHistorial">

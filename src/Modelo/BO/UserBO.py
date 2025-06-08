@@ -66,3 +66,6 @@ class UserBO:
         success = self.user_dao.update_user(vo)
         if not success:
             raise Exception("No se pudo actualizar el perfil del usuario.")
+
+    def listar_usuarios_por_rol(self, rol: str) -> List[SuperVo]:
+        return self.user_dao.listar_por_rol(rol)
