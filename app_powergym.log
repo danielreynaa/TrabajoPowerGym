@@ -212,3 +212,30 @@
 [2025-06-08 09:24:58] [INFO] vista del perfil cargada
 [2025-06-08 09:24:59] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
 [2025-06-08 09:25:00] [INFO] Navegando de Vista Menu Atleta a VistaHistorial para usuario: hola@gmail.com.
+[2025-06-08 09:45:20] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 09:45:20] [INFO] Vista Inicial cargada.
+[2025-06-08 09:45:20] [INFO] Visa inicial cargada.
+[2025-06-08 09:45:23] [INFO] Navegando de Vista Inicial a VistaRegistro (botón 'Registrarme').
+[2025-06-08 09:45:23] [INFO] Vista Registro cargada.
+[2025-06-08 09:46:23] [INFO] Nuevo usuario entren@gmail.com registrado exitosamente con rol: Entrenador.
+[2025-06-08 09:46:24] [INFO] Volviendo de VistaRegistro a VistaLogin (botón 'Volver').
+[2025-06-08 09:46:24] [INFO] Vista Login cargada.
+[2025-06-08 09:46:34] [INFO] Usuario entren@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 09:46:34] [INFO] Login exitoso para entren@gmail.com (Rol: Entrenador). Navegando a VistaMenuEntrenador.
+[2025-06-08 09:56:42] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 09:56:42] [INFO] Vista Inicial cargada.
+[2025-06-08 09:56:42] [INFO] Visa inicial cargada.
+[2025-06-08 09:56:46] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 09:56:49] [INFO] Vista Login cargada.
+[2025-06-08 09:56:59] [INFO] Usuario entren@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 09:56:59] [INFO] Login exitoso para entren@gmail.com (Rol: Entrenador). Navegando a VistaMenuEntrenador.
+[2025-06-08 09:57:12] [INFO] Vista Progreso cargada para usuario: da@gmail.com.
+[2025-06-08 09:57:12] [INFO] Actualizando gráfica para usuario da@gmail.com.
+[2025-06-08 09:57:13] [INFO] No hay datos para Sentadilla para el usuario da@gmail.com.
+[2025-06-08 09:57:18] [INFO] Volviendo de Vista Progreso a Vista Menu Atleta para usuario: da@gmail.com.
+[2025-06-08 09:57:35] [INFO] Vista Progreso cargada para usuario: da@gmail.com.
+[2025-06-08 09:57:35] [INFO] Actualizando gráfica para usuario da@gmail.com.
+[2025-06-08 09:57:35] [INFO] No hay datos para Sentadilla para el usuario da@gmail.com.
+[2025-06-08 09:57:37] [INFO] Actualizando gráfica para usuario da@gmail.com.
+[2025-06-08 09:57:37] [INFO] No hay datos para Peso Muerto para el usuario da@gmail.com.
+[2025-06-08 09:57:39] [INFO] Volviendo de Vista Progreso a Vista Menu Atleta para usuario: da@gmail.com.

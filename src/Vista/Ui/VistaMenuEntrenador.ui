@@ -3,56 +3,21 @@
  <class>VistaMenuEntrenador</class>
  <widget class="QMainWindow" name="VistaMenuEntrenador">
   <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>400</width>
-    <height>300</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>Menú Entrenador</string>
+   <rect><x>0</x><y>0</y><width>400</width><height>300</height></rect>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="labelTitulo">
-    <property name="text">
-     <string>Bienvenido Entrenador</string>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>20</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botonIniciarSesion">
-    <property name="text">
-     <string>Iniciar Sesión de Entrenamiento</string>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>70</y>
-      <width>200</width>
-      <height>40</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botonEstadisticas">
-    <property name="text">
-     <string>Ver Estadísticas</string>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>120</y>
-      <width>200</width>
-      <height>40</height>
-     </rect>
-    </property>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="botonVerProgreso">
+      <property name="text"><string>Ver Progreso Atletas</string></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="botonAsignarRutina">
+      <property name="text"><string>Asignar Rutinas</string></property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
