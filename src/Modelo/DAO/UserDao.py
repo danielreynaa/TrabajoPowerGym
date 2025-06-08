@@ -1,3 +1,5 @@
+# C:\Users\elded\OneDrive\Escritorio\INGENIERÍA DE SOFTWARE\POWER GYM\TrabajoPowerGym\src\Modelo\DAO\UserDao.py
+
 from src.Conexion.Conexion import Conexion
 from src.Modelo.VO.SuperVo import SuperVo
 from typing import List, Optional
@@ -5,16 +7,14 @@ from typing import List, Optional
 from src.Logs.Logger import CustomLogger 
 
 class UserDao(Conexion): 
+    # --- MODIFICACIÓN CLAVE AQUÍ: SQL_INSERT en una sola línea y sin saltos de línea innecesarios ---
+    SQL_INSERT = "INSERT INTO Usuarios (nombre, apellidos, email, contrasena, rol, fecha_nacimiento, telefono, peso_corporal) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+    # --- FIN MODIFICACIÓN ---
+
     SQL_SELECT = """
         SELECT id_usuario, nombre, apellidos, email, contrasena, rol,
                fecha_registro, fecha_nacimiento, telefono, peso_corporal
         FROM Usuarios
-    """
-    SQL_INSERT = """
-        INSERT INTO Usuarios (
-            nombre, apellidos, email, contrasena, rol,
-            fecha_nacimiento, telefono, peso_ corporal
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     """
     SQL_CONSULTA_LOGIN = """
         SELECT COUNT(*) FROM Usuarios WHERE email = ? AND contrasena = ?
@@ -38,23 +38,14 @@ class UserDao(Conexion):
     SQL_DELETE = """
         DELETE FROM Usuarios WHERE email = ?
     """ 
-    SQL_LISTAR_POR_ROL = """
-        SELECT id_usuario,
-               nombre, apellidos, email, contrasena, rol,
-               fecha_registro, fecha_nacimiento, telefono, peso_corporal
-          FROM Usuarios
-         WHERE rol = ?
-    """
+
     def __init__(self):
-        super().__init__() 
-
-        self.cursor = self.getCursor() 
-
+        super().__init__()
         self.logger = CustomLogger() 
         self.logger.info("UserDao inicializado.") 
 
     def select(self) -> List[SuperVo]:
-        cursor = self.getCursor() 
+        cursor = self.getCursor()
         usuarios: List[SuperVo] = []
         try:
             cursor.execute(self.SQL_SELECT)
@@ -68,12 +59,13 @@ class UserDao(Conexion):
 
     def insert_user(self, nombre, apellidos, email, contrasena, rol,
                      fecha_nacimiento=None, telefono=None, peso_corporal=None):
-        cursor = self.getCursor() 
+        cursor = self.getCursor()
+        # --- AÑADIDO: Log para ver la SQL y los parámetros antes de ejecutar ---
+        params = (nombre, apellidos, email, contrasena, rol, fecha_nacimiento, telefono, peso_corporal)
+        self.logger.debug(f"DAO: Ejecutando INSERT: SQL='{self.SQL_INSERT}' con PARAMETROS={params}") # AÑADIDO
+        # --- FIN AÑADIDO ---
         try:
-            cursor.execute(self.SQL_INSERT, (
-                nombre, apellidos, email, contrasena, rol,
-                fecha_nacimiento, telefono, peso_corporal
-            ))
+            cursor.execute(self.SQL_INSERT, params) # Ahora usa la variable params
             self.logger.info(f"Usuario {email} insertado correctamente en BD.") 
         except Exception as e:
             self.logger.error(f"Error al insertar usuario {email}: {e}") 
@@ -82,7 +74,7 @@ class UserDao(Conexion):
             cursor.close()
 
     def consulta_login(self, email: str, contrasena: str) -> bool:
-        cursor = self.getCursor() 
+        cursor = self.getCursor()
         try:
             cursor.execute(self.SQL_CONSULTA_LOGIN, (email, contrasena))
             count = cursor.fetchone()[0]
@@ -95,11 +87,11 @@ class UserDao(Conexion):
             cursor.close()
 
     def obtener_id_por_email(self, email: str) -> Optional[int]:
-        cursor = self.getCursor() 
+        cursor = self.getCursor()
         try:
             self.logger.debug(f"DAO: Buscando ID de usuario para email: {email}.")
-            cursor.execute("SELECT id_usuario FROM Usuarios WHERE email = ?", (email,))
-            resultado = cursor.fetchone()
+            self.cursor.execute("SELECT id_usuario FROM Usuarios WHERE email = ?", (email,))
+            resultado = self.cursor.fetchone()
             if resultado:
                 self.logger.debug(f"DAO: ID de usuario {resultado[0]} encontrado para {email}.")
                 return resultado[0]
@@ -113,7 +105,7 @@ class UserDao(Conexion):
             cursor.close()
 
     def obtener_usuario_por_email(self, email: str) -> Optional[dict]:
-        cursor = self.getCursor() 
+        cursor = self.getCursor()
         try:
             cursor.execute(self.SQL_SELECT_POR_EMAIL, (email,))
             fila = cursor.fetchone()
@@ -130,7 +122,7 @@ class UserDao(Conexion):
             cursor.close()
 
     def eliminar_usuario(self, email: str) -> bool: 
-        cursor = self.getCursor() 
+        cursor = self.getCursor()
         try:
             self.logger.info(f"Intentando eliminar usuario: {email}.")
             cursor.execute(self.SQL_DELETE, (email,)) 
@@ -143,7 +135,7 @@ class UserDao(Conexion):
             cursor.close()
 
     def update_user(self, vo: SuperVo) -> bool: 
-        cursor = self.getCursor() 
+        cursor = self.getCursor()
         try:
             self.logger.info(f"Actualizando usuario: {vo.email}.")
             cursor.execute(self.SQL_UPDATE, (
@@ -162,16 +154,3 @@ class UserDao(Conexion):
             return False
         finally:
             cursor.close()
-    
-    def listar_por_rol(self, rol: str) -> List[SuperVo]:
-        cursor = self.getCursor()
-        usuarios: List[SuperVo] = []
-        try:
-            cursor.execute(self.SQL_LISTAR_POR_ROL, (rol,))
-            for row in cursor.fetchall():
-                usuarios.append(SuperVo(*row))
-        except Exception as e:
-            print("❌ Error en listar_por_rol:", e)
-        finally:
-            cursor.close()
-        return usuarios

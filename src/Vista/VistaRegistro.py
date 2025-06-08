@@ -14,8 +14,10 @@ class VistaRegistro(QMainWindow, Form_Registro):
         super().__init__()
         self.setupUi(self)
 
-        # Logger configurado igual que en main.py
-        self.logger = CustomLogger(log_file="app_powergym.log", log_level="DEBUG")
+        # >>>>>> CAMBIO 1: Logger - Obtener la instancia existente sin reconfigurar <<<<<<
+        # CustomLogger es un Singleton. Ya está inicializado en main.py.
+        # No le pases argumentos aquí para obtener la misma instancia configurada.
+        self.logger = CustomLogger() 
         self.logger.info("VistaRegistro: inicializada.")
 
         # Conexiones de los botones
@@ -23,17 +25,28 @@ class VistaRegistro(QMainWindow, Form_Registro):
         self.btn_volver_login.clicked.connect(self.volver_a_login)
 
     def procesar_registro(self):
-        nombre             = self.txt_nombre.text().strip()
-        apellidos          = self.txt_apellidos.text().strip()
-        email              = self.txt_email.text().strip()
-        contrasena         = self.txt_password.text()
+        nombre           = self.txt_nombre.text().strip()
+        apellidos        = self.txt_apellidos.text().strip()
+        email            = self.txt_email.text().strip()
+        contrasena       = self.txt_password.text()
         confirm_contrasena = self.txt_confirm_password.text()
-        rol                = self.combo_rol.currentText().strip()
+        
+        # >>>>>> CAMBIO 2: Normalizar la capitalización del rol <<<<<<
+        # Mapeo para asegurar que el rol tenga la capitalización exacta del ENUM de la base de datos
+        rol_input = self.combo_rol.currentText().strip() # Leer el texto de la UI
+        rol_mapeado = {
+            "administrador": "Administrador",
+            "entrenador":    "Entrenador",
+            "atleta":        "Atleta"
+        }.get(rol_input.lower(), "") # Convertir a minúsculas para el mapeo, y si no se encuentra, dejar vacío para el error
+        
+        rol = rol_mapeado # Usaremos este rol mapeado para la inserción
+        self.logger.debug(f"VistaRegistro: Rol de UI '{rol_input}' mapeado a '{rol}' para inserción.")
 
-        fecha_qdate  = self.dateedit_fecha_nacimiento.date()
-        fecha_nac    = fecha_qdate.toString("yyyy-MM-dd") if fecha_qdate.isValid() else None
-        telefono     = self.txt_telefono.text().strip()
-        peso_corp    = self.spinbox_peso_corporal.value() if self.spinbox_peso_corporal.value() > 0 else None
+        fecha_qdate      = self.dateedit_fecha_nacimiento.date()
+        fecha_nac        = fecha_qdate.toString("yyyy-MM-dd") if fecha_qdate.isValid() else None
+        telefono         = self.txt_telefono.text().strip()
+        peso_corp        = self.spinbox_peso_corporal.value() if self.spinbox_peso_corporal.value() > 0 else None
 
         errores = []
         if not nombre:
@@ -50,8 +63,11 @@ class VistaRegistro(QMainWindow, Form_Registro):
             errores.append("La Confirmación de Contraseña es obligatoria.")
         if contrasena != confirm_contrasena:
             errores.append("Las contraseñas no coinciden.")
-        if not rol:
-            errores.append("Debe seleccionar un tipo de usuario.")
+        
+        # >>>>>> CAMBIO 3: Validar que el rol mapeado no esté vacío <<<<<<
+        # Si rol_mapeado es "", significa que el texto de la UI no coincidió con ningún rol conocido
+        if not rol: # Ahora validamos 'rol' después del mapeo
+            errores.append("Debe seleccionar un tipo de usuario válido.")
 
         if errores:
             msg = "; ".join(errores)
@@ -64,12 +80,13 @@ class VistaRegistro(QMainWindow, Form_Registro):
         user_bo = UserBO()
 
         try:
+            self.logger.debug(f"VistaRegistro: Llamando a user_bo.registrar_usuario con email={email}, rol={rol}, peso_corporal={peso_corp}.") # Log detallado
             user_bo.registrar_usuario(
                 nombre=nombre,
                 apellidos=apellidos,
                 email=email,
                 contrasena=contrasena_hash,
-                rol=rol,
+                rol=rol, # Usar el rol mapeado aquí
                 fecha_nacimiento=fecha_nac,
                 telefono=telefono,
                 peso_corporal=peso_corp
