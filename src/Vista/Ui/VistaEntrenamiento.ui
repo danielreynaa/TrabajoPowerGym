@@ -11,10 +11,93 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Registro de Entrenamiento</string>
+   <string>POWERGYM - Registro de Entrenamiento</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow#VistaEntrenamiento {
+        background-color: #f0f0f0;
+    }
+    QWidget#centralwidget {
+        background-color: #f8f8f8;
+        padding: 20px;
+    }
+    
+    QLabel {
+        color: #333333;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 5px;
+    }
+
+    QLabel[objectName^="label"][objectName*="Sentadilla"],
+    QLabel[objectName^="label"][objectName*="Banca"],
+    QLabel[objectName^="label"][objectName*="PesoMuerto"] {
+        color: #B71C1C;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+
+    QLineEdit, QSpinBox, QDoubleSpinBox, QDateEdit, QComboBox {
+        background-color: white;
+        border: 2px solid #D32F2F;
+        border-radius: 8px;
+        padding: 8px;
+        color: black;
+        font-size: 14px;
+        min-height: 30px;
+    }
+    QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QDateEdit:focus, QComboBox:focus {
+        border: 2px solid #C62828;
+    }
+
+    QDateEdit::drop-down {
+        border-left: 1px solid #C62828;
+        width: 25px;
+    }
+    QDateEdit::down-arrow {
+        image: url(:/icons/calendar.png);
+        width: 16px;
+        height: 16px;
+    }
+    QSpinBox::up-button, QSpinBox::down-button, 
+    QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+        width: 25px;
+        border-left: 1px solid #C62828;
+    }
+    QSpinBox::up-arrow, QSpinBox::down-arrow, 
+    QDoubleSpinBox::up-arrow, QDoubleSpinBox::down-arrow {
+        image: url(:/icons/arrow_up.png);
+        width: 12px;
+        height: 12px;
+    }
+
+    QPushButton {
+        background-color: #D32F2F;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    QPushButton:hover {
+        background-color: #C62828;
+    }
+   </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="mainVerticalLayout">
+    <item>
+     <widget class="QPushButton" name="btn_volver">
+      <property name="text">
+       <string>Volver</string>
+      </property>
+     </widget>
+    </item>
+
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       
@@ -89,10 +172,13 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinRPESentadilla"> <property name="minimum">
-           <number>1</number> </property>
+         <widget class="QSpinBox" name="spinRPESentadilla">
+          <property name="minimum">
+           <number>1</number>
+          </property>
           <property name="maximum">
-           <number>10</number> </property>
+           <number>10</number>
+          </property>
          </widget>
         </item>
        </layout>
@@ -169,7 +255,8 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinRPEBanca"> <property name="minimum">
+         <widget class="QSpinBox" name="spinRPEBanca">
+          <property name="minimum">
            <number>1</number>
           </property>
           <property name="maximum">
@@ -251,7 +338,8 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinRPEPesoMuerto"> <property name="minimum">
+         <widget class="QSpinBox" name="spinRPEPesoMuerto">
+          <property name="minimum">
            <number>1</number>
           </property>
           <property name="maximum">

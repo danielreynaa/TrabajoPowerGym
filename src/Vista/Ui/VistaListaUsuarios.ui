@@ -3,24 +3,114 @@
  <class>VistaListaUsuarios</class>
  <widget class="QMainWindow" name="VistaListaUsuarios">
   <property name="geometry">
-   <rect><x>0</x><y>0</y><width>500</width><height>400</height></rect>
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height> </rect>
   </property>
-  <property name="windowTitle"><string>Lista de Usuarios</string></property>
+  <property name="windowTitle">
+   <string>POWERGYM - Lista de Usuarios</string> </property>
+  <property name="styleSheet"> <string notr="true">
+    QMainWindow#VistaListaUsuarios { /* Usamos el objectName de la ventana principal */
+        background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+    QWidget#centralwidget {
+        background-color: #f8f8f8; /* Color de fondo del widget central, un poco más claro */
+        padding: 20px; /* Padding general para el contenido */
+    }
+    
+    QLabel { /* Estilo general para todos los QLabel */
+        color: #333333;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    QLabel#labelTituloPrincipal { /* Estilo específico para el nuevo título principal */
+        color: #B71C1C; /* Rojo oscuro para el texto del título */
+        font-size: 28px; /* Tamaño de fuente grande */
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    QPushButton {
+        background-color: #D32F2F; /* Rojo vibrante */
+        color: white;
+        border: none;
+        border-radius: 20px; /* Bordes más redondeados */
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        min-height: 40px; /* Altura mínima para botones */
+        margin-top: 10px; /* Margen superior para separar botones */
+    }
+    QPushButton:hover {
+        background-color: #C62828; /* Rojo más oscuro al pasar el ratón */
+    }
+
+    QListWidget { /* Estilo para la lista de usuarios */
+        background-color: white;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        padding: 5px;
+        font-size: 14px;
+        selection-background-color: #FFCDD2; /* Rojo claro al seleccionar */
+        selection-color: #B71C1C; /* Texto rojo oscuro al seleccionar */
+    }
+    QListWidget::item { /* Estilo para los ítems de la lista */
+        padding: 5px 10px;
+        margin-bottom: 2px;
+    }
+    QListWidget::item:selected {
+        font-weight: bold;
+    }
+   </string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_main"> <property name="spacing">
+     <number>15</number> </property>
+    <property name="leftMargin">
+     <number>30</number>
+    </property>
+    <property name="topMargin">
+     <number>30</number>
+    </property>
+    <property name="rightMargin">
+     <number>30</number>
+    </property>
+    <property name="bottomMargin">
+     <number>30</number>
+    </property>
+
     <item>
-     <widget class="QListWidget" name="lista"/>
+     <widget class="QLabel" name="labelTituloPrincipal"> <property name="text">
+       <string>Gestión de Usuarios</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </item>
+
+    <item>
+     <widget class="QListWidget" name="lista"/> </item>
+
     <item>
      <widget class="QPushButton" name="btn_eliminar">
-      <property name="text"><string>Eliminar Usuario</string></property>
+      <property name="text">
+       <string>Eliminar Usuario</string>
+      </property>
      </widget>
     </item>
+
     <item>
      <widget class="QPushButton" name="btn_volver">
-      <property name="text"><string>Volver</string></property>
+      <property name="text">
+       <string>Volver</string>
+      </property>
      </widget>
     </item>
+
    </layout>
   </widget>
  </widget>

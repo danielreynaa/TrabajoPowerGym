@@ -13,17 +13,102 @@
   <property name="windowTitle">
    <string>POWERGYM - Perfil</string>
   </property>
+  <property name="styleSheet"> <string notr="true">
+    QMainWindow#VistaPerfil { /* Usamos el objectName de la ventana principal */
+        background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+    QWidget#centralwidget {
+        background-color: #f8f8f8; /* Color de fondo del widget central, un poco más claro */
+    }
+    
+    QLabel { /* Estilo general para todos los QLabel */
+        color: #333333;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 5px; /* Pequeño padding superior para separación */
+    }
+
+    QLabel#lbl_titulo { /* Estilo específico para el título principal del perfil */
+        color: #B71C1C; /* Rojo oscuro para el texto del título */
+        font-size: 28px; /* Tamaño de fuente grande */
+        font-weight: bold;
+        padding-bottom: 20px;
+        padding-top: 0px; /* Resetear padding-top para el título */
+    }
+
+    QLineEdit, QDateEdit, QDoubleSpinBox, QSpinBox, QComboBox { /* Estilo para todos los campos de entrada */
+        background-color: white;
+        border: 2px solid #D32F2F; /* Borde rojo vibrante */
+        border-radius: 8px;
+        padding: 10px;
+        color: black;
+        font-size: 14px;
+        min-height: 30px; /* Altura mínima para campos */
+    }
+    QLineEdit:focus, QDateEdit:focus, QDoubleSpinBox:focus, QSpinBox:focus, QComboBox:focus {
+        border: 2px solid #C62828; /* Borde rojo más oscuro al enfocar */
+    }
+    QDateEdit::drop-down {
+        border-left: 1px solid #C62828;
+        width: 25px;
+    }
+    QDateEdit::down-arrow {
+        image: url(:/icons/calendar.png); /* Icono de calendario si tienes, o una flecha */
+        width: 16px;
+        height: 16px;
+    }
+    QDoubleSpinBox::up-button, QDoubleSpinBox::down-button { /* Flechas de spinbox */
+        width: 25px;
+        border-left: 1px solid #C62828;
+    }
+    QDoubleSpinBox::up-arrow, QDoubleSpinBox::down-arrow {
+        image: url(:/icons/arrow_up.png); /* Iconos de flecha si tienes */
+        width: 12px;
+        height: 12px;
+    }
+
+
+    QPushButton { /* Estilo para todos los QPushButton */
+        background-color: #D32F2F; /* Rojo vibrante */
+        color: white;
+        border: none;
+        border-radius: 20px; /* Bordes más redondeados */
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px; /* Margen superior para separar de campos */
+    }
+    QPushButton:hover {
+        background-color: #C62828; /* Rojo más oscuro al pasar el ratón */
+    }
+
+    /* Estilo específico para QLineEdit de solo lectura */
+    QLineEdit[readOnly="true"] {
+        background-color: #E0E0E0; /* Fondo gris claro para campos de solo lectura */
+        color: #616161; /* Texto gris oscuro */
+        border: 1px dashed #9E9E9E; /* Borde punteado */
+    }
+   </string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>10</number> </property>
+    <property name="leftMargin">
+     <number>40</number>
+    </property>
+    <property name="topMargin">
+     <number>40</number>
+    </property>
+    <property name="rightMargin">
+     <number>40</number>
+    </property>
+    <property name="bottomMargin">
+     <number>40</number>
+    </property>
+
     <item>
      <widget class="QLabel" name="lbl_titulo">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
       <property name="text">
        <string>Editar Perfil</string>
       </property>
@@ -71,6 +156,9 @@
       <property name="calendarPopup">
        <bool>true</bool>
       </property>
+      <property name="displayFormat">
+       <string>dd/MM/yyyy</string>
+      </property>
      </widget>
     </item>
     <item>
@@ -84,6 +172,9 @@
      <widget class="QDoubleSpinBox" name="inputPeso">
       <property name="suffix">
        <string> kg</string>
+      </property>
+      <property name="decimals">
+       <number>2</number>
       </property>
       <property name="minimum">
        <double>0.010000000000000</double>

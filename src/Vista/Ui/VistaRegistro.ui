@@ -6,7 +6,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>550</width> <height>850</height> </rect>
+    <width>550</width>
+    <height>850</height>
+   </rect>
   </property>
   <property name="minimumSize">
    <size>
@@ -28,11 +30,93 @@
     <normaloff>:/logo/514ba084-0d56-41a1-9273-abc5a52fc600.png</normaloff>:/logo/514ba084-0d56-41a1-9273-abc5a52fc600.png</iconset>
   </property>
   <property name="styleSheet"> <string notr="true">
-    QMainWindow#MainWindow { /* Usamos el objectName de la ventana principal */
-     background-image: url(:/Imagenes/descarga.jpg); /* Asegúrate de que esta ruta es correcta en recursos.qrc */
-     background-repeat: no-repeat;
-     background-position: center;
-     background-size: cover;
+    /* Estilo del QMainWindow y su fondo de imagen */
+    QMainWindow#MainWindow {
+        background-image: url(:/Imagenes/descarga.jpg); /* Asegúrate de que esta ruta es correcta en recursos.qrc */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* Estilo para el QFrame principal de registro (panel blanco translúcido) */
+    QFrame#frame_registro_principal {
+        background-color: rgba(255, 255, 255, 200); /* Blanco con mayor opacidad */
+        border-radius: 15px;
+        padding: 20px; /* Padding interno */
+    }
+
+    /* Estilo para QLabel del título del registro */
+    QLabel#lbl_titulo_registro {
+        color: #B71C1C; /* Rojo oscuro para el texto del título */
+        font-size: 28px; /* Tamaño de fuente más grande */
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    /* Estilo para QLabels de los campos (Nombre, Apellidos, etc.) */
+    QLabel {
+        color: #333333; /* Texto gris oscuro */
+        font-size: 14px;
+        font-weight: 500; /* Seminegrita */
+        padding-top: 5px; /* Pequeño padding superior para separación */
+    }
+
+    /* Estilo para QLineEdit (campos de entrada) */
+    QLineEdit {
+        background-color: rgba(255, 255, 255, 255); /* Fondo blanco sólido */
+        border: 2px solid #D32F2F; /* Borde rojo vibrante */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
+        color: black;
+        font-size: 14px;
+    }
+    QLineEdit:focus {
+        border: 2px solid #C62828; /* Borde rojo más oscuro al enfocar */
+    }
+
+    /* Estilo para QDateEdit, QDoubleSpinBox, QSpinBox (similar a QLineEdit) */
+    QDateEdit, QDoubleSpinBox, QSpinBox, QComboBox {
+        background-color: rgba(255, 255, 255, 255);
+        border: 2px solid #D32F2F;
+        border-radius: 8px;
+        padding: 8px;
+        color: black;
+        font-size: 14px;
+    }
+    QDateEdit:focus, QDoubleSpinBox:focus, QSpinBox:focus, QComboBox:focus {
+        border: 2px solid #C62828;
+    }
+
+    /* Estilo para QPushButton (botones generales) */
+    QPushButton {
+        background-color: #D32F2F; /* Rojo vibrante */
+        color: white;
+        border: none;
+        border-radius: 20px; /* Bordes más redondeados */
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px; /* Margen superior para separar de otros elementos */
+    }
+    QPushButton:hover {
+        background-color: #C62828; /* Rojo más oscuro al pasar el ratón */
+    }
+
+    /* Estilo específico para el botón "Volver a la pantalla inicial" (enlace) */
+    QPushButton#btn_volver_login {
+        background-color: transparent; /* Fondo transparente */
+        color: #B71C1C; /* Rojo oscuro para el texto */
+        border: none;
+        text-decoration: none; /* Sin subrayado por defecto */
+        font-size: 14px;
+        font-weight: normal;
+        padding: 5px;
+        border-radius: 0px; 
+        margin-top: 10px;
+    }
+    QPushButton#btn_volver_login:hover {
+        text-decoration: underline; /* Subrayar al pasar el ratón */
+        color: #880E4F; /* Un tono de rojo más profundo para hover */
     }
    </string>
   </property>
@@ -70,7 +154,8 @@
      <widget class="QFrame" name="frame_registro_principal">
       <property name="minimumSize">
        <size>
-        <width>450</width> <height>0</height>
+        <width>450</width>
+        <height>0</height>
        </size>
       </property>
       <property name="maximumSize">
@@ -78,15 +163,6 @@
         <width>500</width>
         <height>16777215</height>
        </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
-        QFrame#frame_registro_principal {
-         background-color: rgba(255, 255, 255, 180); /* Blanco con 70% de opacidad */
-         border-radius: 15px;
-         padding: 10px; /* Padding para el frame */
-        }
-       </string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -96,8 +172,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_registro">
        <property name="spacing">
-        <number>15</number>
-       </property>
+        <number>10</number> </property>
        <property name="leftMargin">
         <number>30</number>
        </property>
@@ -119,9 +194,6 @@
            <bold>true</bold>
           </font>
          </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(55,5,255);</string>
-         </property>
          <property name="text">
           <string>REGISTRO DE USUARIO</string>
          </property>
@@ -138,18 +210,12 @@
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>20</height>
-          </size>
+           <height>10</height> </size>
          </property>
         </spacer>
        </item>
        <item>
         <widget class="QLabel" name="lbl_nombre">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Nombre:</string>
          </property>
@@ -163,25 +229,6 @@
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="placeholderText">
           <string>Ingrese su nombre</string>
          </property>
@@ -189,11 +236,6 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_apellidos">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Apellidos:</string>
          </property>
@@ -207,25 +249,6 @@
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="placeholderText">
           <string>Ingrese sus apellidos</string>
          </property>
@@ -233,11 +256,6 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_email">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Correo Electrónico:</string>
          </property>
@@ -251,25 +269,6 @@
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="placeholderText">
           <string>ejemplo@dominio.com</string>
          </property>
@@ -277,11 +276,6 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_password">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Contraseña:</string>
          </property>
@@ -295,25 +289,6 @@
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
          </property>
@@ -324,11 +299,6 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_confirm_password">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Confirmar Contraseña:</string>
          </property>
@@ -342,25 +312,6 @@
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>
          </property>
@@ -371,11 +322,6 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_fecha_nacimiento">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Fecha de Nacimiento:</string>
          </property>
@@ -389,25 +335,6 @@
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QDateEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QDateEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="displayFormat">
           <string>dd/MM/yyyy</string>
          </property>
@@ -418,11 +345,6 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_telefono">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Teléfono:</string>
          </property>
@@ -436,25 +358,6 @@
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="placeholderText">
           <string>Ej: 600123456</string>
          </property>
@@ -462,11 +365,6 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_peso_corporal">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
          <property name="text">
           <string>Peso Corporal (kg):</string>
          </property>
@@ -479,25 +377,6 @@
            <width>0</width>
            <height>40</height>
           </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QDoubleSpinBox {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QDoubleSpinBox:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
          </property>
          <property name="suffix">
           <string> kg</string>
@@ -528,63 +407,39 @@
        </item>
        <item>
         <widget class="QLabel" name="lbl_rol">
-          <property name="font">
-          <font>
-            <pointsize>10</pointsize>
-          </font>
-          </property>
-          <property name="text">
+         <property name="text">
           <string>Tipo de usuario:</string>
-          </property>
+         </property>
         </widget>
-        </item>
-        <item>
+       </item>
+       <item>
         <widget class="QComboBox" name="combo_rol">
-          <property name="minimumSize">
+         <property name="minimumSize">
           <size>
-            <width>0</width>
-            <height>40</height>
+           <width>0</width>
+           <height>40</height>
           </size>
-          </property>
-          <property name="font">
-          <font>
-            <pointsize>11</pointsize>
-          </font>
-          </property>
-          <property name="styleSheet">
-          <string notr="true">
-            QComboBox {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-            }
-            QComboBox:focus {
-            border: 2px solid rgb(0, 0, 200);
-            }
-          </string>
-          </property>
-          <property name="currentIndex">
+         </property>
+         <property name="currentIndex">
           <number>-1</number>
-          </property>
-          <item>
+         </property>
+         <item>
           <property name="text">
-            <string>Administrador</string>
+           <string>Administrador</string>
           </property>
-          </item>
-          <item>
+         </item>
+         <item>
           <property name="text">
-            <string>Entrenador</string>
+           <string>Entrenador</string>
           </property>
-          </item>
-          <item>
+         </item>
+         <item>
           <property name="text">
-            <string>Atleta</string>
+           <string>Atleta</string>
           </property>
-          </item>
+         </item>
         </widget>
-        </item>
+       </item>
 
        <item>
         <widget class="QPushButton" name="btn_registrar">
@@ -600,20 +455,6 @@
            <weight>75</weight>
            <bold>true</bold>
           </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QPushButton {
-            background-color: #4CAF50; /* Verde, coherente con VistaInicial */
-            color: white;
-            border-radius: 15px;
-            padding: 10px;
-            border: none;
-           }
-           QPushButton:hover {
-            background-color: #45a049;
-           }
-          </string>
          </property>
          <property name="text">
           <string>Registrar Cuenta</string>
@@ -633,19 +474,10 @@
            <pointsize>12</pointsize> </font>
          </property>
          <property name="text">
-          <string>¿Ya tienes una cuenta? Inicia Sesión</string> </property>
+          <string>¿Ya tienes una cuenta? Inicia Sesión</string>
+         </property>
          <property name="flat">
           <bool>true</bool>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QPushButton {
-            color: rgb(55, 5, 255); /* Azul/Morado, coherente con las demás */
-           }
-           QPushButton:hover {
-            text-decoration: underline;
-           }
-          </string>
          </property>
         </widget>
        </item>
