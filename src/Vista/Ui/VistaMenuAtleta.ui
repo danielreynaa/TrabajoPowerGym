@@ -13,46 +13,49 @@
   <property name="windowTitle">
    <string>PowerGym - Menú Atleta</string>
   </property>
-  <property name="styleSheet"> <string notr="true">
+  <property name="styleSheet">
+   <string notr="true">
     QMainWindow#MainWindow {
-        background-color: #f0f0f0; /* Color de fondo gris claro */
+        background-color: #f0f0f0;
     }
     QWidget#centralwidget {
-        background-color: #f8f8f8; /* Color de fondo del widget central, un poco más claro */
+        background-color: #f8f8f8;
     }
     
-    QLabel { /* Estilo general para todos los QLabel */
+    QLabel {
         color: #333333;
         font-size: 16px;
         font-weight: 500;
     }
 
-    QLabel#label_3 { /* Estilo específico para el título principal del menú */
-        color: #B71C1C; /* Rojo oscuro para el texto del título */
-        font-size: 32px; /* Tamaño de fuente grande */
+    QLabel#label_3 {
+        color: #B71C1C;
+        font-size: 32px;
         font-weight: bold;
         padding-bottom: 20px;
     }
 
     QPushButton {
-        background-color: #D32F2F; /* Rojo vibrante */
+        background-color: #D32F2F;
         color: white;
         border: none;
-        border-radius: 25px; /* Bordes más redondeados para botones grandes */
+        border-radius: 25px;
         padding: 20px;
         font-size: 18px;
         font-weight: bold;
-        min-width: 150px; /* Ancho mínimo para botones */
-        min-height: 80px; /* Altura mínima para botones */
+        min-width: 150px;
+        min-height: 80px;
     }
     QPushButton:hover {
-        background-color: #C62828; /* Rojo más oscuro al pasar el ratón */
+        background-color: #C62828;
     }
    </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_main"> <property name="spacing">
-     <number>30</number> </property>
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <property name="spacing">
+     <number>30</number>
+    </property>
     <property name="leftMargin">
      <number>50</number>
     </property>
@@ -67,7 +70,8 @@
     </property>
 
     <item>
-     <widget class="QLabel" name="label_3"> <property name="text">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
        <string>PowerGym</string>
       </property>
       <property name="alignment">
@@ -77,7 +81,8 @@
     </item>
 
     <item>
-     <spacer name="verticalSpacer_top"> <property name="orientation">
+     <spacer name="verticalSpacer_top">
+      <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
       <property name="sizeHint" stdset="0">
@@ -90,8 +95,10 @@
     </item>
 
     <item>
-     <layout class="QGridLayout" name="gridLayout_buttons"> <property name="spacing">
-       <number>30</number> </property>
+     <layout class="QGridLayout" name="gridLayout_buttons">
+      <property name="spacing">
+       <number>30</number>
+      </property>
       
       <item row="0" column="0">
        <widget class="QPushButton" name="botonEntrenamiento">
@@ -101,24 +108,15 @@
        </widget>
       </item>
       
-      <item row="0" column="1">
-       <widget class="QPushButton" name="botonProgreso">
-        <property name="text">
-         <string>Ver progreso</string>
-        </property>
-       </widget>
-      </item>
-      
-      <item row="1" column="0">
+      <item row="0" column="1"> 
        <widget class="QPushButton" name="botonHistorial">
         <property name="text">
-         <string>Historial de entrenamientos</string>
+         <string>Progreso de entrenamientos</string>
         </property>
        </widget>
       </item>
       
-      <item row="1" column="1">
-       <widget class="QPushButton" name="botonPerfil">
+      <item row="1" column="0" colspan="2"> <widget class="QPushButton" name="botonPerfil">
         <property name="text">
          <string>Ver perfil</string>
         </property>
@@ -129,7 +127,8 @@
     </item>
 
     <item>
-     <spacer name="verticalSpacer_bottom"> <property name="orientation">
+     <spacer name="verticalSpacer_bottom">
+      <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
       <property name="sizeHint" stdset="0">
@@ -143,16 +142,7 @@
 
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
+  <widget class="QMenuBar" name="menubar"/>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
