@@ -11,7 +11,70 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Historial de Entrenamientos</string>
+   <string>POWERGYM - Historial de Entrenamientos</string> </property>
+  <property name="styleSheet"> <string notr="true">
+    QMainWindow#VistaHistorial { /* Usamos el objectName de la ventana principal */
+        background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+    QWidget#centralwidget {
+        background-color: #f8f8f8; /* Color de fondo del widget central, un poco más claro */
+        padding: 20px; /* Padding general para el contenido */
+    }
+    
+    QLabel { /* Estilo general para todos los QLabel */
+        color: #333333;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    QLabel#labelTitulo { /* Estilo específico para el título principal "Historial de Entrenamientos" */
+        color: #B71C1C; /* Rojo oscuro para el texto del título */
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    QLabel#labelRecord, QLabel#labelTotalesTitulo { /* Estilo para títulos de sección */
+        color: #B71C1C;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px; /* Separación de la sección anterior */
+        padding-bottom: 5px;
+    }
+
+    QPushButton { /* Estilo para todos los QPushButton */
+        background-color: #D32F2F; /* Rojo vibrante */
+        color: white;
+        border: none;
+        border-radius: 15px; /* Bordes redondeados */
+        padding: 10px 20px; /* Padding para botones */
+        font-size: 16px;
+        font-weight: bold;
+        min-height: 40px; /* Altura mínima para botones */
+        margin-bottom: 10px; /* Margen inferior para separar de otros elementos */
+    }
+    QPushButton:hover {
+        background-color: #C62828; /* Rojo más oscuro al pasar el ratón */
+    }
+
+    QTableWidget { /* Estilo para la tabla */
+        background-color: white;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        font-size: 13px;
+        selection-background-color: #FFCDD2; /* Rojo claro al seleccionar */
+        selection-color: #B71C1C; /* Texto rojo oscuro al seleccionar */
+    }
+    QTableWidget::item { /* Estilo para las celdas de la tabla */
+        padding: 5px;
+    }
+    QHeaderView::section { /* Estilo para las cabeceras de la tabla */
+        background-color: #D32F2F; /* Fondo rojo */
+        color: white;
+        padding: 5px;
+        border: 1px solid #C62828;
+        font-weight: bold;
+    }
+   </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="mainVerticalLayout">
@@ -31,11 +94,6 @@
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
       </property>
      </widget>
     </item>
@@ -58,12 +116,6 @@
      <widget class="QLabel" name="labelRecord">
       <property name="text">
        <string>Récords personales</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <bold>true</bold>
-       </font>
       </property>
      </widget>
     </item>
@@ -99,12 +151,6 @@
       <property name="text">
        <string>Total de entrenamientos por ejercicio</string>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
      </widget>
     </item>
     <item>
@@ -132,7 +178,8 @@
       </item>
      </layout>
     </item>
-    </layout>
+
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar"/>
   <widget class="QStatusBar" name="statusbar"/>

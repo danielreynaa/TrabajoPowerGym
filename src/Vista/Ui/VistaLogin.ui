@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class> <widget class="QMainWindow" name="MainWindow"> <property name="geometry">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width> <height>600</height> </rect>
+    <width>500</width>
+    <height>600</height>
+   </rect>
   </property>
   <property name="minimumSize">
    <size>
@@ -25,20 +29,72 @@
     <normaloff>:/logo/514ba084-0d56-41a1-9273-abc5a52fc600.png</normaloff>:/logo/514ba084-0d56-41a1-9273-abc5a52fc600.png</iconset>
   </property>
   <property name="styleSheet"> <string notr="true">
+    /* Estilo del QMainWindow y su fondo de imagen */
     QMainWindow#MainWindow {
-     background-image: url(:/Imagenes/descarga.jpg); /* Usar una sola imagen de fondo */
-     background-repeat: no-repeat;
-     background-position: center;
-     background-attachment: fixed; /* O scroll si la imagen es pequeña */
-     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    }
-    /* O si quieres el fondo en el centralwidget */
-    /* QWidget#centralwidget {
-        background-image: url(:/Imagenes/descarga.jpg);
+        background-image: url(:/Imagenes/descarga.jpg); /* Usar una sola imagen de fondo */
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
-    } */
+        background-attachment: fixed; 
+        background-size: cover; 
+    }
+
+    /* Estilo para el QFrame principal de login (panel blanco translúcido) */
+    QFrame#frame_login_principal {
+        background-color: rgba(255, 255, 255, 200); /* Blanco con mayor opacidad */
+        border-radius: 15px; /* Bordes redondeados */
+        padding: 20px; /* Padding interno */
+    }
+
+    /* Estilo para QLabel del título del login */
+    QLabel#lbl_titulo_login {
+        color: #B71C1C; /* Rojo oscuro para el texto del título */
+        font-size: 28px; /* Tamaño de fuente más grande */
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    /* Estilo para QLineEdit (campos de entrada) */
+    QLineEdit {
+        background-color: rgba(255, 255, 255, 255); /* Fondo blanco sólido */
+        border: 2px solid #D32F2F; /* Borde rojo vibrante */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
+        color: black;
+        font-size: 14px;
+    }
+    QLineEdit:focus {
+        border: 2px solid #C62828; /* Borde rojo más oscuro al enfocar */
+    }
+
+    /* Estilo para QPushButton (botones generales) */
+    QPushButton {
+        background-color: #D32F2F; /* Rojo vibrante */
+        color: white;
+        border: none;
+        border-radius: 20px; /* Bordes más redondeados */
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    QPushButton:hover {
+        background-color: #C62828; /* Rojo más oscuro al pasar el ratón */
+    }
+
+    /* Estilo específico para el botón "Volver a la pantalla inicial" (enlace) */
+    QPushButton#btn_volver_inicial {
+        background-color: transparent; /* Fondo transparente */
+        color: #B71C1C; /* Rojo oscuro para el texto */
+        border: none;
+        text-decoration: none; /* Sin subrayado por defecto */
+        font-size: 12px;
+        font-weight: normal;
+        padding: 5px;
+        border-radius: 0px; /* Sin bordes redondeados */
+    }
+    QPushButton#btn_volver_inicial:hover {
+        text-decoration: underline; /* Subrayar al pasar el ratón */
+        color: #880E4F; /* Un tono de rojo más profundo para hover */
+    }
    </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -57,33 +113,17 @@
      </spacer>
     </item>
     <item>
-     <widget class="QFrame" name="frame_login_principal"> <property name="minimumSize">
-       <size>
-        <width>350</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>400</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="styleSheet"> <string notr="true">
-        QFrame#frame_login_principal {
-         background-color: rgba(255, 255, 255, 180); /* Blanco con 70% de opacidad */
-         border-radius: 15px; /* Bordes redondeados */
-        }
-       </string>
-      </property>
+     <widget class="QFrame" name="frame_login_principal">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_form"> <property name="spacing">
-        <number>20</number> </property>
+      <layout class="QVBoxLayout" name="verticalLayout_form">
+       <property name="spacing">
+        <number>20</number>
+       </property>
        <property name="leftMargin">
         <number>30</number>
        </property>
@@ -97,20 +137,13 @@
         <number>30</number>
        </property>
        <item>
-        <widget class="QLabel" name="lbl_titulo_login"> <property name="font">
-          <font>
-           <pointsize>24</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
+        <widget class="QLabel" name="lbl_titulo_login">
          <property name="text">
-          <string>Iniciar Sesión</string> </property>
+          <string>Iniciar Sesión</string>
+         </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(55,5,255);</string> </property>
         </widget>
        </item>
        <item>
@@ -127,30 +160,12 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLineEdit" name="Nombreusuario"> <property name="minimumSize">
+        <widget class="QLineEdit" name="Nombreusuario">
+         <property name="minimumSize">
           <size>
            <width>0</width>
            <height>45</height>
           </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200); /* Fondo casi blanco semi-transparente */
-            border: 2px solid rgb(55, 5, 255); /* Borde de color */
-            border-radius: 8px; /* Bordes redondeados */
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200); /* Borde diferente al enfocar */
-           }
-          </string>
          </property>
          <property name="placeholderText">
           <string>Correo Electrónico</string>
@@ -158,33 +173,16 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="Contrasena"> <property name="minimumSize">
+        <widget class="QLineEdit" name="Contrasena">
+         <property name="minimumSize">
           <size>
            <width>0</width>
            <height>45</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QLineEdit {
-            background-color: rgba(255, 255, 255, 200);
-            border: 2px solid rgb(55, 5, 255);
-            border-radius: 8px;
-            padding: 8px;
-            color: black;
-           }
-           QLineEdit:focus {
-            border: 2px solid rgb(0, 0, 200);
-           }
-          </string>
-         </property>
          <property name="echoMode">
-          <enum>QLineEdit::Password</enum> </property>
+          <enum>QLineEdit::Password</enum>
+         </property>
          <property name="placeholderText">
           <string>Contraseña</string>
          </property>
@@ -204,61 +202,31 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="botonaceptar"> <property name="minimumSize">
+        <widget class="QPushButton" name="botonaceptar">
+         <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>55</height> </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>18</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QPushButton {
-            background-color: rgb(55, 5, 255); /* Un solo color de fondo */
-            color: white; /* Texto blanco */
-            border-radius: 12px; /* Bordes más redondeados */
-            padding: 10px;
-           }
-           QPushButton:hover {
-            background-color: rgb(0, 0, 200); /* Color al pasar el ratón */
-           }
-          </string>
+           <height>55</height>
+          </size>
          </property>
          <property name="text">
-          <string>Acceder</string> </property>
+          <string>Acceder</string>
+         </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btn_volver_inicial"> <property name="minimumSize">
+        <widget class="QPushButton" name="btn_volver_inicial">
+         <property name="minimumSize">
           <size>
            <width>0</width>
            <height>40</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
+         <property name="flat">
+          <bool>true</bool>
          </property>
          <property name="text">
           <string>Volver a la pantalla inicial</string>
-         </property>
-         <property name="flat">
-          <bool>true</bool> </property>
-         <property name="styleSheet">
-          <string notr="true">
-           QPushButton {
-            color: rgb(55, 5, 255); /* Color de texto del enlace */
-           }
-           QPushButton:hover {
-            text-decoration: underline; /* Subrayar al pasar el ratón */
-           }
-          </string>
          </property>
         </widget>
        </item>

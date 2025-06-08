@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
+ <widget class="QMainWindow" name="MainWindow"> <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -11,74 +10,133 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>POWERGYM - Menú Principal</string> </property>
+  <property name="styleSheet"> <string notr="true">
+    QMainWindow#MainWindow { /* Usamos el objectName de la ventana principal */
+        background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+    QWidget#centralwidget {
+        background-color: #f8f8f8; /* Color de fondo del widget central, un poco más claro */
+    }
+    
+    QLabel { /* Estilo general para todos los QLabel */
+        color: #333333;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    QLabel#label_3 { /* Estilo específico para el título principal "PowerGym" */
+        color: #B71C1C; /* Rojo oscuro para el texto del título */
+        font-size: 32px; /* Tamaño de fuente grande */
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    QPushButton {
+        background-color: #D32F2F; /* Rojo vibrante */
+        color: white;
+        border: none;
+        border-radius: 25px; /* Bordes más redondeados para botones grandes */
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        min-width: 150px; /* Ancho mínimo para botones */
+        min-height: 80px; /* Altura mínima para botones */
+    }
+    QPushButton:hover {
+        background-color: #C62828; /* Rojo más oscuro al pasar el ratón */
+    }
+   </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>240</y>
-      <width>181</width>
-      <height>51</height>
-     </rect>
+   <layout class="QVBoxLayout" name="verticalLayout_main"> <property name="spacing">
+     <number>30</number> </property>
+    <property name="leftMargin">
+     <number>50</number>
     </property>
-    <property name="text">
-     <string>Ver progreso</string>
+    <property name="topMargin">
+     <number>50</number>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>440</y>
-      <width>181</width>
-      <height>51</height>
-     </rect>
+    <property name="rightMargin">
+     <number>50</number>
     </property>
-    <property name="text">
-     <string>Historial de entrenamientos</string>
+    <property name="bottomMargin">
+     <number>50</number>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>440</y>
-      <width>181</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ver perfil</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>240</y>
-      <width>181</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Registrar entrenamiento</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>50</y>
-      <width>111</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PowerGym</string>
-    </property>
-   </widget>
+
+    <item>
+     <widget class="QLabel" name="label_3"> <property name="text">
+       <string>PowerGym</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <spacer name="verticalSpacer_top"> <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+
+    <item>
+     <layout class="QGridLayout" name="gridLayout_buttons"> <property name="spacing">
+       <number>30</number> </property>
+      
+      <item row="0" column="1">
+       <widget class="QPushButton" name="botonProgreso"> <property name="text">
+         <string>Ver progreso</string>
+        </property>
+       </widget>
+      </item>
+      
+      <item row="1" column="0">
+       <widget class="QPushButton" name="botonHistorial"> <property name="text">
+         <string>Historial de entrenamientos</string>
+        </property>
+       </widget>
+      </item>
+      
+      <item row="1" column="1">
+       <widget class="QPushButton" name="botonPerfil"> <property name="text">
+         <string>Ver perfil</string>
+        </property>
+       </widget>
+      </item>
+      
+      <item row="0" column="0">
+       <widget class="QPushButton" name="botonEntrenamiento"> <property name="text">
+         <string>Registrar entrenamiento</string>
+        </property>
+       </widget>
+      </item>
+      
+     </layout>
+    </item>
+
+    <item>
+     <spacer name="verticalSpacer_bottom">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
