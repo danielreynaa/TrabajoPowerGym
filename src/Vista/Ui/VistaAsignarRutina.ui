@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VistaAsignarRutina</class>
+ <widget class="QMainWindow" name="VistaAsignarRutina">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>400</width><height>400</height></rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="lbl_nombre">
+      <property name="text"><string>Asignar rutina a:</string></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="fecha">
+      <property name="calendarPopup"><bool>true</bool></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="sentadilla">
+      <property name="placeholderText"><string>Sentadilla (kg)</string></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="banca">
+      <property name="placeholderText"><string>Press Banca (kg)</string></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="peso_muerto">
+      <property name="placeholderText"><string>Peso Muerto (kg)</string></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_guardar">
+      <property name="text"><string>Asignar Rutina</string></property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_volver">
+      <property name="text"><string>Volver</string></property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
