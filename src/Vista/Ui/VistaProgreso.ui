@@ -14,20 +14,15 @@
    <string>Progreso de Entrenamiento</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_volver">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>150</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Volver al menú</string>
-    </property>
-   </widget>
    <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="btn_volver">
+      <property name="text">
+       <string>Volver al menú</string>
+      </property>
+     </widget>
+    </item>
+
     <item>
      <widget class="QLabel" name="labelTitulo">
       <property name="text">

@@ -140,3 +140,75 @@
 [2025-06-08 09:15:17] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
 [2025-06-08 09:15:17] [INFO] Actualizando gráfica para usuario hola@gmail.com.
 [2025-06-08 09:15:17] [INFO] No hay datos para Sentadilla para el usuario hola@gmail.com.
+[2025-06-08 09:16:20] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 09:16:20] [INFO] Vista Inicial cargada.
+[2025-06-08 09:16:20] [INFO] Visa inicial cargada.
+[2025-06-08 09:16:22] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 09:16:23] [INFO] Vista Login cargada.
+[2025-06-08 09:16:34] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 09:16:34] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 09:16:34] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 09:16:35] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 09:16:35] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 09:16:35] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:16:35] [INFO] No hay datos para Sentadilla para el usuario hola@gmail.com.
+[2025-06-08 09:16:39] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:16:39] [INFO] No hay datos para Peso Muerto para el usuario hola@gmail.com.
+[2025-06-08 09:18:22] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 09:18:22] [INFO] Vista Inicial cargada.
+[2025-06-08 09:18:22] [INFO] Visa inicial cargada.
+[2025-06-08 09:18:23] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 09:18:25] [INFO] Vista Login cargada.
+[2025-06-08 09:18:35] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 09:18:35] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 09:18:35] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 09:18:36] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 09:18:36] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 09:18:36] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:18:36] [INFO] No hay datos para Sentadilla para el usuario hola@gmail.com.
+[2025-06-08 09:18:42] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:18:42] [INFO] No hay datos para Peso Muerto para el usuario hola@gmail.com.
+[2025-06-08 09:20:51] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 09:20:51] [INFO] Vista Inicial cargada.
+[2025-06-08 09:20:51] [INFO] Visa inicial cargada.
+[2025-06-08 09:20:51] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 09:20:53] [INFO] Vista Login cargada.
+[2025-06-08 09:21:01] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 09:21:01] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 09:21:01] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 09:21:03] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 09:21:03] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 09:21:03] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:21:03] [INFO] No hay datos para Sentadilla para el usuario hola@gmail.com.
+[2025-06-08 09:21:06] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:21:06] [INFO] No hay datos para Peso Muerto para el usuario hola@gmail.com.
+[2025-06-08 09:24:41] [INFO] Aplicación PowerGym iniciada.
+[2025-06-08 09:24:41] [INFO] Vista Inicial cargada.
+[2025-06-08 09:24:41] [INFO] Visa inicial cargada.
+[2025-06-08 09:24:42] [INFO] Navegando de Vista Inicial a VistaLogin (botón 'Ya estoy registrado').
+[2025-06-08 09:24:43] [INFO] Vista Login cargada.
+[2025-06-08 09:24:50] [INFO] Usuario hola@gmail.com ha iniciado sesión exitosamente.
+[2025-06-08 09:24:50] [INFO] Login exitoso para hola@gmail.com (Rol: Atleta). Navegando a VistaMenuAtleta.
+[2025-06-08 09:24:50] [INFO] Vista Menu Atleta cargada para usuario: hola@gmail.com.
+[2025-06-08 09:24:51] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 09:24:51] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 09:24:51] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:24:51] [INFO] No hay datos para Sentadilla para el usuario hola@gmail.com.
+[2025-06-08 09:24:53] [INFO] Volviendo de Vista Progreso a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 09:24:53] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 09:24:54] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 09:24:54] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 09:24:54] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:24:54] [INFO] No hay datos para Sentadilla para el usuario hola@gmail.com.
+[2025-06-08 09:24:55] [INFO] Volviendo de Vista Progreso a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 09:24:55] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 09:24:56] [INFO] Navegando de Vista Menu Atleta a VistaProgreso para usuario: hola@gmail.com.
+[2025-06-08 09:24:56] [INFO] Vista Progreso cargada para usuario: hola@gmail.com.
+[2025-06-08 09:24:56] [INFO] Actualizando gráfica para usuario hola@gmail.com.
+[2025-06-08 09:24:56] [INFO] No hay datos para Sentadilla para el usuario hola@gmail.com.
+[2025-06-08 09:24:57] [INFO] Volviendo de Vista Progreso a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 09:24:57] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 09:24:58] [INFO] Navegando de Vista Menu Atleta a VistaPerfil para usuario: hola@gmail.com.
+[2025-06-08 09:24:58] [INFO] vista del perfil cargada
+[2025-06-08 09:24:59] [INFO] Volviendo a Vista Menu Atleta para usuario: hola@gmail.com.
+[2025-06-08 09:25:00] [INFO] Navegando de Vista Menu Atleta a VistaHistorial para usuario: hola@gmail.com.

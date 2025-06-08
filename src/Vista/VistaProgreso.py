@@ -1,4 +1,6 @@
-from PyQt5.QtWidgets import QMainWindow, QVBoxLayout, QMessageBox, QPushButton # Asegúrate de que QPushButton esté importado
+# C:\Users\elded\OneDrive\Escritorio\INGENIERÍA DE SOFTWARE\POWER GYM\TrabajoPowerGym\src\Vista\VistaProgreso.py
+
+from PyQt5.QtWidgets import QMainWindow, QVBoxLayout, QMessageBox, QPushButton 
 from PyQt5 import uic
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
@@ -7,14 +9,14 @@ from src.Conexion.Conexion import Conexion
 from src.Logs.Logger import CustomLogger 
 
 class VistaProgreso(QMainWindow):
-    # Asegúrate de que __init__ recibe 'volver_callback'
     def __init__(self, usuario, volver_callback): 
         super().__init__()
-        # uic.loadUi("src/Vista/Ui/VistaProgreso.ui", self) # Ya está cargado en Qt Designer, no hace falta
         uic.loadUi("src/Vista/Ui/VistaProgreso.ui", self) # Carga el archivo .ui
 
+        print("DEBUG_FLOW_PROGRESO: Constructor de VistaProgreso ejecutado.") # DEPURACIÓN
+
         self.usuario = usuario
-        self.volver_callback = volver_callback # Guarda la referencia a la función para volver
+        self.volver_callback = volver_callback 
         self.conn = Conexion().conexion
         self.cursor = self.conn.cursor()
 
@@ -22,14 +24,17 @@ class VistaProgreso(QMainWindow):
         self.logger.info(f"Vista Progreso cargada para usuario: {self.usuario.get('email', 'Desconocido')}.") 
 
         self.canvas = FigureCanvas(Figure(figsize=(5, 3)))
-        layout = QVBoxLayout(self.graficaWidget) # Asegúrate que graficaWidget existe en tu UI
+        layout = QVBoxLayout(self.graficaWidget) 
         layout.addWidget(self.canvas)
 
-        self.comboEjercicio.currentTextChanged.connect(self.actualizar_grafica) # Asegúrate que comboEjercicio existe en tu UI
+        self.comboEjercicio.currentTextChanged.connect(self.actualizar_grafica) 
         self.actualizar_grafica() 
 
-        # Asegúrate de que 'btn_volver' sea el objectName de tu QPushButton en VistaProgreso.ui
-        self.btn_volver.clicked.connect(self.volver_al_menu) # CONEXIÓN DEL BOTÓN VOLVER
+        # Conexión del botón "Volver"
+        self.btn_volver.clicked.connect(self.volver_al_menu) 
+        # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        print("DEBUG_FLOW_PROGRESO: Botón 'btn_volver' conectado.") # DEPURACIÓN
+        # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     def obtener_id_usuario(self):
         self.logger.debug(f"Obteniendo ID de usuario para: {self.usuario.get('email', 'Desconocido')}.")
@@ -94,7 +99,9 @@ class VistaProgreso(QMainWindow):
             QMessageBox.critical(self, "Error de Gráfica", f"Fallo al cargar datos para gráfica: {e}")
         
     def volver_al_menu(self):
+        print("DEBUG_FLOW_PROGRESO: Método volver_al_menu ejecutado.") # DEPURACIÓN
         self.logger.info(f"Volviendo de Vista Progreso a Vista Menu Atleta para usuario: {self.usuario.get('email', 'Desconocido')}.") # Log de navegación
         self.close() 
         if self.volver_callback:
-            self.volver_callback() 
+            print("DEBUG_FLOW_PROGRESO: Llamando a volver_callback().") # DEPURACIÓN
+            self.volver_callback()
